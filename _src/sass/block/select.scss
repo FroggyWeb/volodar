@@ -1,0 +1,40 @@
+.choices {
+  position: relative;
+  &:focus {
+    outline: none;
+  }
+  &__inner {
+    position: relative;
+    padding-right: .75em;
+    cursor: pointer;
+    &:before {
+      content: "";
+      position: absolute;
+      width: .5em;
+      height: .5em;
+      background: url('@/img/icon/dropdown.svg') no-repeat center center;
+      background-size: cover;
+      right: 0;
+      top: .7em;
+    }
+  }
+  &__item {
+    padding: .25em;
+    line-height: 1.2;
+    cursor: pointer;
+  }
+  &__list--dropdown {
+    min-width: 100%;
+    position: absolute;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0 2px 3px rgba(#000, .2);
+    display: none;
+    &.is-active {
+      display: block;
+    }
+  }
+  .is-highlighted {
+    background-color: $c-main;
+  }
+}

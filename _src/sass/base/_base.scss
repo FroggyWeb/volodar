@@ -1,0 +1,57 @@
+html {
+  height: 100%;
+}
+
+body {
+  font: $f-base;
+  color: $c-text;
+  margin: 0;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+audio,
+canvas,
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+  display: inline-block;
+  outline: none !important;
+}
+
+a {
+  color: $c-link;
+  @include r(lg) {
+    &:hover {
+      color: $c-active;
+    }
+  }
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+svg {
+  fill: currentcolor;
+  max-width: 100%;
+}

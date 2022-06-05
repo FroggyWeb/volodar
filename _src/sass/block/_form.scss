@@ -1,0 +1,117 @@
+// ++++++++++++++++++++++++++++
+// Form
+
+input:not([type="submit"]),
+input:not([type="checkbox"]),
+input:not([type="radio"]),
+textarea {
+  padding: 1em;
+  border-radius: 8px;
+  background-color: $c-light;
+  border: none;
+  display: block;
+  min-width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba($c-main, 0.5);
+  @include placeholder() {
+    opacity: 0.5;
+  }
+}
+
+.form-line {
+  position: relative;
+  margin-bottom: calc(0.75 * $lg);
+  input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]) {
+    width: 100%;
+  }
+  .icon {
+    position: absolute;
+    font-size: 24px;
+    line-height: 1;
+  }
+  .icon--prepend {
+    top: 12px;
+    left: 12px;
+    input {
+      padding-left: 1em;
+    }
+  }
+}
+
+.form__title {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 1em;
+}
+
+.form-footer {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+  input[type="checkbox"] {
+    flex: 0 0 auto;
+  }
+}
+
+.popup-form {
+  display: none;
+  max-width: 500px;
+}
+
+// ++++++++++++++++++++++++++++
+// button
+
+.btn {
+  display: inline-block;
+  position: relative;
+  padding: 1em 2em 1em;
+  text-decoration: none;
+  font-weight: 800;
+  line-height: 1;
+  border-radius: 0.5em;
+  border: none;
+  appearance: none;
+  color: #fff;
+  overflow: hidden;
+  background: #FD9F32;
+  box-shadow: 5px 7px 14px #EEAC76;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0.8em rgba($c-text, 0.3);
+    span {
+      transform: translateX(-1em);
+    }
+    .btn-anim-right {
+      transform: translate(0, -50%);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &--outline {
+    border: 2px solid;
+  }
+  &--big {
+    padding: 0.75em 2em 0.75em;
+    background-color: $c-sec;
+    text-align: center;
+    color: #fff;
+    @include r(1024) {
+      font-size: 20px;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+  &--dark {
+    background-color: $c-main;
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
+  }
+}

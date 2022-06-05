@@ -1,0 +1,50 @@
+:root {
+  --lg: 30px;
+  --mask-both: linear-gradient(#000 0 0) center/calc(100% - 20px) calc(100% - 20px) no-repeat,
+  radial-gradient(farthest-side, #000 100%, #0000) 0 0/40px 40px round;
+  --mask-bottom: linear-gradient(#000 0 0) top/100% calc(100% - 20px) no-repeat,
+  radial-gradient(circle farthest-side, #000 98%, #0000) bottom/37.00px 40px repeat-x;
+  --mask-top: linear-gradient(#000 0 0) bottom/100% calc(100% - 20px) no-repeat,
+  radial-gradient(circle farthest-side, #000 98%, #0000) top/37.00px 40px repeat-x;
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --lg: 15px;
+  }
+}
+
+$breakpoints: (
+  "xs": 480px,
+  "sm": 540px,
+  "md": 767px,
+  "lg": 992px,
+  "xl": 1024px,
+  "xxl": 1360px,
+) !default;
+
+$f-base: 16px/1.2 "Mulish", sans-serif;
+$f-title: "Mulish", sans-serif;
+$f-color: #555;
+
+$lg: var(--lg);
+
+$c-main: #FD9F32;
+$c-sec: #B69D86;
+$c-light: #eff2f6;
+$c-text: #664B42;
+$c-black: #1C1616;
+$c-bg: #F7F7F7;
+$c-link: $c-text;
+$c-active: $c-main;
+
+$hc-offcanvas-nav-background-color: #fff;
+$hc-offcanvas-nav-text-color: #18214d;
+$hc-offcanvas-nav-text-size: 16px;
+
+
+$container-max-widths: (
+  xxl: 1400px,
+);
+
+

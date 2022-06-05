@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev site</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#563219">
+  <meta name="msapplication-TileColor" content="#eee4e1">
+  <meta name="theme-color" content="#fdfff5">
+
+  <meta name="description" content="Разработка сайта" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/vendor.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+</head>
+
+<body>
+  
+
+  <div class="page">
+    <!-- begin Header -->
+    <header class="page__header js-header">
+      <div class="container container--sm">
+        <div class="header">
+          <div class="header__left">
+            <div class="burger">
+              <div class="burger__el"></div>
+            </div>
+            <div class="header__lang">
+              <select name="lang" id="select-lang" calss="js-choice" hidden>
+                <option value="Ru" selected>Ru</option>
+                <option value="En">En</option>
+              </select>
+            </div>
+            <div class="header__soc soclist" data-da=".mob-header,1023,2">
+              <a href="#" class="soclist__item" target="_blank">
+                
+<svg class="iconsvg telegram ">
+  <use xlink:href="../img/sprite.svg#telegram"></use>
+</svg>
+
+              </a>
+              <a href="#" class="soclist__item" target="_blank">
+                
+<svg class="iconsvg vk ">
+  <use xlink:href="../img/sprite.svg#vk"></use>
+</svg>
+
+              </a>
+              <a href="#" class="soclist__item" target="_blank">
+                
+<svg class="iconsvg ig ">
+  <use xlink:href="../img/sprite.svg#ig"></use>
+</svg>
+
+              </a>
+              <a href="#" class="soclist__item" target="_blank">
+                
+<svg class="iconsvg vch ">
+  <use xlink:href="../img/sprite.svg#vch"></use>
+</svg>
+
+              </a>
+              <a href="#" class="soclist__item" target="_blank">
+                
+<svg class="iconsvg yt ">
+  <use xlink:href="../img/sprite.svg#yt"></use>
+</svg>
+
+              </a>
+            </div>
+          </div>
+          <a href="/" class="logo header__logo">
+            <img src="../img/logo-header.png" alt="Володарский мукомольный комбинат">
+          </a>
+          <div class="header__right">
+            <a href="tel:+78312289080" class="header__tel" data-da=".mob-header,1023,2">
+              +7 (831) 228-90-80
+            </a>
+            <div class="header__search search">
+              <button class="search__btn">
+                
+<svg class="iconsvg search ">
+  <use xlink:href="../img/sprite.svg#search"></use>
+</svg>
+
+              </button>
+            </div>
+            <div class="header__cart mini-cart">
+              
+<svg class="iconsvg cart ">
+  <use xlink:href="../img/sprite.svg#cart"></use>
+</svg>
+
+              <div class="mini-cart__count">12</div>
+            </div>
+          </div>
+        </div>
+        <nav class="header__nav nav" id="main-nav">
+	<ul class="nav__list">
+		<li class="nav__item">
+			<a href="#" class="nav__link">Продукция</a>
+		</li>
+		<li class="nav__item">
+			<a href="#" class="nav__link">Услуги</a>
+		</li>
+		<li class="nav__item">
+			<a href="#" class="nav__link">Клиентам</a>
+		</li>
+		<li class="nav__item nav__item-sub">
+			<a href="#" class="nav__link">О компании</a>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#" class="nav__link link-arr-hover">
+            <img src="../img/icon/about-factory.svg" alt="Наша компания">
+            <span>Наша компания</span></a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link link-arr-hover">
+            <img src="../img/icon/about-history.svg" alt="История комбината">
+            <span>История комбината</span></a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link link-arr-hover">
+            <img src="../img/icon/about-document.svg" alt="Документы">
+            <span>Документы</span></a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link link-arr-hover">
+            <img src="../img/icon/about-camera.svg" alt="Фото-видео">
+            <span>Фото-видео</span></a>
+        </li>
+      </ul>
+		</li>
+		<li class="nav__item">
+			<a href="#" class="nav__link">Новости</a>
+		</li>
+		<li class="nav__item">
+			<a href="#" class="nav__link">Контакты</a>
+		</li>
+	</ul>
+</nav>
+<!-- <div class="burger">
+	<span class="burger__el"></span>
+</div> -->
+
+
+        <div class="mob-header"></div>
+      </div>
+    </header>
+    <!-- end Header -->
+    
+<div class="container">
+  <!-- begin intro -->
+  <div class="index-intro section">
+    <div class="index-intro__slide">
+      <div class="index-title">
+        <img src="../img/decor/index-title.svg" class="index-title__logo" alt="Володарский мукомольный комбинат">
+        <h1 class="title title--intro">
+          <span class="title__selection">Володарский</span><br>мукомольный комбинат</span>
+        </h1>
+      </div>
+
+      <div class="intro-slider swiper">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-wrapper">
+          <div class="intro-slide swiper-slide">
+            <div class="intro-slide__cnt">
+              <div class="intro-slide__title title" data-swiper-parallax="-100">Индивидуальный подход к&nbsp;каждому
+                клиенту</div>
+              <div>Персональный менеджер <br>и сопровождение 24/7</div>
+              <a href="#" class="btn">Заказать поставку</a>
+            </div>
+            <img class="intro-slide__img round-both" src="../img/content/slide-1.png" alt="">
+          </div>
+          <div class="intro-slide swiper-slide">
+            <div class="intro-slide__cnt">
+              <div class="intro-slide__title title" data-swiper-parallax="-100">Большие объемы призводимой продукции
+              </div>
+              <div>700 тонн - производимая способность <br>комбината “Володарский”</div>
+              <a href="#" class="btn">Заказать поставку</a>
+            </div>
+            <img class="intro-slide__img round-both" src="../img/content/slide-2.png" alt="">
+          </div>
+        </div>
+        <div class="intro-slider__bg round-both bg-card"></div>
+      </div>
+    </div>
+    <div class="index-intro__aside anons-card">
+      <div class="video">
+        <a href="#" class="video__wrap">
+          <div class="video__link">
+            
+<svg class="iconsvg play ">
+  <use xlink:href="../img/sprite.svg#play"></use>
+</svg>
+
+          </div>
+          <img src="../img/content/intro-video.jpg" alt="Крупнейший поставщик муки">
+        </a>
+      </div>
+      <div class="anons-card__cnt">
+        <h2 class="title title--small anons-card__title">Крупнейший поставщик муки в Нижегородской области</h2>
+        <p class="anons-card__txt c-sec">Мукомольный комбинат Володарский — радует людей вкусным хлебом. В этом нам
+          помогает качественное и экологическое сырье,
+          индивидуальный подход к клиентам и квалифицированные сотрудники, всегда готовые помочь</p>
+        <div class="anons-card__footer">
+          <div class="ceo ceo--faximile">Генеральный директор
+            <span>О. А. Дворникова</span>
+          </div>
+          <a href="#" class="link-arr">О компании</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end intro -->
+  <!-- begin product-card -->
+
+  
+  <div class="product-card section">
+    
+    <a href="#" class="product-card__item link-arr-hover">
+      <img src=../img/content/product/product_card_1.png alt="Крупа манная">
+      <span>Крупа манная</span>
+    </a>
+    
+    <a href="#" class="product-card__item link-arr-hover">
+      <img src=../img/content/product/product_card_2.png alt="Пшеничная мука">
+      <span>Пшеничная мука</span>
+    </a>
+    
+    <a href="#" class="product-card__item link-arr-hover">
+      <img src=../img/content/product/product_card_3.png alt="Ржаная мука">
+      <span>Ржаная мука</span>
+    </a>
+    
+    <a href="#" class="product-card__item link-arr-hover">
+      <img src=../img/content/product/product_card_4.png alt="Отруби">
+      <span>Отруби</span>
+    </a>
+    
+    <a href="#" class="product-card__item link-arr-hover">
+      <img src=../img/content/product/product_card_5.png alt="Зерноотходы">
+      <span>Зерноотходы</span>
+    </a>
+    
+  </div>
+  <!-- end product-card -->
+
+</div>
+<div class="container container--sm">
+  <!-- begin production-steps -->
+  <div class="production-steps section">
+    <h2 class="title title--center production-steps__title" id="step-1">Путь производства нашей муки</h2>
+    <div class="production-step">
+      <div class="production-step__cnt-wrap">
+        <div class="production-step__cnt" id="step-2">
+          <h3 class="production-step__title title-sub">Закупка зерна</h3>
+          <p class="production-step__txt">Мы закупаем зерно только у агрохолдингов с проверенной репутацией</p>
+          <a href="#" class="btn production-step__link">Стать вашим поставщиком</a>
+        </div>
+      </div>
+      <div class="production-step__img">
+        <img src="../img/content/processing-1.png" alt="Закупка зерна">
+      </div>
+    </div>
+    <div class="production-step production-step--reverse">
+      <div class="production-step__cnt-wrap">
+        <div class="production-step__cnt" id="step-3">
+          <h3 class="production-step__title title-sub">Около 2 000 тонн</h3>
+          <p class="production-step__txt">Приемка зерна зерноавтотранспортом в сутки</p>
+        </div>
+      </div>
+      <div class="production-step__img img-out-left">
+        <img class="round-top " src="../img/content/processing-2.jpg" alt="2 000 тонн">
+      </div>
+    </div>
+    <div class="production-step">
+      <div class="production-step__cnt-wrap">
+        <div class="production-step__cnt" id="step-4">
+          <h3 class="production-step__title title-sub">Очистка зерна</h3>
+          <p class="production-step__txt">Мы исследуем каждую партию сырья в собственной лаборатории</p>
+        </div>
+      </div>
+      <div class="production-step__img callout">
+        <img class="round-top " src="../img/content/processing-3.png" alt="Очистка зерна">
+        <div class="production-step__callout callout__item callout__item--1 round-both">
+          <div class="callout__item-title">32-35 г</div>
+          Вес 1 отборного зерна, из которого мы делаем муку
+        </div>
+      </div>
+    </div>
+    <div class="production-steps__benefits benefit">
+      <div class="benefit__item">
+        <div class="benefit__ico">
+          <img src="../img/icon/benefit-ico-1.svg" alt="Отсев по весу">
+        </div>
+        <h3 class="benefit__title">Отсев по весу</h3>
+        <div class="benefit__txt">Наша современая техника позволет
+          успешно очищать зерно от всех примесей</div>
+      </div>
+      <div class="benefit__item">
+        <div class="benefit__ico">
+          <img src="../img/icon/benefit-ico-2.svg" alt="Оптическая сортировка">
+        </div>
+        <h3 class="benefit__title">Оптическая сортировка</h3>
+        <div class="benefit__txt">С помощью инфракрасного спектра мы анализируем сырье на наличие заражённости и
+          различных дефектов</div>
+      </div>
+      <div class="benefit__item">
+        <div class="benefit__ico">
+          <img src="../img/icon/benefit-ico-3.svg" alt="Сортировка по форме и размеру">
+        </div>
+        <h3 class="benefit__title">Сортировка по форме и размеру</h3>
+        <div class="benefit__txt">Крупные зерна с гладкой здоровой фактурой идут на производство муки высших сортов,
+          мелкие — диетических с повышенным
+          содержанием пищевых волокон</div>
+      </div>
+    </div>
+    <div class="production-step production-step--reverse">
+      <div class="production-step__cnt-wrap">
+        <div class="production-step__cnt callout" id="step-3">
+          <h3 class="production-step__title title-sub">Три производственные линии
+          </h3>
+          <p class="production-step__txt">Наконец, подготовленные виды зерна отправляются в размольное отделение,
+            где cначала дробятся в крупку, а потом
+            измельчаются в муку</p>
+          <div class="production-step__callout callout__item callout__item--1 round-both">
+            <div class="callout__item-title">700 тонн в сутки</div>
+            зерна (в том числе 100 тонн ржи)
+            — производственная способность
+            комбината «Володарский»
+          </div>
+        </div>
+      </div>
+      <div class="production-step__img img-out-left">
+        <img class="round-bottom" src="../img/content/processing-4.jpg" alt="2 000 тонн">
+      </div>
+    </div>
+    <div class="production-step">
+      <div class="production-step__cnt-wrap">
+        <div class="production-step__cnt" id="step-2">
+          <h3 class="production-step__title title-sub">+ 30 видов продукции</h3>
+          <p class="production-step__txt">Может производить комбинат в зависимости
+            от задач и потребностей заказчика, в том числе муку по индивидуальным параметрам</p>
+          <a href="#" class="btn production-step__link">Посмотреть продукцию</a>
+        </div>
+      </div>
+      <div class="production-step__img">
+        <img src="../img/content/processing-5.png" alt="Закупка зерна">
+      </div>
+    </div>
+    <div class="production-step production-step--vert">
+      <div class="production-step__cnt" id="step-3">
+        <h3 class="production-step__title title-sub">Фасовка</h3>
+        <p class="production-step__txt">Произведенную продукцию фасуют и развозят по предприятиям, магазинам и фермам
+        </p>
+      </div>
+      <div class="production-step__cnt" id="step-2">
+        <h3 class="production-step__title title-small">Бестарная фасовка</h3>
+        <p class="production-step__txt-p"><b>Муковоз</b>
+        </p>
+      </div>
+      <div class="production-step__img-p"><img src="../img/content/delivery-auto.svg" alt="Доставка муковозом"></div>
+      <div class="production-step__cnt" id="step-2">
+        <h3 class="production-step__title title-small">Варианты упаковки</h3>
+      </div>
+      <div class="production-step__img-p"><img src="../img/content/delivery-pack.png" alt="Варианты поставки"></div>
+    </div>
+    <div class="production-step production-step--vert">
+      <div class="production-step__cnt" id="step-2">
+        <h3 class="production-step__title title-small">Поставка</h3>
+        <p class="production-step__txt-p">Поставим муку на ваше производство в любом количестве. 35 регионов, 5 районов,
+          4 страны
+        </p>
+        <a href="#" class="btn production-step__link">Заказать поставку</a>
+      </div>
+    </div>
+  </div>
+  <!-- end production-steps -->
+
+</div>
+
+<div class="map">
+  <img src="../img/map.svg" alt="Регионы поставок">
+</div>
+
+
+
+  </div>
+
+  
+  <script src="../js/leader-line.min.js"></script>
+  <script defer src="../js/vendor.js"></script>
+  <script defer src="../js/main.js"></script>
+</body>
+
+</html>

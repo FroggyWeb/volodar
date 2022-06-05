@@ -1,0 +1,244 @@
+.index-intro {
+  display: grid;
+  gap: $lg;
+  @include r(1280) {
+    grid-template-columns: 2fr 1fr;
+    gap: calc(2*$lg);
+  }
+  &__aside{
+    align-self: flex-end;
+    display: grid;
+    gap: $lg;
+    @include rm(767, 1280) {
+      grid-template-columns: 1fr 1fr;
+      max-width: 1000px;
+      margin: auto;
+    }
+  }
+}
+
+.index-title {
+  position: relative;
+  color: $c-sec;
+  display: flex;
+  align-items: center;
+  font-size: clamp(28px, 7vw, 55px);
+  margin-bottom: -60px;
+  z-index: 100;
+  gap: $lg;
+  .title--intro {
+    font-size: inherit;
+    margin: 0;
+  }
+  img{
+    width: 4em;
+  }
+}
+
+.intro-slide {
+  position: relative;
+  /* .intro-slide__cnt */
+  &__cnt {
+    padding: calc(2*$lg);
+    position: relative;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    z-index: 1;
+    @include r(550) {
+      max-width: 60%;
+    }
+  }
+  /* .intro-slide__title */
+  &__title {
+    margin: 20px 0 0;
+  }
+  /* .intro-slide__img */
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: calc(100% + 40px);
+    object-fit: cover;
+  }
+}
+
+.intro-slider{
+  position: relative;
+  padding-top: 40px;
+}
+
+.intro-slider__bg {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 40px);
+  padding: 0;
+}
+
+.anons-card {
+  &__title.title {
+    margin-bottom: 0;
+  }
+  /* .anons-card__txt */
+  &__txt {
+    margin: 15px 0 0;
+  }
+
+  /* .anons-card__footer */
+  &__footer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: $lg;
+    align-items: flex-end;
+  }
+}
+
+.ceo {
+  font-size: 14px;
+  span {
+    display: block;
+    font-size: 16px;
+  }
+
+  /* .ceo--faximile */
+  &--faximile {
+    padding-left: 50px;
+    background: url('@/img/decor/index-faximile.svg') no-repeat bottom left;
+    background-size: contain;
+  }
+}
+
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $lg;
+  justify-content: center;
+  /* .product-card__item */
+  &__item {
+    max-width: 250px;
+    flex: 0 0 calc(50% - var(--lg));
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1;
+    align-items: center;
+    padding: $lg;
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    &:before {
+      content: "";
+      background: url('@/img/bg.jpg');
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 80%;
+      width: 100%;
+      z-index: -1;
+      border-radius: 10px;
+    }
+  }
+}
+
+.production-step {
+  display: flex;
+  align-items: center;
+  gap: $lg;
+  margin-bottom: $lg;
+  /* .production-step__cnt */
+  &__cnt {
+  }
+
+  /* .production-step__title */
+  &__title {}
+
+  /* .production-step__txt */
+  &__txt {
+    margin: .5em 0 0;
+    max-width: 400px;
+    @include r(450) {
+      font-size: 18px;
+    }
+  }
+  /* .production-step__link */
+  &__link {
+    margin-top: 3em;
+  }
+  /* .production-step__img */
+  &__img {
+    position: relative;
+  }
+  &--vert{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@include rmax(1023) {
+  .production-steps__title + .production-step {
+    margin-top: 0;
+  }
+  .production-step {
+    flex-direction: column;
+    margin-top: calc(7*$lg);
+  }
+  .production-step__img {
+    margin-left: calc($lg * -1);
+    margin-right: calc($lg * -1);
+    order: -1;
+    width: 100vw;
+  }
+}
+
+.map {
+  padding: 20px;
+  background: url('@/img/map-grid.svg');
+  background-size: cover;
+}
+
+@include r(lg) {
+  .production-steps__title {
+    padding-bottom: $lg;
+  }
+  .production-step__img {
+    width: 60%;
+  }
+  .production-step__cnt-wrap{
+    min-width: 40%;
+  }
+  .production-step__cnt{
+    padding: $lg 3vw;
+  }
+
+  .production-step:nth-child(2n) {
+    .production-step__cnt {
+    }
+  }
+
+  .production-step--reverse {
+    flex-direction: row-reverse;
+  }
+
+  .production-steps__benefits{
+    padding: 3vw $lg 0;
+  }
+  .img-out-left {
+    flex: 0 0 60%;
+    max-width: none;
+    min-width: calc(60% + ((100vw - 80vw) / 2) + 60px);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
