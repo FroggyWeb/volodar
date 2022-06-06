@@ -7,7 +7,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-  background-color: #F7F7F7;
+  background-color: #fff;
   font-weight: 500;
 }
 
@@ -86,9 +86,9 @@ a[href*="tel"] {
 }
 
 .section {
-	padding-top: calc(2 * $lg);
+  padding-top: calc(6 * $lg);
 	@include r(450){
-    padding-top: calc(6 * $lg);
+    padding-top: calc(2 * $lg);
   }
 	&--bg {
 		background-color: $c-light;
