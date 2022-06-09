@@ -199,3 +199,84 @@ a[href*="tel"] {
     margin: .5em 0 0;
   }
 }
+
+.footer {
+  padding: 40px 0;
+  background: url('@/img/bg.jpg');
+  margin-top: -20px;
+  &__main {}
+
+  &__about {}
+
+  &__logo {}
+
+  &__addr {}
+
+  &__nav {}
+
+  &__nav-list {}
+
+  &__contact {}
+
+  &__contact-tel {}
+
+  &__contact-mail {}
+
+  &__soc {}
+}
+
+.footer-nav {
+  &__title {
+    font-size: 22px;
+    font-weight: 800;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  &__item {
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  &__link {
+    display: inline-block;
+    @include r(767) {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.footer-nav__title>.footer-nav__link {
+  text-decoration: none;
+  padding: 0;
+  margin-bottom: 10px;
+  display: block;
+  @include rmax(767) {
+    border-bottom: 1px solid;
+    margin: 15px 0;
+  }
+}
+
+.a-panel .footer-nav__link {
+  @include rmax(767) {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    padding: .75em;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+}
+
+.a-container {
+  @include r(767) {
+    display: grid;
+    gap: $lg;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

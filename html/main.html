@@ -408,42 +408,44 @@
   <img src="../img/map.svg" alt="Регионы поставок">
 </div>
 
-<form class="form-order" name="form_order">
+<form class="form-order form" name="form_order">
   <div class="container container-sm">
-    <div class="form-order__pre">
-      <div class="form-order__pre-txt">
-        <h3 class="form__title">Оставьте заявку</h3>
-        <p>С вами свяжется персональный менеджер, который отрегулирует все вопросы и будет на связи 24/7</p>
-      </div>
-      <div class="form-order__pre-tel">
-       <span> Или позвоните нам:</span>
-        <a href="tel:+78312289080">+7 (831) 228-90-80</a>
-      </div>
-    </div>
-    <div class="form-order__body">
-      <div class="form-order__body-main">
-        <div class="form__line">
-          <input type="text" name="name" placeholder="Имя">
+    <div class="form-order__wrap">
+      <div class="form-order__pre">
+        <div class="form-order__pre-txt">
+          <h3 class="form__title">Оставьте заявку</h3>
+          <p>С вами свяжется персональный менеджер, который отрегулирует все вопросы и будет на связи 24/7</p>
         </div>
-        <div class="form__line">
-          <input type="tel" name="tel" placeholder="Телефон">
-        </div>
-        <div class="form__line">
-          <input type="mail" name="mail" placeholder="Почта">
+        <div class="form-order__pre-tel">
+         <span> Или позвоните нам:</span>
+          <a href="tel:+78312289080">+7 (831) 228-90-80</a>
         </div>
       </div>
-      <div class="form-order__body-side">
-        <div class="form__line">
-          <textarea name="msg" id="" rows="10" placeholder="Комментарий"></textarea>
+      <div class="form-order__body">
+        <div class="form-order__body-main">
+          <div class="form__line">
+            <input type="text" name="name" placeholder="Имя" required>
+          </div>
+          <div class="form__line">
+            <input type="tel" name="tel" placeholder="Телефон" required>
+          </div>
+          <div class="form__line">
+            <input type="mail" name="mail" placeholder="Почта" required>
+          </div>
+        </div>
+        <div class="form-order__body-side">
+          <textarea name="msg" id="" rows="9" placeholder="Комментарий" required></textarea>
+        </div>
+        <div class="form-order__footer">
+          <input class="check check--invert" id="form__confirm" type="checkbox" hidden checked>
+          <label class="form__confirm" for="form__confirm">Я согласен с условиями <a
+              href="#">политики&nbsp;конфиденциальноcти</a></label>
+          <div class="form__btn">
+            <button type="submit" class="btn">Отправить</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="form-order__footer">
-      <label for="form_confirm">
-        <input class="check" id="form_confirm" type="checkbox">
-        Я согласен с условиями <a href="#">политики конфиденциальноcти</a>
-      </label>
-      <button type="submit" class="btn">Отправить</button>
+
     </div>
   </div>
 </form>
@@ -452,7 +454,126 @@
 
   </div>
 
-  
+  <div class="footer round-top">
+  <div class="container container-sm">
+    <div class="footer__main">
+      <div class="footer__about">
+        <a href="/" class="footer__logo">
+          <img src="../img/logo-footer.png" alt="Володарский мукомольный комбинат">
+        </a>
+        <div class="footer__addr">606070, Нижегородская&nbsp;область, г.&nbsp;Володарск, улица&nbsp;Южная,&nbsp;19А</div>
+      </div>
+      <nav class="footer__nav footer-nav">
+        <ul class="footer-nav__list a-container">
+          <li class="footer-nav__title a-item">
+            <a href="#" class="footer-nav__link">Продукция
+              <span class="marker a-btn"></span>
+            </a>
+            <ul class="footer-nav__list a-panel">
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Пшеничная мука</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Ржаная мука</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Отруби</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Зерноотходы</a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer-nav__title a-item">
+            <a href="#" class="footer-nav__link">О компании
+              <span class="marker a-btn"></span>
+            </a>
+            <ul class="footer-nav__list a-panel">
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">История</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Документы</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Фото/видео</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Вакансии</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Новости</a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer-nav__title a-item">
+            <a href="#" class="footer-nav__link">Клиентам
+              <span class="marker a-btn"></span>
+            </a>
+            <ul class="footer-nav__list a-panel">
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Вопрос/ответ</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Потребителям</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Услуги элеватора</a>
+              </li>
+              <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer__contact">
+        <a class="footer__contact-tel" href="tel:+78312289080">+7 (831) 228-90-80</a>
+        <a class="footer__contact-mail" href="mailto:nn@wolodar.ru">nn@wolodar.ru</a>
+        <div class="footer__soc soclist">
+          <a href="#" class="soclist__item" target="_blank">
+            
+<svg class="iconsvg telegram ">
+  <use xlink:href="../img/sprite.svg#telegram"></use>
+</svg>
+
+          </a>
+          <a href="#" class="soclist__item" target="_blank">
+            
+<svg class="iconsvg vk ">
+  <use xlink:href="../img/sprite.svg#vk"></use>
+</svg>
+
+          </a>
+          <a href="#" class="soclist__item" target="_blank">
+            
+<svg class="iconsvg ig ">
+  <use xlink:href="../img/sprite.svg#ig"></use>
+</svg>
+
+          </a>
+          <a href="#" class="soclist__item" target="_blank">
+            
+<svg class="iconsvg vch ">
+  <use xlink:href="../img/sprite.svg#vch"></use>
+</svg>
+
+          </a>
+          <a href="#" class="soclist__item" target="_blank">
+            
+<svg class="iconsvg yt ">
+  <use xlink:href="../img/sprite.svg#yt"></use>
+</svg>
+
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
   <script src="../js/leader-line.min.js"></script>
   <script defer src="../js/vendor.js"></script>
   <script defer src="../js/main.js"></script>

@@ -1,5 +1,5 @@
 :root {
-  --lg: 30px;
+  --lg: 20px;
   --mask-both: linear-gradient(#000 0 0) center/calc(100% - 20px) calc(100% - 20px) no-repeat,
   radial-gradient(farthest-side, #000 100%, #0000) 0 0/40px 40px round;
   --mask-bottom: linear-gradient(#000 0 0) top/100% calc(100% - 20px) no-repeat,
@@ -10,7 +10,7 @@
 
 @media screen and (max-width: 767px) {
   :root {
-    --lg: 15px;
+    --lg: 20px;
   }
 }
 
@@ -31,7 +31,7 @@ $lg: var(--lg);
 
 $c-main: #FD9F32;
 $c-sec: #B69D86;
-$c-light: #eff2f6;
+$c-light: #F2EDE6;
 $c-text: #664B42;
 $c-black: #1C1616;
 $c-bg: #F7F7F7;
