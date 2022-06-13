@@ -86,7 +86,7 @@ a[href*="tel"] {
 }
 
 .section {
-  padding-top: calc(6 * $lg);
+  padding-top: calc(4 * $lg);
 	@include r(450){
     padding-top: calc(2 * $lg);
   }
@@ -112,7 +112,7 @@ a[href*="tel"] {
   @include r(650) {
     font-size: 32px;
   }
-  @include r(767) {
+  @include r(1023) {
     font-size: 36px;
   }
   &__selection {
@@ -131,7 +131,7 @@ a[href*="tel"] {
   font-weight: 800;
   margin: 0 0 .75em;
   font-size: 24px;
-  @include r(650){
+  @include r(1023){
     font-size: 32px;
   }
 }
