@@ -51,6 +51,10 @@
   }
 }
 
+.soclist {
+  text-align: center;
+}
+
 .mini-cart {
   position: relative;
   padding: 5px;
@@ -213,6 +217,15 @@
     }
 
   }
+}
+
+.marker {
+  display: none;
+  width: 26px;
+  height: 26px;
+  background: url('@/img/icon/dropdown.svg') no-repeat center center;
+  background-size: contain;
+  transition: all .3s;
 }
 
 @keyframes video {

@@ -3,16 +3,18 @@
 .nav {
 	margin: auto;
 	&__list {
-    position: relative;
-		list-style: none;
 		margin: 0;
 		padding: 0;
-		display: flex;
-    justify-content: center;
+		list-style: none;
     background-color: #fff;
-	}
-	&__item {
-    padding: .5em 1.5em;
+    @include r(1024) {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      .nav__item {
+        padding: .5em 1.5em;
+      }
+    }
 	}
 	&__link {
 		display: block;
@@ -22,7 +24,7 @@
 	}
 }
 
-@include r(lg) {
+@include r(1024) {
   .nav {
     display: flex;
     justify-content: center;
@@ -114,3 +116,8 @@
 	}
 }
 
+.hc-offcanvas-nav li:not(.custom-content) a {
+  display: flex;
+  align-items: center;
+  gap: .75em;
+}

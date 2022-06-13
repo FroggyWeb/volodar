@@ -204,38 +204,130 @@ a[href*="tel"] {
   padding: 40px 0;
   background: url('@/img/bg.jpg');
   margin-top: -20px;
-  &__main {}
 
-  &__about {}
+  &__main {
+    @include r(1360) {
+      display: grid;
+      gap: $lg;
+      grid-template-columns: auto 1fr auto;
+    }
+  }
 
-  &__logo {}
+  &__about {
+    @include r(451) {
+      display: flex;
+      gap: 60px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: $lg;
+      .footer__contact {
+        flex: 0 0 auto;
+        text-align: right;
+      }
+    }
+    @include r(767) {
+      align-items: flex-start;
+    }
+    @include rmax(450) {
+        text-align: center;
+        margin-bottom: $lg;
+        .footer__logo {
+          display: inline-block;
+          max-width:200px;
+          margin-bottom: $lg;
+        }
+      }
+    @include r(1360) {
+      flex-direction: column;
+    }
+  }
 
-  &__addr {}
+  &__logo {
 
-  &__nav {}
+  }
+
+  &__addr {
+    padding: 10px 0 0 20px;
+    background: url('@/img/map-footer.svg') top left no-repeat;
+    margin-top: calc(2*$lg);
+    max-width: 320px;
+    @include r(767) {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 0;
+    }
+  }
+
+  &__nav {
+    max-width: 750px;
+    margin: auto;
+    @include rmax(1360) {
+      margin-top: $lg;
+      margin: $lg auto 0;
+    }
+  }
 
   &__nav-list {}
 
-  &__contact {}
+  &__contact {
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
 
-  &__contact-tel {}
+  &__contact-tel {
+    font-size: 26px;
+    display: block;
+  }
 
-  &__contact-mail {}
+  &__post {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    @include r(767) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
 
-  &__soc {}
+
 }
 
 .footer-nav {
+  @include rmax(767) {
+    .a-panel {
+      overflow: hidden;
+      max-height: 0;
+      transition: all .25s ease-in-out;
+    }
+    .a-item.active .a-panel {
+      max-height: 500px;
+    }
+    .marker {
+      display: block;
+    }
+  }
   &__title {
     font-size: 22px;
     font-weight: 800;
+    @include rmax(767) {
+       border-bottom: 1px solid;
+    }
+  }
+
+  &__root {
+    @include r(767) {
+        display: grid;
+        gap: calc(2*$lg);
+        grid-template-columns: repeat(3, auto);
+      }
   }
 
   &__list {
     list-style: none;
     margin: 0;
     padding: 0;
-
   }
 
   &__item {
@@ -253,13 +345,18 @@ a[href*="tel"] {
 
 .footer-nav__title>.footer-nav__link {
   text-decoration: none;
-  padding: 0;
+  padding: 10px 0;
   margin-bottom: 10px;
   display: block;
   @include rmax(767) {
-    border-bottom: 1px solid;
-    margin: 15px 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
   }
+}
+
+.active .marker {
+  transform: rotate(180deg);
 }
 
 .a-panel .footer-nav__link {
@@ -273,10 +370,3 @@ a[href*="tel"] {
   }
 }
 
-.a-container {
-  @include r(767) {
-    display: grid;
-    gap: $lg;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
