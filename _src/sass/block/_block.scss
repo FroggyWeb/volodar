@@ -8,6 +8,7 @@
     background-color: transparent;
     appearance: none;
     color: $c-text;
+    font-size: 20px;
   }
   &__soc {
     margin-top: -.5em;
@@ -59,9 +60,11 @@
   position: relative;
   padding: 5px;
   border-radius: 3px;
-  background-color: $c-bg;
+  font-size: 20px;
+  display: inline-block;
   /* .mini-cart__count */
   &__count {
+    color: #fff;
     position: absolute;
     width: 16px;
     height: 16px;
@@ -121,15 +124,11 @@
   font-weight: 800;
   text-decoration: none;
   white-space: nowrap;
-  &:after {
-    content: "";
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    background: url('@/img/icon/arrow.svg') no-repeat;
-    background-size: cover;
-    transition: all .3s;
-    margin: .25em 0 0 .5em;
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  .iconsvg {
+    font-size: .75em;
   }
 }
 
@@ -141,6 +140,9 @@
 }
 .round-top{
   mask: var(--mask-top);
+}
+.round-left{
+  mask: var(--mask-left);
 }
 
 .bg-card {
@@ -239,6 +241,137 @@
   }
 }
 
+.sec-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+
+  @include r(1280) {
+    flex-direction: column;
+  }
+
+  @include rmax(767) {
+    display: none;
+  }
+
+  /* .sec-nav__item */
+  &__item {}
+
+  /* sec-nav__link */
+  &__link {
+    text-decoration: none;
+    font-size: 18px;
+    color: $c-sec;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    transition: all .3s;
+
+    @include r(1023) {
+      font-size: 22px;
+    }
+
+    &:hover {
+      color: $c-main;
+    }
+
+    &.active {
+      color: $c-main;
+    }
+
+    &.active:before {
+      content: "";
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      margin-right: .5em;
+      border-radius: 50%;
+      border: 1px solid $c-main;
+      background: radial-gradient($c-main 30%, #fff 30%);
+    }
+  }
+}
+
+.intro {
+  display: grid;
+  gap: 3vw;
+  align-items: start;
+
+  @include r(1280) {
+    grid-template-columns: 300px 1fr;
+  }
+  /* .intro__nav */
+  &__nav {}
+  /* .intro__slide */
+  &__slide {
+    background: url("@/img/bg.jpg");
+    @include r(767) {
+      display: grid;
+      gap: $lg;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* .intro__slide-cnt */
+  &__slide-cnt {
+    padding: 40px;
+    align-self: center;
+  }
+
+  /* .intro__title */
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 1em;
+    line-height: 1;
+    @include r(1023) {
+      font-size: 36px;
+    }
+  }
+
+  /* .intro__slide-img */
+  &__slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    &.round-left {
+      @include rmax(767) {
+        mask: var(--mask-top)
+      }
+    }
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+  @include r(1024) {
+    font-size: 22px;
+  }
+  /* .list__item */
+  &__item {
+    padding-left: 1em;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0.35em;
+      left: 0;
+      border-radius: 50%;
+      background-color: $c-main;
+      width: .5em;
+      height: .5em;
+    }
+  }
+}
 
 
 

@@ -1,0 +1,318 @@
+{% extends "./parthtml/base.html" %} {% block content %}
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <span href="#" class="breadcrumbs__link">Наша компания</span>
+    </li>
+  </ul>
+  <div class="intro">
+    <ul class="intro__nav sec-nav">
+      <li class="sec-nav__item">
+        <a href="#" class="sec-nav__link active">Наша компания</a>
+      </li>
+      <li class="sec-nav__item">
+        <a href="#" class="sec-nav__link">История комбината</a>
+      </li>
+      <li class="sec-nav__item">
+        <a href="#" class="sec-nav__link">Документы и награды</a>
+      </li>
+      <li class="sec-nav__item">
+        <a href="#" class="sec-nav__link">Фото-видео</a>
+      </li>
+    </ul>
+    <div class="intro__main">
+      <h1 class="title title-mob-center">Сохраняем традиционные для России рецепты хлебобулочных изделий</h1>
+      <div class="intro__slide round-both">
+        <div class="intro__slide-cnt">
+          <div class="intro__title">В этом нам помогает
+          </div>
+          <ul class="list">
+            <li class="list__item">Качественное и экологическое сырье</li>
+            <li class="list__item">Индивидуальный подход к нашим клиентам</li>
+            <li class="list__item">Квалифицированные сотрудники, всегда готовые помочь.</li>
+          </ul>
+        </div>
+        <img src="@/img/content/about/about_slide.jpg" alt="" class="intro__slide-img round-left">
+      </div>
+    </div>
+  </div>
+  <section class="priority section">
+    <h2 class="priority__title title title--center">
+      Наши <span class="strong">главные </span>приоритеты
+    </h2>
+    <div class="priority__list">
+      <div class="priority-item">
+        <div class="priority-item__img">
+          <img src="@/img/content/about/ico-priority-1.svg" alt="Экологичность">
+        </div>
+        Экологичность
+      </div>
+      <div class="priority-item">
+        <div class="priority-item__img">
+          <img src="@/img/content/about/ico-priority-2.svg" alt="Доступность">
+        </div>
+        Доступность
+      </div>
+      <div class="priority-item">
+        <div class="priority-item__img">
+          <img src="@/img/content/about/ico-priority-3.svg" alt="Качество">
+        </div>
+        Качество
+      </div>
+    </div>
+  </section>
+
+  <section class="section indicators-wrap">
+    <h2 class="indicators__title title title--center">
+      Мы - <span class="strong">большое </span>производство
+    </h2>
+    <div class="indicators">
+      <div class="indicators__item indicator">
+        <div class="indicator__title">
+          <div class="indicator__count">3</div>
+          производственные линии по размолу зерна
+        </div>
+        <img src="@/img/content/about/indicators-1.jpg" alt="линии">
+      </div>
+      <div class="indicators__item indicator">
+        <div class="indicator__title">
+          <div class="indicator__count">48</div>
+          вагонов под погрузку можно разместить на ж/д путях предприятия
+        </div>
+        <img src="@/img/content/about/indicators-2.jpg" alt="вагоны">
+      </div>
+      <div class="indicators__item indicator">
+        <div class="indicator__title indicator__title--short">
+          <div class="indicator__count">50&nbsp;тыс.<br> тонн</div>
+          зерна - мощность элеватора
+        </div>
+        <img src="@/img/content/about/indicators-3.jpg" alt="элеватор">
+      </div>
+      <div class="indicators__item indicator">
+        <div class="indicator__title indicator__title--short">
+          <div class="indicator__count">190&nbsp;м<sup>2</sup></div>
+          занимаемая территория
+        </div>
+        <img src="@/img/content/about/indicators-4.jpg" alt="элеватор">
+      </div>
+      <div class="indicators__item indicator">
+        <div class="indicator__title indicator__title--short">
+          <div class="indicator__count">8</div>
+          сертифицированных муковозов x 14–25 тонн
+        </div>
+        <img src="@/img/content/about/indicators-5.jpg" alt="элеватор">
+      </div>
+      <div class="indicators__item indicator">
+        <div class="indicator__title indicator__title--short indicator__title--right">
+          <div class="indicator__count">170</div>
+          сотрудников
+        </div>
+        <img src="@/img/content/about/indicators-6.jpg" alt="элеватор">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wares">
+      <div class="title title--center">Из производимой
+        на предприятии муки можно испечь
+        <span class="strong">по 1 батону в сутки на каждого жителя</span> Нижегородской области
+      </div>
+    </div>
+  </section>
+
+  <div class="section">
+    <div class="production-step fill-block round-top">
+      <div class="production-step__cnt-wrap">
+        <div class="production-step__cnt" id="step-3">
+          <h2 class="production-step__title title-sub"><span class="strong">Собственная</span><br>
+            аттестованая<br> лаборатория</h2>
+        </div>
+      </div>
+      <img class="fill-block__img" src="@/img/content/about/lab.jpg" alt="2 000 тонн">
+    </div>
+  </div>
+
+  <div class="production-step labs-info">
+    <div class="production-step__cnt-wrap">
+      <div class="production-step__cnt" id="step-4">
+        <h3 class="production-step__title title-sub">Что исследуется?</h3>
+        <ul class="list">
+          <li class="list__item">Содержание протеина, клейковины</li>
+          <li class="list__item">Наличие сорной зерновой примеси</li>
+          <li class="list__item">Натурный вес, органолептика (вкус, запах, цвет)</li>
+          <li class="list__item">Уровень влажности, степень стекловидности</li>
+        </ul>
+        <div class="callout">
+          <img src="@/img/content/about/labs-2.png" alt="">
+          <div class="callout__item round-both">
+            Лаборатория оснащена
+            высокотехнологичным
+            оборудованием
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="production-step__img">
+      <img class="round-top " src="@/img/content/about/labs-1.png" alt="Лаборатория">
+
+    </div>
+  </div>
+
+  <section>
+    <h2 class="title title--center">
+      <span class="strong">Профессиональное</span> оборудование
+    </h2>
+    <div class="equipment-list">
+      <div class="equipment">
+        <div class="equipment__img">
+          <img src="@/img/content/about/equipment-1.jpg" alt="">
+          <div class="equipment__img-logo">
+            <img src="@/img/content/about/equipment-logo-1.png" alt="">
+          </div>
+        </div>
+        <div class="equipment__txt">
+          Зерноочистка, оснащена современными машинами производства Buhler, Cimbria Heid GmbH, позволяет выпускать
+          муку высочайшего качества.
+        </div>
+      </div>
+      <div class="equipment">
+        <div class="equipment__img">
+          <img src="@/img/content/about/equipment-2.jpg" alt="">
+        </div>
+        <div class="equipment__txt">
+          ПТЛ оборудована инфракрасным анализатором сырья и продукции франзузского производства, пробоотборником,
+          позволяющим
+          сократить время отбора проб.
+
+        </div>
+      </div>
+      <div class="equipment">
+        <div class="equipment__img">
+          <img src="@/img/content/about/equipment-3.jpg" alt="">
+          <div class="equipment__img-logo">
+            <img src="@/img/content/about/equipment-logo-2.png" alt="">
+          </div>
+        </div>
+        <div class="equipment__txt">
+          Автоматическая линия фасовки NewProject для муки высшего сорта в пакетах по 2кг.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section container--sm">
+    <div class="peoples event">
+      <h2 class="title title--center">
+        Наши главные лица
+      </h2>
+      <div class="people">
+        <div class="people__photo">
+          <img src="@/img/content/about/people-1.jpg" alt="Ольга Александровна Дворникова">
+        </div>
+        <div class="people__txt">
+          <div class="people__position">директор</div>
+          <div class="people__name">Ольга Александровна Дворникова</div>
+        </div>
+      </div>
+      <div class="people">
+        <div class="people__photo">
+          <img src="@/img/content/about/people-2.jpg" alt="Ирина Романовна Крошилина">
+        </div>
+        <div class="people__txt">
+          <div class="people__position">финансовый директор</div>
+          <div class="people__name">Ирина Романовна Крошилина</div>
+        </div>
+      </div>
+      <div class="people">
+        <div class="people__photo">
+          <img src="@/img/content/about/people-3.jpg" alt="Юлия Анатольевна Кислюнина">
+        </div>
+        <div class="people__txt">
+          <div class="people__position">начальник ПТЛ</div>
+          <div class="people__name">Юлия Анатольевна Кислюнина</div>
+        </div>
+      </div>
+      <div class="people">
+        <div class="people__photo">
+          <img src="@/img/content/about/people-4.jpg" alt="Александр Викторович Калинин">
+        </div>
+        <div class="people__txt">
+          <div class="people__position">технический директор</div>
+          <div class="people__name">Александр Викторович Калинин</div>
+        </div>
+      </div>
+    </div>
+    <div class="peoples-lead title-small title--center">На нашем комбинате дружно работает <span
+        class="strong">170&nbsp;сотрудников</span>, которые
+      усердно трудятся чтобы получть достойное качество сырья.</div>
+  </div>
+
+  <div class="departament-contacts">
+    <div class="container--sm">
+      <div class="departament-contact">
+        <div class="contact">
+          <div class="contact__name">Бугалтерия</div>
+          <a href="tel: 800000000" class="contact__tel">8 000 000 00 00</a>
+          <a href="mailto: mkv@mkvolod.ru" class="contact__mail">mkv@mkvolod.ru</a>
+        </div>
+        <div class="contact">
+          <a href="#" class="contact__name link-arr">Отдел продаж
+            {{ macro.iconSvg('arr-short') }}
+          </a>
+          <a href="tel: 800000000" class="contact__tel">8 000 000 00 00</a>
+          <a href="mailto: mkv@mkvolod.ru" class="contact__mail">mkv@mkvolod.ru</a>
+        </div>
+        <div class="contact">
+          <a href="#" class="contact__name link-arr">Отдел снабжения
+            {{ macro.iconSvg('arr-short') }}
+          </a>
+          <a href="tel: 800000000" class="contact__tel">8 000 000 00 00</a>
+          <a href="mailto: mkv@mkvolod.ru" class="contact__mail">mkv@mkvolod.ru</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section container--sm">
+    <h2 class="title title--center">Узнать больше</h2>
+    <div class="section-links">
+      <a href="#" class="section-link">
+        <div class="section-link__icon">
+          <img src="@/img/icon/about-history.svg" alt="">
+        </div>
+        <div class="section-link__txt">
+          Наша история
+          {{ macro.iconSvg('arr-long') }}
+        </div>
+      </a>
+      <a href="#" class="section-link">
+        <div class="section-link__icon">
+          <img src="@/img/icon/about-document.svg" alt="">
+        </div>
+        <div class="section-link__txt">
+          Документы
+          {{ macro.iconSvg('arr-long') }}
+        </div>
+      </a>
+      <a href="#" class="section-link">
+        <div class="section-link__icon">
+          <img src="@/img/icon/about-camera.svg" alt="">
+        </div>
+        <div class="section-link__txt">
+          Фото-видео
+          {{ macro.iconSvg('arr-long') }}
+        </div>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- end-container -->
+</div>
+
+
+{% endblock %}

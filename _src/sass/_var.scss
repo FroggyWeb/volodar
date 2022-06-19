@@ -6,13 +6,28 @@
   radial-gradient(circle farthest-side, #000 98%, #0000) bottom/37.00px 40px repeat-x;
   --mask-top: linear-gradient(#000 0 0) bottom/100% calc(100% - 20px) no-repeat,
   radial-gradient(circle farthest-side, #000 98%, #0000) top/37.00px 40px repeat-x;
-}
+  --mask-left:
+  radial-gradient(circle farthest-side, #000 100%, #0000) left/39.00px 40px repeat-y, linear-gradient(to right, transparent 20px, #000 20px);
 
-@media screen and (max-width: 767px) {
-  :root {
-    --lg: 20px;
+}
+@media screen and (min-width: 767px) {
+  html {
+    font-size: 18px;
+  }
+  body {
+    --lg: 35px;
   }
 }
+
+@media screen and (min-width: 1023px) {
+  html {
+    font-size: 20px;
+  }
+  body {
+    --lg: 70px;
+  }
+}
+
 
 $breakpoints: (
   "xs": 480px,
@@ -47,4 +62,6 @@ $container-max-widths: (
   xxl: 1400px,
 );
 
-
+// * {
+//   outline: 1px solid #000;
+// }

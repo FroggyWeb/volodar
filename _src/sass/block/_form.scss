@@ -63,10 +63,6 @@ input.check {
   }
 }
 
-.form__line:not(:last-child) {
-  margin-bottom: $lg;
-}
-
 .popup-form {
   display: none;
   max-width: 500px;
@@ -158,6 +154,7 @@ input.check {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 20px;
   }
 
   &__body-side {
@@ -201,8 +198,10 @@ input.check {
   overflow: hidden;
   background: #FD9F32;
   box-shadow: 7px 4px 15px hsl(27deg 34% 69% / 45%);
+  transition: all .3s;
   &:hover {
     cursor: pointer;
+    color: $c-text;
     box-shadow: 0 0 0.8em rgba($c-text, 0.3);
     span {
       transform: translateX(-1em);
