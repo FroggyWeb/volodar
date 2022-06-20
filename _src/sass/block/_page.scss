@@ -402,6 +402,8 @@ a[href*="tel"] {
   list-style: none;
   margin: 50px 0;
   padding: 0;
+  position: relative;
+  z-index: 1;
   /* .breadcrumbs__item */
   &__item {
     margin: 0 .5em;
