@@ -115,9 +115,6 @@
   }
   @include r(767) {
     width: 270px;
-    &:hover {
-      width: 100%;
-    }
   }
   /* .product-mark__name */
   &__name {
@@ -216,7 +213,7 @@ body:not(.touch) .product:hover .pfoot,
 body:not(.touch) .product-mark:hover,
 .product-mark.open {
   border-color: $c-text;
-
+  width: 100%;
   .product-mark__to-basket {
     display: flex;
   }
@@ -242,7 +239,7 @@ body:not(.touch) .product-mark:hover,
     border-radius: 6px;
   }
 
-  .mini-cart {
+  .product-mark__to-basket .mini-cart {
     display: none;
   }
 

@@ -17,8 +17,12 @@ if (products) {
     }
 
     //показ заказа марки продукта
-    if (e.target.classList.contains('product-mark__name')) {
-
+    if (e.target.closest('.product-mark')) {
+      const open = document.querySelector('.product-mark.open')
+      if (open && !e.target.classList.contains('open')) {
+        open.classList.remove('open')
+      }
+      e.target.closest('.product-mark').classList.toggle('open')
     }
   })
 }
