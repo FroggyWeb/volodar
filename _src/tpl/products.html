@@ -1,4 +1,6 @@
-{% extends "./parthtml/base.html" %} {% block content %}
+{% extends "./parthtml/base.html" %}
+
+{% block content %}
 <div class="container container--sm">
   <ul class="breadcrumbs">
     <li class="breadcrumbs__item">
@@ -17,184 +19,483 @@
     </div>
   </div>
 
-  <div class="section products">
-    <div class="product">
-      <div class="product__main">
-        <div class="product__cnt">
-          <a href="#" class="product__name link-arr-hover">
-            <span>Крупа Манная</span>
-          </a>
-          <div class="product-mark">
-            <div class="product-mark__name">Марки м</div>
-            <div class="product-mark__to-basket to-basket">
-              <a href="#sendorder" class="btn">Оставить заявку</a>
-              <a href="#" class="add-to-basket">Добавить в корзину
-                <div class="mini-cart">
-                  {{ macro.iconSvg('cart') }}
-                  <div class="mini-cart__count">+</div>
-                </div>
+    <div class="section products">
+
+      <ul class="products__nav sec-nav">
+        <li class="sec-nav__item">
+          <a class="sec-nav__link mixitup-control-active" data-filter = "all">Всё</a>
+        </li>
+        <li class="sec-nav__item">
+          <a class="sec-nav__link" data-filter = "[data-mix='Крупа']">Крупа</a>
+        </li>
+        <li class="sec-nav__item">
+          <a class="sec-nav__link" data-filter = "[data-mix='Мука']">Мука</a>
+        </li>
+        <li class="sec-nav__item">
+          <a class="sec-nav__link" data-filter = "[data-mix='Отруби']">Отруби</a>
+        </li>
+        <li class="sec-nav__item">
+          <a class="sec-nav__link" data-filter = "[data-mix='Зерноотходы']">Зерноотходы</a>
+        </li>
+      </ul>
+
+      <div class="mixed">
+        <div class="product mix" data-mix="Крупа">
+          <div class="product__main">
+            <div class="product__cnt">
+              <a href="#" class="product__name link-arr-hover">
+                <span>Крупа Манная</span>
               </a>
-            </div>
-          </div>
-        </div>
-        <a href="#" class="product__img">
-          <img src="@/img/content/product/product_card_1.png" alt="">
-        </a>
-      </div>
-      <footer class="product__footer">
-        <div class="product__footer-custom">
-          <div class="product__footer-custom-name">Мука по индивидуальным параметрам</div>
-          <div class="to-basket">
-            <a href="#sendorder" class="btn">Оставить заявку</a>
-            <a href="#" class="add-to-basket">Добавить в корзину
-              <div class="mini-cart">
-                {{ macro.iconSvg('cart') }}
-                <div class="mini-cart__count">+</div>
+              <div class="product-mark">
+                <div class="product-mark__name">Марки м</div>
+                <div class="product-mark__to-basket to-basket">
+                  <a href="#sendorder" class="btn">Оставить заявку</a>
+                  <a href="#" class="add-to-basket">Добавить в корзину
+                    <div class="mini-cart">
+                      {{ macro.iconSvg('cart') }}
+                      <div class="mini-cart__count">+</div>
+                    </div>
+                  </a>
+                </div>
               </div>
+            </div>
+            <a href="#" class="product__img">
+              <img src="@/img/content/product/product_card_1.png" alt="">
+            </a>
+          </div>
+          <footer class="product__footer">
+            <div class="product__footer-custom">
+              <div class="product__footer-custom-name">Крупа по индивидуальным параметрам</div>
+              <div class="to-basket">
+                <a href="#sendorder" class="btn">Оставить заявку</a>
+                <a href="#" class="add-to-basket">Добавить в корзину
+                  <div class="mini-cart">
+                    {{ macro.iconSvg('cart') }}
+                    <div class="mini-cart__count">+</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="product__footer-post pfoot">
+              <div class="pfoot__production">
+                <div class="pfoot__title">Произведем</div>
+                Произведем продукцию по вашим индивидуальным потребностям
+              </div>
+              <div class="pfoot__pack">
+                <div class="pfoot__title">Упакуем</div>
+                <div class="pfoot__param">
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-pack') }} Пакет
+                    <span>2 кг</span>
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-bag') }} Мешок
+                    <span>5,10,25,50 кг</span>
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-auto') }} Авто
+                    <span>в таре, бестарно</span>
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-carriage') }} Вагон
+                    <span>в таре, бестарно</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pfoot__pack">
+                <div class="pfoot__title">Доставим в срок</div>
+                <div class="pfoot__param">
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-user') }} Самовывоз
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-auto') }} Авто
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-auto') }} Муковоз
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-carriage') }} Вагон
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="product__readmore">читать ещё</a>
+          </footer>
+        </div>
+
+        <div class="product" data-mix='Мука'>
+          <div class="product__main">
+            <div class="product__cnt">
+              <a href="#" class="product__name link-arr-hover">
+                <span>Мука пшеничная Хлебопекарная</span>
+              </a>
+              <div class="product-mark">
+                <div class="product-mark__name">Высший сорт</div>
+                <div class="product-mark__to-basket to-basket">
+                  <a href="#sendorder" class="btn">Оставить заявку</a>
+                  <a href="#" class="add-to-basket">Добавить в корзину
+                    <div class="mini-cart">
+                      {{ macro.iconSvg('cart') }}
+                      <div class="mini-cart__count">+</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="product-mark">
+                <div class="product-mark__name">Сорт Экстра</div>
+                <div class="product-mark__to-basket to-basket">
+                  <a href="#sendorder" class="btn">Оставить заявку</a>
+                  <a href="#" class="add-to-basket">Добавить в корзину
+                    <div class="mini-cart">
+                      {{ macro.iconSvg('cart') }}
+                      <div class="mini-cart__count">+</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="product-mark">
+                <div class="product-mark__name">1 сорт</div>
+                <div class="product-mark__to-basket to-basket">
+                  <a href="#sendorder" class="btn">Оставить заявку</a>
+                  <a href="#" class="add-to-basket">Добавить в корзину
+                    <div class="mini-cart">
+                      {{ macro.iconSvg('cart') }}
+                      <div class="mini-cart__count">+</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="product-mark">
+                <div class="product-mark__name">2 сорт</div>
+                <div class="product-mark__to-basket to-basket">
+                  <a href="#sendorder" class="btn">Оставить заявку</a>
+                  <a href="#" class="add-to-basket">Добавить в корзину
+                    <div class="mini-cart">
+                      {{ macro.iconSvg('cart') }}
+                      <div class="mini-cart__count">+</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="product-mark">
+                <div class="product-mark__name">М55-23</div>
+                <div class="product-mark__to-basket to-basket">
+                  <a href="#sendorder" class="btn">Оставить заявку</a>
+                  <a href="#" class="add-to-basket">Добавить в корзину
+                    <div class="mini-cart">
+                      {{ macro.iconSvg('cart') }}
+                      <div class="mini-cart__count">+</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="product__img">
+              <img src="@/img/content/product/product_card_2.png" alt="">
+            </a>
+          </div>
+          <footer class="product__footer">
+            <div class="product__footer-custom">
+              <div class="product__footer-custom-name">Мука по индивидуальным параметрам</div>
+              <div class="to-basket">
+                <a href="#sendorder" class="btn">Оставить заявку</a>
+                <a href="#" class="add-to-basket">Добавить в корзину
+                  <div class="mini-cart">
+                    {{ macro.iconSvg('cart') }}
+                    <div class="mini-cart__count">+</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="product__footer-post pfoot">
+              <div class="pfoot__production">
+                <div class="pfoot__title">Произведем</div>
+                Произведем продукцию по вашим индивидуальным потребностям
+              </div>
+              <div class="pfoot__pack">
+                <div class="pfoot__title">Упакуем</div>
+                <div class="pfoot__param">
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-pack') }} Пакет
+                    <span>2 кг</span>
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-bag') }} Мешок
+                    <span>5,10,25,50 кг</span>
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-auto') }} Авто
+                    <span>в таре, бестарно</span>
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-carriage') }} Вагон
+                    <span>в таре, бестарно</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pfoot__pack">
+                <div class="pfoot__title">Доставим в срок</div>
+                <div class="pfoot__param">
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-user') }} Самовывоз
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-auto') }} Авто
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-auto') }} Муковоз
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-carriage') }} Вагон
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+
+        <div class="product" data-mix='Мука'>
+          <div class="product__main">
+            <div class="product__cnt">
+              <a href="#" class="product__name link-arr-hover">
+                <span>Ржаная мука</span>
+              </a>
+              <div class="product-mark">
+                <div class="product-mark__name">Обдирная</div>
+                <div class="product-mark__to-basket to-basket">
+                  <a href="#sendorder" class="btn">Оставить заявку</a>
+                  <a href="#" class="add-to-basket">Добавить в корзину
+                    <div class="mini-cart">
+                      {{ macro.iconSvg('cart') }}
+                      <div class="mini-cart__count">+</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="product__img">
+              <img src="@/img/content/product/product_card_3.png" alt="">
             </a>
           </div>
         </div>
-        <div class="product__footer-post pfoot">
-          <div class="pfoot__production">
-            <div class="pfoot__title">Произведем</div>
-            Произведем продукцию по вашим индивидуальным потребностям
-          </div>
-          <div class="pfoot__pack">
-            <div class="pfoot__title">Упакуем</div>
-            <div class="pfoot__param">
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-pack') }} Пакет
-                <span>2 кг</span>
-              </div>
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-bag') }} Мешок
-                <span>5,10,25,50 кг</span>
-              </div>
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-auto') }} Авто
-                <span>в таре, бестарно</span>
-              </div>
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-carriage') }} Вагон
-                <span>в таре, бестарно</span>
-              </div>
-            </div>
-          </div>
-          <div class="pfoot__pack">
-            <div class="pfoot__title">Доставим в срок</div>
-            <div class="pfoot__param">
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-user') }} Самовывоз
-              </div>
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-auto') }} Авто
-              </div>
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-auto') }} Муковоз
-              </div>
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-carriage') }} Вагон
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="#" class="product__readmore">читать ещё</a>
-      </footer>
-    </div>
-    <div class="product">
-      <div class="product__main">
-        <div class="product__cnt">
-          <a href="#" class="product__name link-arr-hover">
-            <span>Мука пшеничная Хлебопекарная</span>
-          </a>
-          <div class="product-mark">
-            <div class="product-mark__name">Высший сорт</div>
-            <div class="product-mark__to-basket to-basket">
-              <a href="#sendorder" class="btn">Оставить заявку</a>
-              <a href="#" class="add-to-basket">Добавить в корзину
-                <div class="mini-cart">
-                  {{ macro.iconSvg('cart') }}
-                  <div class="mini-cart__count">+</div>
-                </div>
+
+        <div class="product" data-mix='Отруби'>
+          <div class="product__main">
+            <div class="product__cnt">
+              <a href="#" class="product__name link-arr-hover">
+                <span>Пшеничные отруби</span>
               </a>
-            </div>
-          </div>
-          <div class="product-mark">
-            <div class="product-mark__name">Сорт Экстра</div>
-            <div class="product-mark__to-basket to-basket">
-              <a href="#sendorder" class="btn">Оставить заявку</a>
-              <a href="#" class="add-to-basket">Добавить в корзину
-                <div class="mini-cart">
-                  {{ macro.iconSvg('cart') }}
-                  <div class="mini-cart__count">+</div>
+              <div class="product-mark">
+                <div class="product-mark__name">На кормовые цели</div>
+                <div class="product-mark__to-basket to-basket">
+                  <a href="#sendorder" class="btn">Оставить заявку</a>
+                  <a href="#" class="add-to-basket">Добавить в корзину
+                    <div class="mini-cart">
+                      {{ macro.iconSvg('cart') }}
+                      <div class="mini-cart__count">+</div>
+                    </div>
+                  </a>
                 </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <a href="#" class="product__img">
-          <img src="@/img/content/product/product_card_1.png" alt="">
-        </a>
-      </div>
-      <footer class="product__footer">
-        <div class="product__footer-custom">
-          <div class="product__footer-custom-name">Мука по индивидуальным параметрам</div>
-          <div class="to-basket">
-            <a href="#sendorder" class="btn">Оставить заявку</a>
-            <a href="#" class="add-to-basket">Добавить в корзину
-              <div class="mini-cart">
-                {{ macro.iconSvg('cart') }}
-                <div class="mini-cart__count">+</div>
               </div>
+              <div class="product-mark">
+                <div class="product-mark__name">На пищевые цели</div>
+                <div class="product-mark__to-basket to-basket">
+                  <a href="#sendorder" class="btn">Оставить заявку</a>
+                  <a href="#" class="add-to-basket">Добавить в корзину
+                    <div class="mini-cart">
+                      {{ macro.iconSvg('cart') }}
+                      <div class="mini-cart__count">+</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="product__img">
+              <img src="@/img/content/product/product_card_4.png" alt="">
+            </a>
+          </div>
+          <footer class="product__footer">
+            <div class="product__footer-custom">
+              <div class="product__footer-custom-name">Крупа по индивидуальным параметрам</div>
+              <div class="to-basket">
+                <a href="#sendorder" class="btn">Оставить заявку</a>
+                <a href="#" class="add-to-basket">Добавить в корзину
+                  <div class="mini-cart">
+                    {{ macro.iconSvg('cart') }}
+                    <div class="mini-cart__count">+</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="product__footer-post pfoot">
+              <div class="pfoot__production">
+                <div class="pfoot__title">Произведем</div>
+                Произведем продукцию по вашим индивидуальным потребностям
+              </div>
+              <div class="pfoot__pack">
+                <div class="pfoot__title">Упакуем</div>
+                <div class="pfoot__param">
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-pack') }} Пакет
+                    <span>2 кг</span>
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-bag') }} Мешок
+                    <span>5,10,25,50 кг</span>
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-auto') }} Авто
+                    <span>в таре, бестарно</span>
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-carriage') }} Вагон
+                    <span>в таре, бестарно</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pfoot__pack">
+                <div class="pfoot__title">Доставим в срок</div>
+                <div class="pfoot__param">
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-user') }} Самовывоз
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-auto') }} Авто
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-auto') }} Муковоз
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-carriage') }} Вагон
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="product__readmore">читать ещё</a>
+          </footer>
+        </div>
+
+        <div class="product" data-mix='Отруби'>
+          <div class="product__main">
+            <div class="product__cnt">
+              <a href="#" class="product__name link-arr-hover">
+                <span>Ржаные отруби</span>
+              </a>
+              <div class="product-mark">
+                <div class="product-mark__name">На кормовые цели</div>
+                <div class="product-mark__to-basket to-basket">
+                  <a href="#sendorder" class="btn">Оставить заявку</a>
+                  <a href="#" class="add-to-basket">Добавить в корзину
+                    <div class="mini-cart">
+                      {{ macro.iconSvg('cart') }}
+                      <div class="mini-cart__count">+</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="product-mark">
+                <div class="product-mark__name">На пищевые цели</div>
+                <div class="product-mark__to-basket to-basket">
+                  <a href="#sendorder" class="btn">Оставить заявку</a>
+                  <a href="#" class="add-to-basket">Добавить в корзину
+                    <div class="mini-cart">
+                      {{ macro.iconSvg('cart') }}
+                      <div class="mini-cart__count">+</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="product__img">
+              <img src="@/img/content/product/product_card_4.png" alt="">
+            </a>
+          </div>
+          <footer class="product__footer">
+            <div class="product__footer-custom">
+              <div class="product__footer-custom-name">Крупа по индивидуальным параметрам</div>
+              <div class="to-basket">
+                <a href="#sendorder" class="btn">Оставить заявку</a>
+                <a href="#" class="add-to-basket">Добавить в корзину
+                  <div class="mini-cart">
+                    {{ macro.iconSvg('cart') }}
+                    <div class="mini-cart__count">+</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="product__footer-post pfoot">
+              <div class="pfoot__production">
+                <div class="pfoot__title">Произведем</div>
+                Произведем продукцию по вашим индивидуальным потребностям
+              </div>
+              <div class="pfoot__pack">
+                <div class="pfoot__title">Упакуем</div>
+                <div class="pfoot__param">
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-pack') }} Пакет
+                    <span>2 кг</span>
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-bag') }} Мешок
+                    <span>5,10,25,50 кг</span>
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-auto') }} Авто
+                    <span>в таре, бестарно</span>
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-carriage') }} Вагон
+                    <span>в таре, бестарно</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pfoot__pack">
+                <div class="pfoot__title">Доставим в срок</div>
+                <div class="pfoot__param">
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-user') }} Самовывоз
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-auto') }} Авто
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-auto') }} Муковоз
+                  </div>
+                  <div class="pfoot__line">
+                    {{ macro.iconSvg('prod-carriage') }} Вагон
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="product__readmore">читать ещё</a>
+          </footer>
+        </div>
+
+        <div class="product" data-mix='Зерноотходы'>
+          <div class="product__main">
+            <div class="product__cnt">
+              <a href="#" class="product__name link-arr-hover">
+                <span>Зерноотходы</span>
+              </a>
+              <div class="to-basket">
+                <a href="#sendorder" class="btn">Оставить заявку</a>
+                <a href="#" class="add-to-basket">Добавить в корзину
+                  <div class="mini-cart">
+                    {{ macro.iconSvg('cart') }}
+                    <div class="mini-cart__count">+</div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+            <a href="#" class="product__img">
+              <img src="@/img/content/product/product_card_5.png" alt="">
             </a>
           </div>
         </div>
-        <div class="product__footer-post pfoot">
-          <div class="pfoot__production">
-            <div class="pfoot__title">Произведем</div>
-            Произведем продукцию по вашим индивидуальным потребностям
-          </div>
-          <div class="pfoot__pack">
-            <div class="pfoot__title">Упакуем</div>
-            <div class="pfoot__param">
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-pack') }} Пакет
-                <span>2 кг</span>
-              </div>
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-bag') }} Мешок
-                <span>5,10,25,50 кг</span>
-              </div>
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-auto') }} Авто
-                <span>в таре, бестарно</span>
-              </div>
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-carriage') }} Вагон
-                <span>в таре, бестарно</span>
-              </div>
-            </div>
-          </div>
-          <div class="pfoot__pack">
-            <div class="pfoot__title">Доставим в срок</div>
-            <div class="pfoot__param">
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-user') }} Самовывоз
-              </div>
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-auto') }} Авто
-              </div>
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-auto') }} Муковоз
-              </div>
-              <div class="pfoot__line">
-                {{ macro.iconSvg('prod-carriage') }} Вагон
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+      </div>
+
   </div>
 
 

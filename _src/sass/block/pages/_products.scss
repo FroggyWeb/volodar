@@ -29,9 +29,13 @@
   }
 }
 
+.products__nav {
+  margin-bottom: $lg;
+}
+
 .product {
   padding: $lg;
-  background: url('@/img/bg.jpg');
+  background: url('@/img/bg-saturate.jpg');
   border-radius: 16px;
   &:not(:last-child) {
     margin-bottom: $lg;
@@ -239,7 +243,7 @@ body:not(.touch) .product-mark:hover,
     border-radius: 6px;
   }
 
-  .product-mark__to-basket .mini-cart {
+  .product .mini-cart {
     display: none;
   }
 

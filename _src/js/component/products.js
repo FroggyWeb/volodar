@@ -1,5 +1,26 @@
+import mixitup from 'mixitup';
+
 const readMore = document.querySelectorAll('.product__readmore');
 const products = document.querySelector('.products')
+
+mixitup('.mixed', {
+  // load: {
+  // 	sort: 'order:asc'
+  // },
+	// animation: {
+  //   effects: 'fade rotateZ(-180deg)',
+  //   duration: 700
+  // },
+  // classNames: {
+  //   block: 'programs',
+  //   elementFilter: 'filter-btn',
+  //   elementSort: 'sort-btn'
+  // },
+  selectors: {
+    target: '.product'
+  }
+});
+
 
 if (products) {
   document.addEventListener('click', function (e) {
