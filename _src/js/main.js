@@ -4,6 +4,7 @@ import "./component/select";
 import "./component/nav";
 import "./component/dynamicAdapt";
 import "./component/products";
+import "./component/tabs";
 
 
 if ('ontouchstart' in window || navigator.msMaxTouchPoints) {

@@ -1,0 +1,92 @@
+{% extends "./parthtml/base.html" %}
+{% block prebase %}
+<!-- begin page-bg -->
+<div class="page-bg page-bg--products round-bottom">
+{% endblock %}
+{% block content %}
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a href="#" class="breadcrumbs__link">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#" class="breadcrumbs__link">Продукция</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <span href="#" class="breadcrumbs__link">Мука пшеничная хлебопекарная Высший сорт</span>
+      </li>
+    </ul>
+    <div class="intro-product round-both">
+      <div class="intro-product__wrap">
+        <div class="intro-product__cnt">
+          <div class="intro-product__cnt-main">
+            <h1 class="title">Мука пшеничная хлебопекарная <span class="intro-product__mark">Высший сорт</span></h1>
+            <div class="gost">ГОСТ 26574-2017</div>
+            <div class="gost">ГОСТ Р ИСО 22000-2019</div>
+          </div>
+          <div class="to-basket">
+            <a href="#sendorder" class="btn">Заказать поставку</a>
+            <a href="#" class="add-to-basket">
+              <div class="mini-cart">
+                {{ macro.iconSvg('cart') }}
+                <div class="mini-cart__count">+</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="intro-product__img">
+          <img src="@/img/content/product/product-main.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="product-tabs tabs">
+      <div class="tabs__nav tabs-nav">
+        <div class="tabs-nav__item is-active" data-tab-name="tab-1">Доставка</div>
+        <div class="tabs-nav__item" data-tab-name="tab-2">Описание</div>
+        <div class="tabs-nav__item" data-tab-name="tab-3">Характеристики</div>
+        <div class="tabs-nav__item" data-tab-name="tab-4">Тара</div>
+      </div>
+      <div class="tabs__content">
+        <div class="tab active" id="tab-1">
+          <h2 class="title tab__title title-mob-center">Доставка данной продукции осуществляется с помощью:</h2>
+          <div class="delivery-cards">
+            <div class="delivery-cards__item">
+              <div class="delivery-cards__cnt">
+                <div class="delivery-cards__title"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab" id="tab-2"><p>Мука высшего сорта – белая мука из пшеницы твёрдых сортов. В пшеничной муке высшего сорта содержится незначительное количество жира, клетчатки, сахара и белков. Зато в ней много крахмала (около 80%). Этот сорт муки отличается белым цветом и прекрасными хлебопекарными свойствами. Выпечка получается объемной с мелкой пористостью.</p>
+          <div class="product-recommendation">
+            <div class="product-recommendation__title">Идеальна для</div>
+            <div class="product-recommendation__list">
+              <div class="product-recommendation__item">
+                <img class="product-recommendation__icon" src="@/img/content/product/food-1.svg" alt="">
+                Дрожжевого теста
+              </div>
+              <div class="product-recommendation__item">
+                <img class="product-recommendation__icon" src="@/img/content/product/food-2.svg" alt="">
+                Песочного теста
+              </div>
+              <div class="product-recommendation__item">
+                <img class="product-recommendation__icon" src="@/img/content/product/food-3.svg" alt="">
+                Слоеного теста
+              </div>
+              <div class="product-recommendation__item">
+                <img class="product-recommendation__icon" src="@/img/content/product/food-4.svg" alt="">
+                Мучной заправки
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab" id="tab-3">Содержание таба 3</div>
+        <div class="tab" id="tab-4">Содержание таба 4</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end page-bg -->
+</div>
+
+{% endblock %}

@@ -29,6 +29,11 @@
   }
 }
 
+.products{
+  position: relative;
+  z-index: 1;
+}
+
 .products__nav {
   margin-bottom: $lg;
 }
@@ -282,3 +287,124 @@ body:not(.touch) .product__readmore {
     vertical-align: middle;
   }
 }
+
+////////////////////////////////////////////////////////////////////////
+/// product page
+///
+
+.intro-product {
+  background: url('@/img/bg.jpg');
+  padding: $lg calc(1.5*$lg) calc(1.5*$lg);
+  &__wrap {
+    @include r(1025) {
+      max-width: 80vw;
+      padding: 0 60px;
+      margin: auto;
+      display: flex;
+      gap: $lg;
+      align-items: center;
+      .to-basket {
+        flex: 0 0 auto;
+      }
+    }
+  }
+  &__cnt {
+    @include r(1025) {
+      display: flex;
+      gap: $lg;
+    }
+  }
+
+  &__cnt-main {}
+
+  &__mark {
+    display: block;
+    color: $c-main;
+    font-size: .75em;
+    margin-top: .5em;
+  }
+
+  &__img {
+    margin-top: calc(-1 * $lg);
+    flex-shrink: 0;
+  }
+  .title {
+    font-size: 28px;
+    margin-bottom: .25em;
+    @include r(390) {
+      font-size: 36px;
+    }
+    @include r(1024) {
+      font-size: 48px;
+    }
+
+  }
+  .mini-cart {
+    font-size: 40px;
+  }
+}
+
+.gost {
+  color: $c-sec;
+}
+
+
+.tabs {
+  position: relative;
+  z-index: 1;
+  max-width: 1300px;
+  margin: calc(-1.5*$lg) auto 0;
+  &__nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {}
+}
+
+.tabs-nav {
+  &__item {
+    padding: 1em 2em;
+  }
+}
+
+.is-active {}
+
+.tab {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: $lg;
+  p {
+    max-width: 700px;
+  }
+  &__title {
+    font-size: rem(18);
+  }
+}
+
+.active {}
+
+
+.product-recommendation {
+  color: $c-sec;
+  &__title {
+    font-size: rem(22);
+    margin-bottom: .5em;
+    font-weight: 700;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $lg;
+  }
+
+  &__item {
+  }
+
+  &__icon {
+    display: block;
+
+  }
+}
+
