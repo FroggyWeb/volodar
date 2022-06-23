@@ -364,16 +364,26 @@ body:not(.touch) .product__readmore {
 
 .tabs-nav {
   &__item {
-    padding: 1em 2em;
+    padding: .5em 2em;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    &.active {
+      background-color: #fff;
+    }
   }
 }
-
-.is-active {}
 
 .tab {
   background-color: #fff;
   border-radius: 16px;
   padding: $lg;
+  opacity: 0;
+  display: none;
+  transform: translateX(100%);
+  &.active {
+    display: block;
+    animation: tab .3s forwards;
+  }
   p {
     max-width: 700px;
   }
@@ -382,8 +392,17 @@ body:not(.touch) .product__readmore {
   }
 }
 
-.active {}
+@keyframes tab {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 
+}
 
 .product-recommendation {
   color: $c-sec;
@@ -408,3 +427,141 @@ body:not(.touch) .product__readmore {
   }
 }
 
+.delivery-cards {
+  display: grid;
+  gap: $lg;
+  @include r(1023) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  &__item {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-color: $c-light;
+    padding-top: 50%;
+    border-radius: 8px;
+    background-size: 70% auto;
+  }
+
+  &__cnt {
+    padding: 16px;
+    float: right;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__title {
+    font-size: 22px;
+    color: $c-main;
+
+  }
+}
+
+.tabs-props {
+  display: grid;
+  gap: $lg;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  &__col {}
+
+  &__title {
+    font-size: 22px;
+    &:before {
+      content: '';
+      display: inline-block;
+      width: .5em;
+      height: .5em;
+      background: $c-main;
+      vertical-align: middle;
+      border-radius: 50%;
+      margin-right: .25em;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.tabs-props-footer {
+  margin-top: $lg;
+  font-size: rem(18);
+  font-weight: 700;
+  border-top: 1px dashed #000;
+  padding-top: .5em;
+}
+
+.tab-pack {
+  @include r(1024) {
+    display: grid;
+    gap: $lg;
+    grid-template-columns: 360px auto;
+    align-items: center;
+    .tab-pack__title {
+      text-align: left;
+    }
+  }
+  &__title {
+    text-align: center;
+    font-size: rem(18);
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+
+  &__cnt {
+    display: flex;
+    gap: $lg;
+    align-items: flex-end;
+    justify-content: center;
+    @include r(767) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    img {
+      display: block;
+      margin: 0 auto 1em;
+      transform-origin: bottom center;
+    }
+    &:nth-child(2) {
+      img {width: 10em;}
+    }
+    &:nth-child(3) {
+      img {width: 12em;}
+    }
+  }
+}
+
+.product-priority {
+  padding: $lg;
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  gap: $lg;
+  @include r(767) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.priority-hor {
+  display: grid;
+  gap: $lg;
+  align-items: center;
+  grid-template-columns: 25% 1fr;
+  &__img {
+  }
+
+  &__cnt {}
+
+  &__title {
+    font-size: rem(22);
+    margin-bottom: .5em;
+    font-weight: 700;
+  }
+}

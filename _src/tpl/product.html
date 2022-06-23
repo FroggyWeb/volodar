@@ -1,7 +1,7 @@
 {% extends "./parthtml/base.html" %}
 {% block prebase %}
 <!-- begin page-bg -->
-<div class="page-bg page-bg--products round-bottom">
+<div class="page-bg page-bg--nopad round-bottom">
 {% endblock %}
 {% block content %}
   <div class="container">
@@ -41,7 +41,7 @@
     </div>
     <div class="product-tabs tabs">
       <div class="tabs__nav tabs-nav">
-        <div class="tabs-nav__item is-active" data-tab-name="tab-1">Доставка</div>
+        <div class="tabs-nav__item active" data-tab-name="tab-1">Доставка</div>
         <div class="tabs-nav__item" data-tab-name="tab-2">Описание</div>
         <div class="tabs-nav__item" data-tab-name="tab-3">Характеристики</div>
         <div class="tabs-nav__item" data-tab-name="tab-4">Тара</div>
@@ -50,9 +50,34 @@
         <div class="tab active" id="tab-1">
           <h2 class="title tab__title title-mob-center">Доставка данной продукции осуществляется с помощью:</h2>
           <div class="delivery-cards">
-            <div class="delivery-cards__item">
+            <div class="delivery-cards__item" style="background-image: url('@/img/content/product/delivery-1.svg');">
               <div class="delivery-cards__cnt">
-                <div class="delivery-cards__title"></div>
+                <div class="delivery-cards__title">Муковоз</div>
+                Бестарно
+              </div>
+            </div>
+            <div class="delivery-cards__item" style="background-image: url('@/img/content/product/delivery-2.svg');">
+              <div class="delivery-cards__cnt">
+                <div class="delivery-cards__title">Фура</div>
+                В таре
+              </div>
+            </div>
+            <div class="delivery-cards__item" style="background-image: url('@/img/content/product/delivery-3.svg');">
+              <div class="delivery-cards__cnt" >
+                <div class="delivery-cards__title">Вагон</div>
+                В таре
+              </div>
+            </div>
+            <div class="delivery-cards__item" style="background-image: url('@/img/content/product/delivery-4.svg');">
+              <div class="delivery-cards__cnt" >
+                <div class="delivery-cards__title">Зерновоз</div>
+                Бестарно
+              </div>
+            </div>
+            <div class="delivery-cards__item" style="background-image: url('@/img/content/product/delivery-5.svg');">
+              <div class="delivery-cards__cnt" >
+                <div class="delivery-cards__title">Хоппер</div>
+                Бестарно
               </div>
             </div>
           </div>
@@ -80,13 +105,118 @@
             </div>
           </div>
         </div>
-        <div class="tab" id="tab-3">Содержание таба 3</div>
-        <div class="tab" id="tab-4">Содержание таба 4</div>
+        <div class="tab" id="tab-3">
+          <div class="tabs-props">
+            <div class="tabs-props__col">
+              <h3 class="tabs-props__title">Пищевая ценность (100г)</h3>
+              <ul class="tabs-props__list">
+                <li>Белки 11;</li>
+                <li> Жиры 11;</li>
+                <li>Углеводы 11;</li>
+                <li>Энергетическая ценность 1260кДж;</li>
+                <li>Калорий 330.</li>
+              </ul>
+            </div>
+            <div class="tabs-props__col">
+              <h3 class="tabs-props__title">Характеристики</h3>
+              <ul class="tabs-props__list">
+                <li>Цвет белый или белый с кремовым оттенком;</li>
+                <li>Влажность не более 15,0%;</li>
+                <li>Зольность не более 0,45%;</li>
+                <li>Клейковина не менее 28%;</li>
+                <li>Число падения не менее 200 c.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tabs-props-footer">Также можем произвести муку по вашим индивидуальным характеристикам</div>
+        </div>
+        <div class="tab" id="tab-4">
+          <div class="tab-pack">
+            <div class="tab-pack__title">Можем упаковать продукт в различные тары</div>
+            <div class="tab-pack__cnt">
+              <div class="tab-pack__item">
+                <img src="@/img/content/product/bag.svg" alt="Пакет">
+                Пакет<br>1-1,8-2 кг
+              </div>
+              <div class="tab-pack__item">
+                <img src="@/img/content/product/bag.svg" alt="Мешок">
+                Мешок<br>5-10-25-50 кг
+              </div>
+              <div class="tab-pack__item">
+                <img src="@/img/content/product/bag.svg" alt="Мешок">
+                Биг-Бэг<br>1000 кг
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="product-priority">
+      <div class="priority-hor">
+        <div class="priority-hor__img">
+          <img src="@/img/content/product/product-priorety-1.svg" alt="">
+        </div>
+        <div class="priority-hor__cnt">
+          <div class="priority-hor__title">Объемы</div>
+          Мельница производительностью 700 тн в сутки обеспечивает постоянное наличие продукции
+        </div>
+      </div>
+      <div class="priority-hor">
+        <div class="priority-hor__img">
+          <img src="@/img/content/product/product-priorety-2.svg" alt="">
+        </div>
+        <div class="priority-hor__cnt">
+          <div class="priority-hor__title">Качество</div>
+          Cоответствие муки всем принятым нормам, стандартам и ГОСТам
+        </div>
+      </div>
+      <div class="priority-hor">
+        <div class="priority-hor__img">
+          <img src="@/img/content/product/product-priorety-3.svg" alt="">
+        </div>
+        <div class="priority-hor__cnt">
+          <div class="priority-hor__title">Ответственность</div>
+          Высокая ответственность за выполнение договорных обязательств
+        </div>
+      </div>
+      <div class="priority-hor">
+        <div class="priority-hor__img">
+          <img src="@/img/content/product/product-priorety-4.svg" alt="">
+        </div>
+        <div class="priority-hor__cnt">
+          <div class="priority-hor__title">Свойства</div>
+          Много крахмала, поэтому отилчные хлебоперкарные свойства
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- end page-bg -->
+</div>
+
+<div class="container section">
+  <h2 class="title title--center">Другие виды производимой продукции</h2>
+  <div class="product-other">
+    <div class="product-other__wrap">
+      <div class="product-other__item">
+        <img src="@/img/content/product/product_card_2.png" alt="">
+        <div class="product-other__txt">Мука пшеничная хлебопекарная 1 сорт</div>
+      </div>
+      <div class="product-other__item">
+        <img src="@/img/content/product/product_card_2.png" alt="">
+        <div class="product-other__txt">Мука пшеничная хлебопекарная 2 сорт</div>
+      </div>
+      <div class="product-other__item">
+        <img src="@/img/content/product/product_card_2.png" alt="">
+        <div class="product-other__txt">Мука пшеничная хлебопекарная 1 сорт</div>
+      </div>
+    </div>
+    <a href="#" class="product-other__more link-arr"> Посмотреть всю продукцию
+       {{ macro.iconSvg('arr-short') }}
+    </a>
+  </div>
 </div>
 
 {% endblock %}
