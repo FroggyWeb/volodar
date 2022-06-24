@@ -1,0 +1,26 @@
+.video-gall {
+  display: grid;
+  gap: $lg;
+  max-width: 1200px;
+  @include r(767) {
+    grid-template-columns: 1fr 1fr;
+  }
+  // .video {
+  //   max-width: 550px;
+  // }
+}
+
+.photo-gall {
+  display: grid;
+  gap: $lg;
+  @include r(767) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &__item {
+    &:nth-child(3n+1) {
+      @include r(767) {
+        grid-column: span 2;
+      }
+    }
+  }
+}

@@ -124,6 +124,7 @@ a[href*="tel"] {
 	line-height: 1;
 	font-weight: 800;
 	font-size: 24px;
+  max-width: 1000px;
   @include r(650) {
     font-size: 32px;
   }
@@ -139,6 +140,8 @@ a[href*="tel"] {
   }
   &--center {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

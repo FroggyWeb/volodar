@@ -17,7 +17,7 @@
       </li>
     </ul>
     <div class="intro-product round-both">
-      <div class="intro-product__wrap">
+      <div class="intro-product__wrap container--sm">
         <div class="intro-product__cnt">
           <div class="intro-product__cnt-main">
             <h1 class="title">Мука пшеничная хлебопекарная <span class="intro-product__mark">Высший сорт</span></h1>
@@ -200,23 +200,32 @@
   <h2 class="title title--center">Другие виды производимой продукции</h2>
   <div class="product-other">
     <div class="product-other__wrap">
-      <div class="product-other__item">
+      <a href="#" class="product-other__item">
         <img src="@/img/content/product/product_card_2.png" alt="">
         <div class="product-other__txt">Мука пшеничная хлебопекарная 1 сорт</div>
-      </div>
-      <div class="product-other__item">
+      </a>
+      <a href="#" class="product-other__item">
         <img src="@/img/content/product/product_card_2.png" alt="">
         <div class="product-other__txt">Мука пшеничная хлебопекарная 2 сорт</div>
-      </div>
-      <div class="product-other__item">
+      </a>
+      <a href="#" class="product-other__item">
         <img src="@/img/content/product/product_card_2.png" alt="">
         <div class="product-other__txt">Мука пшеничная хлебопекарная 1 сорт</div>
-      </div>
+      </a>
     </div>
     <a href="#" class="product-other__more link-arr"> Посмотреть всю продукцию
        {{ macro.iconSvg('arr-short') }}
     </a>
   </div>
 </div>
+
+<section class="section container container--sm">
+    <div class="wares" style="background-image: url(../img/content/product/bg_wares_product.png);">
+      <div class="wares__cnt">
+        <p class="title title--center">Произведем продукцию по вашим <span class="strong">индивидуальным потребностям</span> и доставим ее в срок</p>
+        <a href="#" class="btn">Оставить заявку</a>
+      </div>
+    </div>
+  </section>
 
 {% endblock %}

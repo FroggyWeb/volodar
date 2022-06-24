@@ -122,14 +122,23 @@
 }
 
 .wares {
-  background: url('@/img/content/about/bg-wares.png') no-repeat 50%;
+  background-repeat: no-repeat;
+  background-position: 50%;
   background-size: cover;
   position: relative;
   padding-top: 57%;
   @include rmax(450) {
-    padding-top: 80%;
+    padding-top: 120%;
+    margin-left: calc(-1 * $lg);
+    margin-right: calc(-1 * $lg);
   }
   .title {
+    font-size: 18px;
+    @include r(767) {
+      font-size: 36px;
+    }
+  }
+  .wares__cnt {
     max-width: 750px;
     width: 80%;
     // width: 50%;
@@ -137,7 +146,10 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-
+    text-align: center;
+    .btn {
+      font-size: 16px;
+    }
     @include rmax(650) {
       font-size: 18px;
     }

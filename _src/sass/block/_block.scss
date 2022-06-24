@@ -172,7 +172,6 @@
 
 .video {
   width: 100%;
-  max-width: 420px;
   &__wrap {
     position: relative;
     display: block;
@@ -238,6 +237,15 @@
     }
 
   }
+
+    /* .video__desc */
+  &__desc {
+    margin-top: 1em;
+    font-size: rem(18);
+    font-weight: bold;
+    text-decoration: none;
+  }
+
 }
 
 .marker {

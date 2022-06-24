@@ -1,4 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arr-long" viewBox="0 0 44 24"><g style="enable-background:new 0 0 44 24;">
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arr-down" viewBox="0 0 16 17"><g style="enable-background:new 0 0 16 17;">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;}
+</style>
+<path class="st0" d="M16,8.5l-8,8l-8-8l2-2l4.6,4.6V0.5h2.8v10.6L14,6.5L16,8.5z"/>
+</g></symbol><symbol id="arr-long" viewBox="0 0 44 24"><g style="enable-background:new 0 0 44 24;">
 <polygon points="32.9,23.1 30.8,21 38.3,13.5 0.4,13.5 0.4,10.5 38.3,10.5 30.8,3 32.9,0.9 42.5,10.5 43.4,11.4 44,12 43.4,12.6 
   42.5,13.5 "/>
 </g></symbol><symbol id="arr-short" viewBox="0 0 16 17"><g style="enable-background:new 0 0 16 17;">

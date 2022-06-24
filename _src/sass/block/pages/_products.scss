@@ -296,22 +296,27 @@ body:not(.touch) .product__readmore {
   background: url('@/img/bg.jpg');
   padding: $lg calc(1.5*$lg) calc(1.5*$lg);
   &__wrap {
-    @include r(1025) {
-      max-width: 80vw;
-      padding: 0 60px;
+    @include r(767) {
       margin: auto;
-      display: flex;
+      display: grid;
       gap: $lg;
       align-items: center;
+      grid-template-columns: auto auto;
       .to-basket {
         flex: 0 0 auto;
       }
     }
+    @include r(1600) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
   }
   &__cnt {
-    @include r(1025) {
-      display: flex;
-      gap: $lg;
+    display: grid;
+    gap: 1em;
+    margin-bottom: $lg;
+    @include r(1600) {
+      grid-template-columns: 3fr 2fr;
     }
   }
 
@@ -335,7 +340,7 @@ body:not(.touch) .product__readmore {
       font-size: 36px;
     }
     @include r(1024) {
-      font-size: 48px;
+      font-size: 55px;
     }
 
   }
@@ -565,3 +570,46 @@ body:not(.touch) .product__readmore {
     font-weight: 700;
   }
 }
+
+.product-other {
+  &__wrap {
+    display: flex;
+    gap: $lg;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: $lg;
+    @include r(1023) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    text-decoration: none;
+    background-color: $c-light;
+    padding: 1em;
+    font-size: rem(16);
+    font-weight: 700;
+    border-radius: 8px;
+    @include r(550) {
+      flex: 0 0 calc(50% - $lg);
+    }
+
+    img {
+      flex: 0 0 33%;
+    }
+  }
+
+  &__txt {}
+
+  &__more {
+    display: block;
+    text-align: right;
+    margin-left: auto;
+  }
+}
+
+.link-arr {}
