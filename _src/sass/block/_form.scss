@@ -6,6 +6,7 @@
 input:not([type="submit"]),
 input:not([type='checkbox']),
 input:not([type="radio"]),
+input:not([type="file"]),
 textarea {
   padding: 1em;
   border-radius: 8px;
@@ -85,8 +86,11 @@ input.check {
   }
 
   &__btn {
-    margin-top: $lg;
+    margin-top: calc($lg / 2);
     text-align: center;
+  }
+  &__btn-left {
+    text-align: left;
   }
 }
 
@@ -115,7 +119,7 @@ input.check {
     }
   }
   &__pre {
-    margin-bottom: calc(2*$lg);
+    margin-bottom: $lg;
     display: flex;
     flex-direction: column;
     gap: $lg;
@@ -164,7 +168,6 @@ input.check {
   }
 
   &__footer {
-    margin-top: $lg;
     @include r(650) {
       text-align: center;
     }

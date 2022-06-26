@@ -1,0 +1,88 @@
+{% extends "./parthtml/base.html" %} {% block content %}
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <span href="#" class="breadcrumbs__link">Вакансии</span>
+    </li>
+  </ul>
+
+  <div class="intro__slide round-both">
+    <div class="intro__slide-cnt">
+      <div class="intro__title">Хотите работать у нас?</div>
+      <p>Мы предоставляем хорошие условия труда
+        и достойную зароботную плату</p>
+    </div>
+    <img src="@/img/content/about/vacancy.jpg" alt="" class="intro__slide-img round-left">
+  </div>
+
+  <div class="vacancys section">
+    <div class="vacancys__main">
+      <div class="vacancys__header">
+        <div class="vacancys__header-main">
+          <h2 class="title-sub">К сожалению, никаких вакансий сейчас нет</h2>
+          <p>Но вы можете оставить нам ваше резюме и мы его рассмотрим</p>
+        </div>
+      </div>
+      <div class="vacancys__list">
+        <form action="" class="form vacancy-form" method="post" enctype="multipart/form-data">
+          <div class="form__line">
+            <input type="text" name="name" placeholder="Имя" required="">
+          </div>
+          <div class="form__line">
+            <input type="tel" name="tel" placeholder="Телефон" required>
+          </div>
+          <div class="form__line">
+            <input type="mail" name="mail" placeholder="Почта" required>
+          </div>
+          <div class="form__line">
+            <input type="file" name="file" id="form__file" placeholder="Добавить резюме" hidden>
+            <label class="form__file-label" for="form__file">Добавить резюме</label>
+          </div>
+          <div class="form__footer">
+            <input class="check check--invert" id="form__confirm" type="checkbox" hidden checked>
+            <label class="form__confirm" for="form__confirm">Я согласен с условиями <a
+                href="#">политики&nbsp;конфиденциальноcти</a></label>
+            <div class="form__btn form__btn-left">
+              <button type="submit" class="btn">Отправить</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="vacancys__aside conditions">
+      <div class="work-conditions">
+        <div class="work-conditions__title">
+          <img src="@/img/icon/work-about.svg" alt="">
+          Условия труда
+        </div>
+        <p>Социальная ответственность в отношении сотрудников завода
+          определяется коллективным договором и другими локальными
+          нормативными актами организации</p>
+      </div>
+      <div class="work-conditions">
+        <div class="work-conditions__title">
+          <img src="@/img/icon/work-shield.svg" alt="">
+          Охрана труда
+        </div>
+        <p>В соответствии с требованиями законодательства проводится специальная оценка условий труда, по
+          результатам
+          которой при наличии вредных условий труда сотрудникам назначаются соответствующие компенсации и
+          льготы;</p>
+      </div>
+    </div>
+  </div>
+  <!-- end-container -->
+</div>
+<script>
+  var file = document.querySelector('#form__file');
+  file.addEventListener('change', function () {
+    var value = file.files[0].name;
+    document.querySelector('.form__file-label').textContent = value;
+  })
+</script>
+
+
+{% endblock %}

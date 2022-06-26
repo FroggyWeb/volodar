@@ -168,25 +168,6 @@ a[href*="tel"] {
   margin: 0 0 .75em;
 }
 
-.callout {
-  position: relative;
-}
-
-.callout__item {
-  padding: $lg;
-  background: url('@/img/bg.jpg');
-  width: 290px;
-  &:before{
-    content: "";
-    width: 170px;
-    height: 36px;
-  }
-  &-title {
-    font-weight: 800;
-    font-size: 18px;
-  }
-}
-
 .benefit {
   display: flex;
   gap: $lg;

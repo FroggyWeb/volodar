@@ -51,4 +51,5 @@ function initAcc(elem, option, media){
 }
 
 initAcc('.footer-nav__list', true, '767px');
+initAcc('.faq', true);
 

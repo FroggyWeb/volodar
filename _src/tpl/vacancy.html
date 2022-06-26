@@ -1,0 +1,125 @@
+{% extends "./parthtml/base.html" %} {% block content %}
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <span href="#" class="breadcrumbs__link">Вакансии</span>
+    </li>
+  </ul>
+
+  <div class="intro__slide round-both">
+    <div class="intro__slide-cnt">
+      <div class="intro__title">Хотите работать у нас?</div>
+      <p>Мы предоставляем хорошие условия труда
+        и достойную зароботную плату</p>
+    </div>
+    <img src="@/img/content/about/vacancy.jpg" alt="" class="intro__slide-img round-left">
+  </div>
+
+  <div class="vacancys section">
+    <div class="vacancys__main">
+      <div class="vacancys__header">
+        <div class="vacancys__header-main">
+          <h2 class="title-sub">Наши вакансии</h2>
+          <p>Мы обязательно рассмотрим Ваш отклик и дадим обратную связь!</p>
+        </div>
+        <div class="vacancys__sort">
+          <select name="lang" id="select-vacancy" calss="js-choice" hidden data-filter-group>
+            <option value="all" selected>Выберете отдел</option>
+            <option value="Лаборатория">Лаборатория</option>
+            <option value="Отдел продаж">Отдел продаж</option>
+            <option value="Отдел закупок">Отдел закупок</option>
+          </select>
+        </div>
+      </div>
+      <div class="vacancys__list">
+        <div class="vacancy mix" data-mix="Лаборатория">
+          <div class="vacancy__header">
+            <div class="vacancy__header-main">
+              <div class="vacancy__title">Ученый в лабораторию</div>
+              <div class="vacancy__departament">Лаборатория</div>
+            </div>
+            <div class="vacancy__date">22.04.22</div>
+          </div>
+          <div class="vacancy__footer">
+            <a href="#" class="link-arr">подробнее на hh.ru
+              {{ macro.iconSvg('arr-short') }}
+            </a>
+            <a href="#" class="link-arr">подробнее на Zarplata.ru
+              {{ macro.iconSvg('arr-short') }}
+            </a>
+            <a href="#" class="link-arr">подробнее на Vkjob.ru
+              {{ macro.iconSvg('arr-short') }}
+            </a>
+          </div>
+        </div>
+        <div class="vacancy mix" data-mix="Отдел продаж">
+          <div class="vacancy__header">
+            <div class="vacancy__header-main">
+              <div class="vacancy__title">Начальник отдела продаж</div>
+              <div class="vacancy__departament">Отдел продаж</div>
+            </div>
+            <div class="vacancy__date">22.04.22</div>
+          </div>
+          <div class="vacancy__footer">
+            <a href="#" class="link-arr">подробнее на hh.ru
+              {{ macro.iconSvg('arr-short') }}
+            </a>
+            <a href="#" class="link-arr">подробнее на Zarplata.ru
+              {{ macro.iconSvg('arr-short') }}
+            </a>
+            <a href="#" class="link-arr">подробнее на Vkjob.ru
+              {{ macro.iconSvg('arr-short') }}
+            </a>
+          </div>
+        </div>
+        <div class="vacancy mix" data-mix="Отдел закупок">
+          <div class="vacancy__header">
+            <div class="vacancy__header-main">
+              <div class="vacancy__title">Ведущий юрист</div>
+              <div class="vacancy__departament">Отдел закупок</div>
+            </div>
+            <div class="vacancy__date">22.04.22</div>
+          </div>
+          <div class="vacancy__footer">
+            <a href="#" class="link-arr">подробнее на hh.ru
+              {{ macro.iconSvg('arr-short') }}
+            </a>
+            <a href="#" class="link-arr">подробнее на Zarplata.ru
+              {{ macro.iconSvg('arr-short') }}
+            </a>
+            <a href="#" class="link-arr">подробнее на Vkjob.ru
+              {{ macro.iconSvg('arr-short') }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="vacancys__aside conditions">
+      <div class="work-conditions">
+        <div class="work-conditions__title">
+          <img src="@/img/icon/work-about.svg" alt="">
+          Условия труда
+        </div>
+        <p>Социальная ответственность в отношении сотрудников завода
+          определяется коллективным договором и другими локальными
+          нормативными актами организации</p>
+      </div>
+      <div class="work-conditions">
+        <div class="work-conditions__title">
+          <img src="@/img/icon/work-shield.svg" alt="">
+          Охрана труда
+        </div>
+        <p>В соответствии с требованиями законодательства проводится специальная оценка условий труда, по результатам
+          которой при наличии вредных условий труда сотрудникам назначаются соответствующие компенсации и льготы;</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- end-container -->
+</div>
+
+
+{% endblock %}

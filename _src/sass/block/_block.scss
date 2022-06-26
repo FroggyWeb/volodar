@@ -238,7 +238,7 @@
 
   }
 
-    /* .video__desc */
+  /* .video__desc */
   &__desc {
     margin-top: 1em;
     font-size: rem(18);
@@ -352,14 +352,20 @@
   &__slide-cnt {
     padding: 40px;
     align-self: center;
+    font-size: rem(18);
+    color: $c-sec;
+    @include r(768) {
+      padding: 40px 0 40px 80px;
+    }
   }
 
   /* .intro__title */
   &__title {
     font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 1em;
+    font-weight: 800;
+    margin-bottom: .5em;
     line-height: 1;
+    color: $c-text;
     @include r(1023) {
       font-size: 36px;
     }
@@ -406,5 +412,31 @@
   }
 }
 
+.more {
+  margin-top: $lg;
+  &--center {
+    text-align: center;
+  }
+}
 
+.callout {
+  position: relative;
+}
 
+.callout__item {
+  padding: 30px;
+  background: url('@/img/bg.jpg');
+  width: 290px;
+  text-align: left;
+
+  &:before {
+    content: "";
+    width: 170px;
+    height: 36px;
+  }
+
+  &-title {
+    font-weight: 800;
+    font-size: 18px;
+  }
+}

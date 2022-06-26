@@ -6,7 +6,7 @@ const products = document.querySelector('.products')
 if (mixed) {
   mixitup('.mixed', {
     selectors: {
-      target: '.product'
+      target: '.mix'
     }
   });
 }

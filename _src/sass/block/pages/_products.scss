@@ -301,7 +301,7 @@ body:not(.touch) .product__readmore {
       display: grid;
       gap: $lg;
       align-items: center;
-      grid-template-columns: auto auto;
+      grid-template-columns: 2fr minmax(350px, 1fr);
       .to-basket {
         flex: 0 0 auto;
       }

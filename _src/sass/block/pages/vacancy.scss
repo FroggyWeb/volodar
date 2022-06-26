@@ -1,0 +1,156 @@
+.vacancys {
+  display: grid;
+  gap: $lg;
+  align-items: start;
+  @include r(1024) {
+    grid-template-columns: 2fr 1fr;
+  }
+  /* .vacansys__main */
+  &__main {}
+
+  /* .vacansys__header */
+  &__header {
+    display: grid;
+    gap: $lg;
+    @include r(767) {
+      grid-template-columns: 1fr 200px;
+    }
+  }
+
+  /* .vacansys__header-main */
+  &__header-main {
+    font-size: rem(18);
+    color: $c-sec;
+    .title-sub {
+      color: $c-text;
+      margin-bottom: .5em;
+    }
+  }
+
+  /* .vacansys__sort */
+  &__sort {
+    align-self: end;
+    max-width: 200px;
+    margin-left: auto;
+  }
+
+  /* .vacansys__list */
+  &__list {}
+
+  /* .vacansys__aside */
+  &__aside {}
+}
+
+
+
+.vacancy {
+  padding: $lg;
+  margin-top: $lg;
+  background-color: $c-light;
+  border-radius: 16px;
+  /* .vacancy__header */
+  &__header {
+    display: grid;
+    gap: $lg;
+    grid-template-columns: 1fr 150px;
+  }
+
+  /* .vacancy__header-main */
+  &__header-main {}
+
+  /* .vacancy__title */
+  &__title {
+    font-size: rem(24);
+    font-weight: 800;
+  }
+
+  /* .vacancy__departament */
+  &__departament {
+    font-size: rem(20);
+    margin-top: .5em;
+  }
+
+  /* .vacancy__date */
+  &__date {
+    font-size: rem(18);
+    text-align: right;
+  }
+
+  /* .vacancy__footer */
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: $lg;
+    margin-top: $lg;
+    @include r(767) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .link-arr {
+      color: $c-text;
+      &:hover {
+        color: $c-main;
+      }
+    }
+  }
+}
+
+.conditions {
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 9px 13px 26px -12px rgba(0, 0, 0, 0.25);
+  padding: 1em;
+  display: grid;
+  gap: $lg;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.work-conditions {
+  color: $c-sec;
+  padding: 1em;
+  /* .work-conditions__title */
+  &__title {
+    font-size: rem(22);
+    font-weight: 800;
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+.vacancy-form {
+  margin-top: $lg;
+  max-width: 600px;
+  display: grid;
+  gap: 1em;
+  #form__file {
+    display: none;
+  }
+  .form__file-label {
+    display: inline-block;
+    padding: 1em;
+    background: $c-light;
+    position: relative;
+    &:after {
+      content: "+";
+      color: $c-main;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 28px;
+      font-weight: 800;
+      margin: -.25em 0 0 .5em;
+      line-height: 1;
+    }
+  }
+}
+
+.check {
+
+  /* .check--invert */
+  &--invert {}
+}
+
+.btn {}

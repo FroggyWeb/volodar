@@ -25,6 +25,7 @@ specifiers:
   gulp-svgstore: ^9.0.0
   hc-offcanvas-nav: ^6.1.5
   imask: ^6.4.2
+  mixitup: ^3.3.1
   node-sass-glob-importer: ^5.3.2
   path: ^0.12.7
   postcss: ^8.4.12
@@ -38,6 +39,7 @@ dependencies:
   choices.js: 10.1.0
   hc-offcanvas-nav: 6.1.5
   imask: 6.4.2
+  mixitup: 3.3.1
   swiper: 8.1.4
 
 devDependencies:
@@ -4899,6 +4901,10 @@ packages:
       for-in: 1.0.2
       is-extendable: 1.0.1
     dev: true
+
+  /mixitup/3.3.1:
+    resolution: {integrity: sha512-5WlMzRNSAU5R1N/NlmOvmYxcZVgib3do5I0H+LO6e0ArI7GlNLMPoAANK7XOemuwJFZcJHIGvWDIPMK1jnWEqA==}
+    dev: false
 
   /mkdirp/0.5.5:
     resolution: {integrity: sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==}

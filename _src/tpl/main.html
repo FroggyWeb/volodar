@@ -2,9 +2,9 @@
 {% block prebase %}
 <!-- begin page-bg -->
 <div class="page-bg round-bottom">
-{% endblock %}
+  {% endblock %}
 
-{% block content %}
+  {% block content %}
   <div class="container">
     <!-- begin intro -->
     <div class="index-intro section">
@@ -59,33 +59,35 @@
             <div class="ceo ceo--faximile">Генеральный директор
               <span>О. А. Дворникова</span>
             </div>
-            <a href="#" class="link-arr">О компании</a>
+            <a href="#" class="link-arr">О компании
+              {{ macro.iconSvg('arr-short') }}
+            </a>
           </div>
         </div>
       </div>
     </div>
     <!-- end intro -->
     <!-- begin product-card -->
-    </div>
-    <!-- end page-bg -->
   </div>
-  <div class="container">
-    {% set products_card = [{ name: "Крупа манная", img: "@/img/content/product/product_card_1.png" },
+  <!-- end page-bg -->
+</div>
+<div class="container">
+  {% set products_card = [{ name: "Крупа манная", img: "@/img/content/product/product_card_1.png" },
       { name: "Пшеничная мука", img: "@/img/content/product/product_card_2.png" },
       { name: "Ржаная мука", img: "@/img/content/product/product_card_3.png" },
       { name: "Отруби", img: "@/img/content/product/product_card_4.png" },
       { name: "Зерноотходы", img: "@/img/content/product/product_card_5.png" }
     ] %}
-    <div class="product-card">
-      {% for item in products_card %}
-      <a href="#" class="product-card__item link-arr-hover">
-        <img src={{ item.img }} alt="{{ item.name }}">
-        <span>{{ item.name }}</span>
-      </a>
-      {% endfor %}
-    </div>
-    <!-- end product-card -->
+  <div class="product-card">
+    {% for item in products_card %}
+    <a href="#" class="product-card__item link-arr-hover">
+      <img src={{ item.img }} alt="{{ item.name }}">
+      <span>{{ item.name }}</span>
+    </a>
+    {% endfor %}
   </div>
+  <!-- end product-card -->
+</div>
 
 <div class="container container--sm">
 
@@ -167,18 +169,20 @@
 
   <div class="production-step fill-block round-bottom">
     <img class="fill-block__img production-step--reverse" src="@/img/content/processing-4.jpg" alt="2 000 тонн">
-    <div class="production-step__cnt-wrap">
-      <div class="production-step__cnt callout" id="step-3">
-        <h3 class="production-step__title title-sub">Три производственные линии
-        </h3>
-        <p class="production-step__txt">Наконец, подготовленные виды зерна отправляются в размольное отделение,
-          где cначала дробятся в крупку, а потом
-          измельчаются в муку</p>
-        <div class="production-step__callout callout__item callout__item--1 round-both">
-          <div class="callout__item-title">700 тонн в сутки</div>
-          зерна (в том числе 100 тонн ржи)
-          — производственная способность
-          комбината «Володарский»
+    <div class="container container--sm">
+      <div class="production-step__cnt-wrap">
+        <div class="production-step__cnt callout" id="step-3">
+          <h3 class="production-step__title title-sub">Три производственные линии
+          </h3>
+          <p class="production-step__txt">Наконец, подготовленные виды зерна отправляются в размольное отделение,
+            где cначала дробятся в крупку, а потом
+            измельчаются в муку</p>
+          <div class="production-step__callout callout__item callout__item--1 round-both">
+            <div class="callout__item-title">700 тонн в сутки</div>
+            зерна (в том числе 100 тонн ржи)
+            — производственная способность
+            комбината «Володарский»
+          </div>
         </div>
       </div>
     </div>
