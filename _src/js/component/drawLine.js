@@ -10,8 +10,18 @@ let leadercnf = {
   color: '#50220F',
 }
 
+// new LeaderLine(
+//   document.getElementById('step-1'),
+//   LeaderLine.pointAnchor(
+//     document.getElementById('step-2'), { x: '20%', y: 0 }
+//   ),leadercnf);
 new LeaderLine(
   document.getElementById('step-1'),
-  LeaderLine.pointAnchor(
-    document.getElementById('step-2'), { x: '20%', y: 0 }
-  ),leadercnf);
+  document.getElementById('step-2'),
+  leadercnf
+  );
+new LeaderLine(
+  document.getElementById('step-2'),
+  LeaderLine.pointAnchor(document.getElementById('step-3'), { x: '20%', y: 0 }),
+  leadercnf
+  );
