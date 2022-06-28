@@ -151,6 +151,7 @@
 }
 
 .production-step {
+  position: relative;
   display: grid;
   align-items: center;
   gap: $lg;
@@ -168,6 +169,8 @@
     max-width: 450px;
     margin: auto;
     padding: 30px 0;
+    background-color: #fff;
+
   }
 
   /* .production-step__title */
@@ -216,13 +219,13 @@
   .production-step__cnt-wrap {
     padding: $lg;
     max-width: none;
-    display: flex;
+    background-color: transparent;
   }
 
   @include r(767) {
     display: block;
     .container {
-      min-height: 450px;
+      min-height: 350px;
       display: flex;
     }
     .production-step__cnt-wrap {
@@ -252,8 +255,154 @@
 }
 
 .production-step__benefits{
-    padding: 0 $lg $lg;
+  padding: 20px 0 $lg;
+  position: relative;
+  background-color: #fff;
+  @include r(767){
+  grid-column: span 2;
+  }
+}
+
+//connect line
+.line {
+  border-top: 1px dashed $c-text;
+  position: absolute;
+  left: 5%;
+  right: 50%;
+  z-index: -1;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 40px;
+  }
+  &:before {
+    border-left: 1px dashed $c-text;
+    left: 0;
+    bottom: 0;
+  }
+  &:after {
+    border-right: 1px dashed $c-text;
+    right: 0;
+  }
+}
+
+.line--1 {
+  top: 20px;
+  left: 5%;
+  right: 50%;
+  &:before {
+    right: 0;
+    left: auto;
+  }
+  &:after {
+    left: 0;
+    right: auto;
+    height: 120px;
+  }
+}
+
+.line--2 {
+  top: auto;
+  bottom: 0;
+  right: 40%;
+  &:before {
+    height: 120px;
+  }
+  &:after {
+    height: 120px;
+  }
+}
+
+.line--3 {
+  top: 0;
+  right: 40%;
+  &:before {
+    right: 0;
+    left: auto;
+    height: 120px;
+  }
+  &:after {
+    left: 0;
+    right: auto;
+    height: 120px;
+  }
+}
+
+.line--4 {
+  left: 5%;
+  top: 0;
+  width: 1px;
+  &:before {
+    height: 200px;
+  }
+  &:after {
+    content: none;
+  }
+}
+
+.line--5 {
+  top: auto;
+  bottom: -50px;
+  right: 40%;
+  left: 5%;
+  &:before {
+    height: 120px;
   }
 
+  &:after {
+    height: 120px;
+  }
+}
 
+.line--6 {
+  top: -20px;
+  right: 40%;
 
+  &:before {
+    right: 0;
+    left: auto;
+    height: 120px;
+  }
+
+  &:after {
+    left: 0;
+    right: auto;
+    height: 120px;
+  }
+}
+
+.line--7 {
+  left: 5%;
+  right: 50%;
+  bottom: -20px;
+  &:before {
+    height: 200px;
+  }
+
+  &:after {
+    height: 120px;
+  }
+}
+
+.line--8 {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  &:before {
+    height: 80px;
+  }
+  &:after {
+    display: none;
+  }
+}
+
+.callout__item--1 {
+  top: 0;
+  right: 0;
+  svg {
+    bottom: 0;
+    left: 0;
+  }
+}

@@ -8,7 +8,8 @@
   radial-gradient(circle farthest-side, #000 98%, #0000) top/37.00px 40px repeat-x;
   --mask-left:
   radial-gradient(circle farthest-side, #000 100%, #0000) left/39.00px 40px repeat-y, linear-gradient(to right, transparent 20px, #000 20px);
-
+  --mask-small: linear-gradient(#000 0 0) center/calc(100% - 10px) calc(100% - 10px) no-repeat,
+      radial-gradient(farthest-side, #000 100%, #0000) 0 0/20px 20px round;
 }
 @media screen and (min-width: 767px) {
   html {

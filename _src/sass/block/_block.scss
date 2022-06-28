@@ -424,26 +424,25 @@
 }
 
 .callout__item {
+  position: relative;
+  position: absolute;
+  svg {
+    fill: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+    &-title {
+      font-weight: 800;
+      font-size: 18px;
+      margin-bottom: .5em;
+    }
+}
+
+.callout__cnt {
   padding: 30px;
   background: url('@/img/bg.jpg');
   width: 290px;
   text-align: left;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-
-  &:before {
-    content: "";
-    width: 170px;
-    height: 36px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateX(-100%);
-  }
-
-  &-title {
-    font-weight: 800;
-    font-size: 18px;
-  }
+  mask: var(--mask-small);
 }
