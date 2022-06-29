@@ -425,7 +425,10 @@
 
 .callout__item {
   position: relative;
-  position: absolute;
+  width: 250px;
+  @include r(650) {
+    position: absolute;
+  }
   svg {
     fill: none;
     position: absolute;
@@ -442,7 +445,7 @@
 .callout__cnt {
   padding: 30px;
   background: url('@/img/bg.jpg');
-  width: 290px;
   text-align: left;
+  font-size: 14px;
   mask: var(--mask-small);
 }

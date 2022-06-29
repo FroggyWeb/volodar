@@ -42,14 +42,15 @@
   /* .intro-slide__cnt */
   &__cnt {
     position: relative;
-    padding: 60px;
+    padding: 60px $lg 200px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
     z-index: 1;
-    @include r(550) {
+    @include r(600) {
       max-width: 60%;
+      padding: 60px;
     }
   }
   /* .intro-slide__title */
@@ -63,6 +64,12 @@
     bottom: 0;
     height: calc(100% + 40px);
     object-fit: cover;
+    max-width: 50%;
+    @include rmax(600) {
+      height: auto;
+      max-width: 100%;
+
+    }
   }
 }
 
@@ -135,7 +142,7 @@
     padding: 1em;
     position: relative;
     font-weight: bold;
-    font-size: 20px;
+    font-size: rem(18);
     &:before {
       content: "";
       background: url('@/img/bg.jpg');
@@ -150,16 +157,20 @@
   }
 }
 
+.production-steps__title {
+  font-size: 36px;
+}
+
 .production-step {
   position: relative;
   display: grid;
   align-items: center;
   gap: $lg;
   margin-bottom: calc(2*$lg);
-  @include r(767) {
-      grid-template-columns: minmax(350px, 10vw) auto;
-      gap: 20px;
-    }
+  // @include r(767) {
+  //     grid-template-columns: minmax(350px, 10vw) auto;
+  //     gap: 20px;
+  //   }
   @include r(1024) {
       grid-template-columns: minmax(450px, 10vw) auto;
     }
@@ -168,15 +179,13 @@
   &__cnt-wrap {
     max-width: 450px;
     margin: auto;
-    padding: 30px 0;
     background-color: #fff;
-
+    @include r(1024) {
+      padding: 30px 0;
+    }
   }
 
-  /* .production-step__title */
-  &__title {}
-
-  /* .production-step__txt */
+    /* .production-step__txt */
   &__txt {
     @include r(1023) {
       font-size: 18px;
@@ -190,6 +199,9 @@
   &__img {
     text-align: left;
     position: relative;
+    @include rmax(1023) {
+      order: -1;
+    }
   }
 
   &--vert{
@@ -220,6 +232,7 @@
     padding: $lg;
     max-width: none;
     background-color: transparent;
+    max-width: 450px;
   }
 
   @include r(767) {
@@ -258,151 +271,207 @@
   padding: 20px 0 $lg;
   position: relative;
   background-color: #fff;
-  @include r(767){
+  @include r(1024){
   grid-column: span 2;
   }
 }
 
 //connect line
-.line {
-  border-top: 1px dashed $c-text;
-  position: absolute;
-  left: 5%;
-  right: 50%;
-  z-index: -1;
-  &:before,
-  &:after {
-    content: "";
+@include r(1024) {
+  .line {
+    border-top: 1px dashed $c-text;
     position: absolute;
-    width: 1px;
-    height: 40px;
+    left: 5%;
+    right: 50%;
+    z-index: -1;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 40px;
+    }
+    &:before {
+      border-left: 1px dashed $c-text;
+      left: 0;
+      bottom: 0;
+    }
+    &:after {
+      border-right: 1px dashed $c-text;
+      right: 0;
+    }
   }
-  &:before {
-    border-left: 1px dashed $c-text;
-    left: 0;
+
+  .line--1 {
+    top: 20px;
+    left: 5%;
+    right: 50%;
+    &:before {
+      right: 0;
+      left: auto;
+    }
+    &:after {
+      left: 0;
+      right: auto;
+      height: 120px;
+    }
+  }
+
+  .line--2 {
+    top: auto;
     bottom: 0;
+    right: 40%;
+    &:before {
+      height: 120px;
+    }
+    &:after {
+      height: 120px;
+    }
   }
-  &:after {
-    border-right: 1px dashed $c-text;
-    right: 0;
+
+  .line--3 {
+    top: 0;
+    right: 40%;
+    &:before {
+      right: 0;
+      left: auto;
+      height: 120px;
+    }
+    &:after {
+      left: 0;
+      right: auto;
+      height: 120px;
+    }
   }
+
+  .line--4 {
+    left: 5%;
+    top: 0;
+    width: 1px;
+    &:before {
+      height: 200px;
+    }
+    &:after {
+      content: none;
+    }
+  }
+
+  .line--5 {
+    top: auto;
+    bottom: -50px;
+    right: 40%;
+    left: 5%;
+    &:before {
+      height: 120px;
+    }
+
+    &:after {
+      height: 120px;
+    }
+  }
+
+  .line--6 {
+    top: -20px;
+    right: 40%;
+
+    &:before {
+      right: 0;
+      left: auto;
+      height: 120px;
+    }
+
+    &:after {
+      left: 0;
+      right: auto;
+      height: 120px;
+    }
+  }
+
+  .line--7 {
+    left: 5%;
+    right: 50%;
+    bottom: -20px;
+    &:before {
+      height: 200px;
+    }
+
+    &:after {
+      height: 120px;
+    }
+  }
+
+  .line--8 {
+    top: 0;
+    left: 50%;
+    width: 1px;
+    &:before {
+      height: 80px;
+    }
+    &:after {
+      display: none;
+    }
+  }
+
 }
 
-.line--1 {
-  top: 20px;
-  left: 5%;
-  right: 50%;
-  &:before {
-    right: 0;
-    left: auto;
-  }
-  &:after {
-    left: 0;
-    right: auto;
-    height: 120px;
-  }
-}
-
-.line--2 {
-  top: auto;
-  bottom: 0;
-  right: 40%;
-  &:before {
-    height: 120px;
-  }
-  &:after {
-    height: 120px;
-  }
-}
-
-.line--3 {
-  top: 0;
-  right: 40%;
-  &:before {
-    right: 0;
-    left: auto;
-    height: 120px;
-  }
-  &:after {
-    left: 0;
-    right: auto;
-    height: 120px;
-  }
-}
-
-.line--4 {
-  left: 5%;
-  top: 0;
-  width: 1px;
-  &:before {
-    height: 200px;
-  }
-  &:after {
-    content: none;
-  }
-}
-
-.line--5 {
-  top: auto;
-  bottom: -50px;
-  right: 40%;
-  left: 5%;
-  &:before {
-    height: 120px;
-  }
-
-  &:after {
-    height: 120px;
-  }
-}
-
-.line--6 {
-  top: -20px;
-  right: 40%;
-
-  &:before {
-    right: 0;
-    left: auto;
-    height: 120px;
-  }
-
-  &:after {
-    left: 0;
-    right: auto;
-    height: 120px;
-  }
-}
-
-.line--7 {
-  left: 5%;
-  right: 50%;
-  bottom: -20px;
-  &:before {
-    height: 200px;
-  }
-
-  &:after {
-    height: 120px;
-  }
-}
-
-.line--8 {
-  top: 0;
-  left: 50%;
-  width: 1px;
-  &:before {
-    height: 80px;
-  }
-  &:after {
-    display: none;
+.callout--1 {
+  @include rm(1023, 1280) {
+    img {
+      transform: translateX(-25%)
+    }
   }
 }
 
 .callout__item--1 {
   top: 0;
   right: 0;
+  margin-left: auto;
   svg {
-    bottom: 0;
+    display: none;
+    @include r(450) {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%) rotate(30deg);
+      z-index: 1;
+    }
+    @include r(650) {
+      transform: translateX(-100%) rotate(160deg);
+    }
+  }
+}
+
+.callout--2 {
+  margin-bottom: 250px;
+  @include rmax(500) {
+    margin-bottom: $lg;
+  }
+  @include r(1024) {
+    margin-bottom: 120px;
+  }
+}
+.callout__item--2 {
+  position: absolute;
+  bottom: -200px;
+  right: 40px;
+  width: 290px;
+  @include rmax(500) {
+    position: static;
+    margin: 0 auto;
+  }
+  @include r(1024) {
+    bottom: -120px;
+  }
+  svg {
+    position: absolute;
+    display: block;
+    top: 0;
     left: 0;
+    transform: translateX(-100%) rotate(30deg);
+    z-index: 1;
+    @include rmax(500) {
+      display: none;
+    }
   }
 }

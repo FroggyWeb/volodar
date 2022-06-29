@@ -157,6 +157,11 @@
 }
 
 .labs-info {
+  @include r(1024) {
+    &.production-step {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
   .production-step__cnt-wrap {
     max-width: none;
   }
