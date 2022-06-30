@@ -14,6 +14,8 @@
   display: grid;
   gap: $lg;
   &__item {
+    border-radius: 8px;
+    overflow: hidden;
     img {
       object-fit: cover;
       width: 100%;
@@ -26,7 +28,13 @@
 .photo-gall__right {
   display: grid;
   gap: $lg;
-  @include r(767) {
+  grid-template-columns: repeat(2, 1fr);
+  @include rmax(767) {
+    .photo-gall__item:nth-child(5) {
+      grid-column: span 2;
+    }
+  }
+  @include r(768) {
       grid-template-columns: repeat(4, 1fr);
     }
 }

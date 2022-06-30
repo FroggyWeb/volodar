@@ -41,6 +41,14 @@ table {
 
 .rewards {
   &__list {
+    display: flex;
+    gap: $lg;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        display: none;
+      }
     @include r(767) {
       display: grid;
       gap: $lg;
@@ -60,6 +68,7 @@ table {
 
 .reward {
   margin: 0 auto;
+  text-decoration: none;
   &__img {
     margin-bottom: 20px;
     img{
@@ -72,7 +81,10 @@ table {
   }
 
   &__name {
-    font-size: 26px;
+    font-size: rem(22);
     font-weight: 700;
+  }
+  @include rmax(767) {
+    flex: 0 0 250px;
   }
 }

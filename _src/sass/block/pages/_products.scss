@@ -364,11 +364,15 @@ body:not(.touch) .product__readmore {
     justify-content: center;
   }
 
-  &__content {}
+  &__content {
+    background-color: #fff;
+    border-radius: 16px;
+  }
 }
 
 .tabs-nav {
   &__item {
+    font-weight: bold;
     padding: .5em 2em;
     border-radius: 8px 8px 0 0;
     cursor: pointer;
@@ -379,8 +383,7 @@ body:not(.touch) .product__readmore {
 }
 
 .tab {
-  background-color: #fff;
-  border-radius: 16px;
+
   padding: $lg;
   opacity: 0;
   display: none;
@@ -407,6 +410,25 @@ body:not(.touch) .product__readmore {
     transform: none;
   }
 
+}
+
+.product-tabs {
+  @include rmax(767) {
+    display: flex;
+    .tabs-nav__item {
+      writing-mode: vertical-lr;
+      font-size: 18px;
+      transform: rotate(180deg);
+      margin: 1em 0;
+      padding: 1em .5em;
+      border-radius: 0 8px 8px 0;
+    }
+    .tabs__nav {
+      flex: 0 0 auto;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
 }
 
 .product-recommendation {

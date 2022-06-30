@@ -3,7 +3,7 @@
   gap: $lg;
   align-items: start;
   @include r(1024) {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: minmax(760px, 2fr) 1fr;
   }
   /* .vacansys__main */
   &__main {}

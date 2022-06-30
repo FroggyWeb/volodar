@@ -157,6 +157,13 @@
 }
 
 .labs-info {
+  .production-step__img {
+    text-align: center;
+    margin: auto;
+    @include rmax(1023) {
+      max-width: 600px;
+    }
+  }
   @include r(1024) {
     &.production-step {
       grid-template-columns: 1fr 1fr;
@@ -164,6 +171,31 @@
   }
   .production-step__cnt-wrap {
     max-width: none;
+  }
+  .callout {
+    margin-top: 40px;
+    @include r(450) {
+      margin-bottom: 120px;
+    }
+  }
+}
+
+.callout__item--3 {
+  margin-left: auto;
+
+  @include r(450) {
+    position: absolute;
+    right: 0;
+    bottom: -120px;
+  }
+
+  svg {
+    top: 0;
+    left: 0;
+    transform: translateX(-100%) rotate(30deg);
+    @include rmax(450) {
+      display: none;
+    }
   }
 }
 
