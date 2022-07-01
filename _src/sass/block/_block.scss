@@ -48,7 +48,7 @@
 .page-bg {
   background-color: $c-bg;
   padding-bottom: calc(4*$lg);
-  margin-bottom: calc(-2*$lg);
+  margin-bottom: calc(-3*$lg);
   &--products {
     padding-bottom: calc(4*$lg);
     margin-bottom: calc(-3*$lg);
@@ -122,7 +122,7 @@
       width: 1em;
       height: 1em;
       background: url('@/img/icon/arrow.svg') no-repeat;
-      background-size: cover;
+      background-size: 100% auto;
       transition: all .3s;
       opacity: 0;
     }
@@ -132,6 +132,26 @@
       transform: translateX(-.5em);
       &:before {
         transform: translateX(1.2em);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.link-arr-hover--long {
+  span {
+    &:before {
+      background: url('@/img/icon/arr-long.svg') no-repeat;
+      background-size: 100% auto;
+      width: 1.5em;
+      bottom: 0;
+    }
+  }
+  &:hover {
+    span {
+      transform: translateX(-1em);
+      &:before {
+        transform: translateX(2em);
         opacity: 1;
       }
     }
@@ -210,7 +230,7 @@
   /* .video__link */
   &__link {
     position: absolute;
-    color: #fff;
+    color: $c-main;
     font-size: 54px;
     top: 50%;
     left: 50%;
@@ -218,7 +238,7 @@
     z-index: 5;
     line-height: 0;
     border-radius: 50%;
-    &::before, &::after {
+    &::after {
       content: "";
       position: absolute;
       width: 100%;
@@ -293,7 +313,7 @@
     transition: all .3s;
 
     @include r(1023) {
-      font-size: 22px;
+      font-size: 24px;
     }
 
     &:hover {
@@ -323,16 +343,20 @@
 
 .intro {
   display: grid;
-  gap: 3vw;
+  gap: 7vw;
   align-items: start;
 
   @include r(1280) {
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 320px 1fr;
+    .title {
+      font-size: 46px;
+    }
   }
   /* .intro__nav */
   &__nav {
     @include r(1280) {
         flex-direction: column;
+        gap: 1em;
       }
       @include rmax(767) {
         display: none;
@@ -353,7 +377,6 @@
     padding: 40px;
     align-self: center;
     font-size: rem(18);
-    color: $c-sec;
     @include r(768) {
       padding: 40px 0 40px 80px;
     }

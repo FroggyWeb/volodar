@@ -2,7 +2,7 @@
   display: grid;
   gap: $lg;
   align-items: start;
-  @include r(1024) {
+  @include r(1280) {
     grid-template-columns: minmax(760px, 2fr) 1fr;
   }
   /* .vacansys__main */
@@ -20,18 +20,22 @@
   /* .vacansys__header-main */
   &__header-main {
     font-size: rem(18);
-    color: $c-sec;
+    color: #A28276;
     .title-sub {
       color: $c-text;
       margin-bottom: .5em;
+    }
+    p {
+      margin: 0;
     }
   }
 
   /* .vacansys__sort */
   &__sort {
     align-self: end;
-    max-width: 200px;
+    width: 200px;
     margin-left: auto;
+    text-align: center;
   }
 
   /* .vacansys__list */

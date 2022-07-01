@@ -118,6 +118,9 @@
     color: $c-main;
     line-height: .75;
     flex: 0 0 auto;
+    @include r(1280) {
+      font-size: 74px;
+    }
   }
 }
 
@@ -358,7 +361,7 @@
 
 .section-link {
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 800;
   display: flex;
   gap: 1em;
   align-items: center;
@@ -367,16 +370,25 @@
   box-shadow: 9px 13px 26px -12px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   @include r(767) {
-    flex-direction: column;
     &__icon img {
       width: 3.5em;
     }
+    flex-direction: column;
   }
   @include r(1280) {
     font-size: 26px;
   }
   /* .section-link__icon */
-  &__icon {}
+  &__icon {
+    @include rmax(767) {
+      flex: 0 0 80px;
+    }
+  }
+
+  &--light {
+    color: #B69D86;
+
+  }
 
   /* .section-link__txt */
   &__txt {}

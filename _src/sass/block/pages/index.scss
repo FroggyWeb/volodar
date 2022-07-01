@@ -1,6 +1,7 @@
 .index-intro {
   display: grid;
   gap: $lg;
+  padding-top: 40px;
   @include r(1280) {
     grid-template-columns: 2fr 1fr;
   }
@@ -42,20 +43,24 @@
   /* .intro-slide__cnt */
   &__cnt {
     position: relative;
-    padding: 60px $lg 200px;
+    padding: 60px 40px 70%;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
     z-index: 1;
-    @include r(600) {
+    max-width:600px;
+    @include r(767) {
       max-width: 60%;
-      padding: 60px;
+      min-height: 460px;
+      padding: 100px 80px;
     }
   }
   /* .intro-slide__title */
   &__title {
     margin: 20px 0 0;
+    font-weight: 800;
+    font-size: rem(28);
   }
   /* .intro-slide__img */
   &__img {
@@ -64,12 +69,15 @@
     bottom: 0;
     height: calc(100% + 40px);
     object-fit: cover;
-    max-width: 50%;
-    @include rmax(600) {
+    max-width: 60%;
+    @include rmax(767) {
       height: auto;
       max-width: 100%;
 
     }
+  }
+  &__txt {
+    font-size: rem(18);
   }
 }
 
@@ -88,17 +96,23 @@
 }
 
 .anons-card {
+  /* .anons-card__cnt */
+  &__cnt {
+    max-width: 500px;
+  }
+  /* .anons-card__title */
   &__title.title {
     margin-bottom: 0;
   }
   /* .anons-card__txt */
   &__txt {
     margin: 15px 0 0;
+    color: #776157;
   }
 
   /* .anons-card__footer */
   &__footer {
-    margin-top: 15px;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     gap: $lg;
@@ -106,11 +120,13 @@
   }
 }
 
+
 .ceo {
   font-size: 14px;
   span {
     display: block;
     font-size: 16px;
+    color: #50220F;
   }
 
   /* .ceo--faximile */
@@ -130,7 +146,7 @@
   justify-content: center;
   /* .product-card__item */
   &__item {
-    max-width: 250px;
+    max-width: 300px;
     flex: 0 0 calc(50% - var(--lg));
     display: flex;
     flex-direction: column;
@@ -143,6 +159,9 @@
     position: relative;
     font-weight: bold;
     font-size: rem(18);
+    @include r(1280) {
+      font-size: 26px;
+    }
     &:before {
       content: "";
       background: url('@/img/bg.jpg');
@@ -159,6 +178,9 @@
 
 .production-steps__title {
   font-size: 36px;
+  @include r(1024) {
+    font-size: 42px;
+  }
 }
 
 .production-step {
@@ -215,13 +237,12 @@
       order: 1
     }
   }
-
 }
 
 .fill-block {
   display: flex;
   flex-direction: column;
-  background-color: #ebebeb;
+  background-color: #FAFAFA;
   position: relative;
   img {
     width: 100%;
@@ -251,6 +272,23 @@
       left: 0;
       top: 0;
     }
+  }
+}
+
+.fill-block--right {
+  img {
+    left: auto;
+    right: 0;
+  }
+  .production-step__cnt-wrap {
+    margin: auto 50% auto 0;
+  }
+}
+
+.production-step__cnt-center {
+  @include rmax(767) {
+    margin: auto!important;
+    text-align: center;
   }
 }
 

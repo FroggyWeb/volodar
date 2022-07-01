@@ -86,14 +86,14 @@
 		display: block;
 		height: 2px;
 		width: 20px;
-		background-color: $c-text;
+		background-color: #A28276;
 		&:before,
 		&:after {
 			content: "";
 			position: absolute;
 			height: 2px;
 			width: 20px;
-			background-color: #000;
+			background-color: #A28276;
 			transition: all 0.3s;
 			transform-origin: 50% 50%;
 		}

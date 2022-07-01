@@ -108,6 +108,8 @@ input.check {
     background-size: auto;
   }
   &__wrap {
+    max-width: 1340px;
+    margin: auto;
     @include r(1400) {
       display: grid;
       gap: $lg;
@@ -173,6 +175,9 @@ input.check {
     }
     @include r(767) {
       grid-column: span 2;
+    }
+    @include r(1025) {
+      text-align-last: left;
     }
     a {
       color: inherit;

@@ -21,18 +21,18 @@
           <div class="swiper-wrapper">
             <div class="intro-slide swiper-slide">
               <div class="intro-slide__cnt">
-                <div class="intro-slide__title title" data-swiper-parallax="-100">Индивидуальный подход к&nbsp;каждому
+                <div class="intro-slide__title" data-swiper-parallax="-100">Индивидуальный подход к&nbsp;каждому
                   клиенту</div>
-                <div>Персональный менеджер <br>и сопровождение 24/7</div>
+                <div class="intro-slide__txt">Персональный менеджер <br>и сопровождение 24/7</div>
                 <a href="#" class="btn">Заказать поставку</a>
               </div>
               <img class="intro-slide__img round-both" src="@/img/content/slide-1.png" alt="">
             </div>
             <div class="intro-slide swiper-slide">
               <div class="intro-slide__cnt">
-                <div class="intro-slide__title title" data-swiper-parallax="-100">Большие объемы призводимой продукции
+                <div class="intro-slide__title" data-swiper-parallax="-100">Большие объемы призводимой продукции
                 </div>
-                <div>700 тонн - производимая способность <br>комбината “Володарский”</div>
+                <div class="intro-slide__txt">700 тонн - производимая способность <br>комбината “Володарский”</div>
                 <a href="#" class="btn">Заказать поставку</a>
               </div>
               <img class="intro-slide__img round-both" src="@/img/content/slide-2.png" alt="">
@@ -52,7 +52,7 @@
         </div>
         <div class="anons-card__cnt">
           <h2 class="title title--small anons-card__title">Крупнейший поставщик муки в Нижегородской области</h2>
-          <p class="anons-card__txt c-sec">Мукомольный комбинат Володарский — радует людей вкусным хлебом. В этом нам
+          <p class="anons-card__txt">Мукомольный комбинат Володарский — радует людей вкусным хлебом. В этом нам
             помогает качественное и экологическое сырье,
             индивидуальный подход к клиентам и квалифицированные сотрудники, всегда готовые помочь</p>
           <div class="anons-card__footer">
@@ -80,7 +80,7 @@
     ] %}
   <div class="product-card">
     {% for item in products_card %}
-    <a href="#" class="product-card__item link-arr-hover">
+    <a href="#" class="product-card__item link-arr-hover link-arr-hover--long">
       <img src={{ item.img }} alt="{{ item.name }}">
       <span>{{ item.name }}</span>
     </a>

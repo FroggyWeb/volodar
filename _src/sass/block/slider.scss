@@ -17,7 +17,11 @@
 .intro-slider {
   .swiper-pagination {
     top: 80px;
-    left: 60px;
+    left: 40px;
+    @include r(767) {
+      top: 120px;
+      left: 80px;
+    }
   }
   .swiper-slide:not(.swiper-slide-active) {
     opacity: 0!important;

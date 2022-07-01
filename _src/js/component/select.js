@@ -24,8 +24,11 @@ if (vacancy) {
   });
 
   choicesVacansy.passedElement.element.addEventListener('choice', (e) => {
-    console.log(e.detail.choice.value)
-    vacancyContainer.filter(`[data-mix="${e.detail.choice.value}"]`);
+    if (e.detail.choice.value == 'all') {
+      vacancyContainer.filter('all')
+    } else {
+      vacancyContainer.filter(`[data-mix="${e.detail.choice.value}"]`);
+    }
   })
 
 

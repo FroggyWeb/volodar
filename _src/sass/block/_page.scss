@@ -71,6 +71,12 @@ a[href*="tel"] {
     flex: 1;
     font-size: 18px;
 	}
+  &__tel-ico {
+    @include r(1023) {
+      display: none;
+    }
+  }
+
   &__soc {
     text-align: center;
     align-items: center;
@@ -124,7 +130,7 @@ a[href*="tel"] {
 	line-height: 1;
 	font-weight: 800;
 	font-size: 24px;
-  max-width: 1000px;
+  max-width: 1200px;
   @include r(650) {
     font-size: 32px;
   }
@@ -148,7 +154,6 @@ a[href*="tel"] {
 .title-mob-center {
   @include rmax(767) {
     text-align: center;
-    margin-bottom: 2em;
   }
 }
 
@@ -211,6 +216,12 @@ a[href*="tel"] {
   padding: 40px 0;
   background: url('@/img/bg.jpg');
   margin-top: -20px;
+  @include r(1025) {
+    padding: 100px 0;
+    .footer__about {
+      margin-top: -60px;
+    }
+  }
 
   &__main {
     @include r(1360) {
@@ -251,6 +262,15 @@ a[href*="tel"] {
 
   &__logo {
 
+  }
+
+  .soc-shop.link-arr {
+    text-align: center;
+    margin-top: 1em;
+    display: block;
+    color: $c-text;
+    font-weight: normal;
+    width: 100%;
   }
 
   &__addr {
