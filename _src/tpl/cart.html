@@ -1,0 +1,43 @@
+{% extends "./parthtml/base.html" %} {% block content %}
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <span href="#" class="breadcrumbs__link">Корзина</span>
+    </li>
+  </ul>
+</div>
+
+<div class="container container--sm">
+  <div class="cart-wrap">
+    <div class="cart">
+      <h1 class="title">Ваша корзина</h1>
+      <div class="cart-list">
+        <div class="cart-list__item">
+          <div class="cart-list__cnt">
+            <div class="cart-list__title">Мука пшеничная хлебопекарная 1 сорт</div>
+            <div class="cart-list__details">
+              <div class="cart-list__count">120 кг</div>
+              <div class="cart-list__edit">Изменить количество
+                {{ macro.iconSvg('edit') }}
+              </div>
+            </div>
+          </div>
+          <div class="cart-list__img">
+            <img src="@/img/content/product/product_card_2.png" alt="">
+          </div>
+          <button class="delete">
+            {{ macro.iconSvg('delete') }}
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <div class="cart-form">
+      <h2 class="title">Оформление заказа</h2>
+    </div>
+  </div>
+</div>
+{% endblock %}

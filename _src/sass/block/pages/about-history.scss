@@ -1,0 +1,111 @@
+.history-info {
+  .production-step__cnt-wrap {
+    max-width: none;
+  }
+  .production-step__img{
+    order: 1;
+    text-align: center;
+  }
+  .callout__cnt {
+    span {
+      display: block;
+      text-align: right;
+    }
+  }
+  @include r(1024) {
+    &.production-step {
+      grid-template-columns: 1.3fr 1fr;
+    }
+  }
+}
+
+.historys {
+  display: grid;
+  @include r(767) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.history {
+  position: relative;
+  padding: calc(3*$lg) 0 $lg;
+  text-align: center;
+  @include r(767) {
+    padding: $lg;
+    text-align: left;
+    &:before, &:after {
+      content: '';
+      border: 1px dashed $c-main;
+      position: absolute;
+    }
+    &:before {
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+    &:nth-child(even):after {
+      content: none;
+    }
+
+    &:nth-child(4n-2):not(:last-child):after {
+      content: '';
+      height: 100%;
+      right: -1px;
+      top: 0;
+    }
+    &:nth-child(4n+3):not(:first-child):after {
+      content: '';
+      height: 100%;
+      left: -1px;
+      top: 0;
+    }
+  }
+
+  /* .history__date */
+  &__date {
+    display: inline-flex;
+    position: relative;
+    font-weight: 800;
+    position: relative;
+    color: $c-main;
+    font-size: rem(26);
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+    }
+    &:before {
+      height: $lg;
+      border: 1px solid $c-main;
+      top: 0;
+      left: 50%;
+      transform: translateY(calc(-1 * $lg));
+    }
+    &:after {
+      width: 10px;
+      height: 10px;
+      background-color: $c-main;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      outline: 1px solid $c-main;
+      left: 50%;
+      top: 0;
+      transform: translate(-9px, calc(-1 * $lg - 10px));
+    }
+    @include rmax(767) {
+      &:before {
+        height: calc(2*$lg);
+        transform: translateY(calc(-2 * $lg));
+      }
+      &:after {
+        transform: translate(-9px, calc(-2 * $lg - 10px));
+      }
+    }
+  }
+
+  /* .history__cnt */
+  &__cnt {
+    font-weight: 800;
+    font-size: rem(16);
+  }
+}

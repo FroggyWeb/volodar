@@ -1,0 +1,99 @@
+{% extends "./parthtml/base.html" %} {% block content %}
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <span href="#" class="breadcrumbs__link">Наша компания</span>
+    </li>
+  </ul>
+</div>
+
+<div class="container container--sm contacts-wrap">
+  <h1 class="title title-mob-center">Контакты Володарского <br>мукомольного комбината</h1>
+  <div class="contacts">
+    <div class="contacts__cnt">
+      <div class="contacts__item">
+        <div class="contacts__desc">Мы находимся</div>
+        <div class="contacts__addr">606070, Нижегородская область, г.&nbsp;Володарск, улица&nbsp;Южная&nbsp;19А</div>
+      </div>
+      <div id="map" class='round-both' data-da=".contacts__map,1023,1">
+        <script type="text/javascript" charset="utf-8" async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8ac85070d55d084391214da1362ee1103d6a8eb7a3c6579e428cd45cc368e27e&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>
+      </div>
+      <div class="contacts__footer">
+        <div class="contacts__item contacts__tel">
+          <div class="contacts__desc">Основной телефон</div>
+          <a href="tel:80000001212">8 000 000 12 12
+            <img class="icon" src="@/img/icon/phone-contact.svg" alt="">
+          </a>
+        </div>
+        <div class="contacts__item contacts__mail">
+          <div class="contacts__desc">Оснавная почта</div>
+          <a href="mailto:it@mkvolod.ru">it@mkvolod.ru
+            <img class="icon" src="@/img/icon/mail-contact.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="contacts__map">
+
+    </div>
+  </div>
+</div>
+
+<div class="container container--sm">
+  <div class="departament-contacts">
+    <div class="departament-contact">
+      <div class="contact">
+        <div href="#" class="contact__name link-arr">Бугалтерия
+          {{ macro.iconSvg('arr-short') }}
+        </div>
+        <a href="tel: 800000000" class="contact__tel">8 000 000 00 00</a>
+        <a href="mailto: mkv@mkvolod.ru" class="contact__mail">mkv@mkvolod.ru</a>
+      </div>
+      <div class="contact">
+        <a href="#" class="contact__name link-arr">Отдел продаж
+          {{ macro.iconSvg('arr-short') }}
+        </a>
+        <a href="tel: 800000000" class="contact__tel">8 000 000 00 00</a>
+        <a href="mailto: mkv@mkvolod.ru" class="contact__mail">mkv@mkvolod.ru</a>
+      </div>
+      <div class="contact">
+        <a href="#" class="contact__name link-arr">Отдел снабжения
+          {{ macro.iconSvg('arr-short') }}
+        </a>
+        <a href="tel: 800000000" class="contact__tel">8 000 000 00 00</a>
+        <a href="mailto: mkv@mkvolod.ru" class="contact__mail">mkv@mkvolod.ru</a>
+      </div>
+      <div class="contact">
+        <div href="#" class="contact__name link-arr">Бугалтерия
+          {{ macro.iconSvg('arr-short') }}
+        </div>
+        <a href="tel: 800000000" class="contact__tel">8 000 000 00 00</a>
+        <a href="mailto: mkv@mkvolod.ru" class="contact__mail">mkv@mkvolod.ru</a>
+      </div>
+      <div class="contact">
+        <a href="#" class="contact__name link-arr">Отдел продаж
+          {{ macro.iconSvg('arr-short') }}
+        </a>
+        <a href="tel: 800000000" class="contact__tel">8 000 000 00 00</a>
+        <a href="mailto: mkv@mkvolod.ru" class="contact__mail">mkv@mkvolod.ru</a>
+      </div>
+      <div class="contact">
+        <a href="#" class="contact__name link-arr">Отдел снабжения
+          {{ macro.iconSvg('arr-short') }}
+        </a>
+        <a href="tel: 800000000" class="contact__tel">8 000 000 00 00</a>
+        <a href="mailto: mkv@mkvolod.ru" class="contact__mail">mkv@mkvolod.ru</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- end-container -->
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,164 @@
+{% extends "./parthtml/base.html" %} {% block content %}
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <span href="#" class="breadcrumbs__link">Наша история</span>
+    </li>
+  </ul>
+  <div class="intro">
+    <ul class="intro__nav sec-nav">
+      <li class="sec-nav__item">
+        <a href="#" class="sec-nav__link">Наша компания</a>
+      </li>
+      <li class="sec-nav__item">
+        <a href="#" class="sec-nav__link active">История комбината</a>
+      </li>
+      <li class="sec-nav__item">
+        <a href="#" class="sec-nav__link">Документы и награды</a>
+      </li>
+      <li class="sec-nav__item">
+        <a href="#" class="sec-nav__link">Фото-видео</a>
+      </li>
+    </ul>
+    <div class="intro__main">
+      <h1 class="title title-mob-center">История Володарского мукомольного комбината началась в 1872 году</h1>
+      <div class="intro__slide round-both">
+        <div class="intro__slide-cnt">
+          <ul class="list">
+            <li class="list__item">Пётр Бугров, нижегородский купец и крупнейший благотворитель города, основал
+              крупчатое производство на реке Сейме.</li>
+            <li class="list__item">Под управлением его внука Николая предприятие стало крупнейшим в
+              Российской империи.</li>
+          </ul>
+        </div>
+        <img src="@/img/content/about/history-intro.png" alt="" class="intro__slide-img">
+      </div>
+    </div>
+  </div>
+
+  <div class="container container--sm section">
+    <div class="production-step history-info">
+      <div class="production-step__cnt-wrap">
+        <div class="production-step__cnt">
+          <div class="title-sub">
+            За <span class="strong">превосходное качество продукции</span> фирма Бугровых была удостоена высшей награды
+            —
+            права маркировать свою продукцию
+            государственным гербом.
+          </div>
+
+        </div>
+      </div>
+      <div class="production-step__img callout callout--4">
+        <img class="" src="@/img/content/about/about-info.png" alt="Лаборатория">
+        <div class="callout__item callout__item--4">
+          <svg width="175" height="38" viewBox="0 0 175 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M174 0.999969C144 28.6666 67.4 67.4 1 0.999969" stroke="#50220F" stroke-width="0.5"
+              stroke-dasharray="8 8" />
+          </svg>
+
+          <div class="callout__cnt"> “Прибыль превыше всего, но честь — превыше прибыли!”
+            <span>Н. А. Бугров</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section history-date">
+      <h2 class="title title--center">История наших достижений</h2>
+      <div class="historys">
+        <div class="history">
+          <div class="history__date">2016</div>
+          <div class="history__cnt">
+            <p>Рекорд завода: переработка 700 тонн зерна в сутки, выпуск 536 тонн муки (444 тонны пшеничной и 92 тонны
+              ржаной) в сутки.</p>
+          </div>
+        </div>
+        <div class="history">
+          <div class="history__date">2014</div>
+          <div class="history__cnt">
+            <p>Расширение географии поставок в другие регионы России.</p>
+          </div>
+        </div>
+        <div class="history">
+          <div class="history__date">2012</div>
+          <div class="history__cnt">
+            <p>Масштабная реорганизация производства: перерабатывающая мощность предприятия увеличилась до 700 тонн
+              зерна в сутки.</p>
+            <p>Налажена система логистики, включая выделенную ж/д линию и собственный автопарк.</p>
+          </div>
+        </div>
+        <div class="history">
+          <div class="history__date">2013</div>
+          <div class="history__cnt">
+            <p>Запуск производства ржаной муки (100 тонн в сутки).</p>
+            <p>Награда “Самая лучшая мука”</p>
+            <p>
+              <img src="@/img/content/about/history-step-1.jpg" alt="">
+            </p>
+          </div>
+        </div>
+        <div class="history">
+          <div class="history__date">2011</div>
+          <div class="history__cnt">
+            <p>Запуск собственного бренда “Володарочка”</p>
+            <p>
+              <img src="@/img/content/about/history-step-2.jpg" alt="">
+            </p>
+          </div>
+        </div>
+        <div class="history">
+          <div class="history__date">
+            <a href="" class="btn">Показать больше</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <section class="section container--sm">
+      <h2 class="title title--center">Узнать больше</h2>
+      <div class="section-links">
+        <a href="#" class="section-link section-link--light">
+          <div class="section-link__icon">
+            <img src="@/img/icon/about-factory.svg" alt="">
+          </div>
+          <div class="section-link__txt">
+            Наша компания
+            {{ macro.iconSvg('arr-long') }}
+          </div>
+        </a>
+        <a href="#" class="section-link section-link--light">
+          <div class="section-link__icon">
+            <img src="@/img/icon/about-document.svg" alt="">
+          </div>
+          <div class="section-link__txt">
+            Документы
+            {{ macro.iconSvg('arr-long') }}
+          </div>
+        </a>
+        <a href="#" class="section-link section-link--light">
+          <div class="section-link__icon">
+            <img src="@/img/icon/about-camera.svg" alt="">
+          </div>
+          <div class="section-link__txt">
+            Фото-видео
+            {{ macro.iconSvg('arr-long') }}
+          </div>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- end-container -->
+
+  </div>
+
+
+
+</div>
+
+{% endblock %}

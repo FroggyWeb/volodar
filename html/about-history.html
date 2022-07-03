@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev site</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#563219">
+  <meta name="msapplication-TileColor" content="#eee4e1">
+  <meta name="theme-color" content="#fdfff5">
+
+  <meta name="description" content="Разработка сайта" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/vendor.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+</head>
+
+<body>
+  
+
+  <div class="page">
+    
+    <!-- begin Header -->
+    <header class="page__header js-header">
+      <div class="container container--sm">
+        <div class="header">
+          <div class="header__left">
+            <div class="burger">
+              <div class="burger__el"></div>
+            </div>
+            <div class="header__lang">
+              <select name="lang" id="select-lang" calss="js-choice" hidden>
+                <option value="Ru" selected>Ru</option>
+                <option value="En">En</option>
+              </select>
+            </div>
+
+          </div>
+          <a href="/" class="logo header__logo">
+            <img src="../img/logo-header.png" alt="Володарский мукомольный комбинат">
+          </a>
+          <div class="header__right">
+
+            <div class="header__search search">
+              <button class="search__btn">
+                
+<svg class="iconsvg search ">
+  <use xlink:href="../img/sprite.svg#search"></use>
+</svg>
+
+              </button>
+            </div>
+            <div class="header__cart mini-cart">
+              
+<svg class="iconsvg cart ">
+  <use xlink:href="../img/sprite.svg#cart"></use>
+</svg>
+
+              <div class="mini-cart__count">12</div>
+            </div>
+          </div>
+        </div>
+        <nav class="header__nav nav" id="main-nav">
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a href="#" class="nav__link">Продукция</a>
+    </li>
+    <li class="nav__item">
+      <a href="#" class="nav__link">Услуги</a>
+    </li>
+    <li class="nav__item">
+      <a href="#" class="nav__link">Клиентам</a>
+    </li>
+    <li class="nav__item nav__item-sub">
+      <a href="#" class="nav__link">О компании</a>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#" class="nav__link link-arr-hover">
+            <img src="../img/icon/about-factory.svg" alt="Наша компания">
+            <span>Наша компания</span></a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link link-arr-hover">
+            <img src="../img/icon/about-history.svg" alt="История комбината">
+            <span>История комбината</span></a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link link-arr-hover">
+            <img src="../img/icon/about-document.svg" alt="Документы">
+            <span>Документы</span></a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link link-arr-hover">
+            <img src="../img/icon/about-camera.svg" alt="Фото-видео">
+            <span>Фото-видео</span></a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav__item">
+      <a href="#" class="nav__link">Новости</a>
+    </li>
+    <li class="nav__item">
+      <a href="#" class="nav__link">Контакты</a>
+    </li>
+  </ul>
+</nav>
+<!-- <div class="burger">
+	<span class="burger__el"></span>
+</div> -->
+
+        <div class="mob-header">
+          <div class="header__soc soclist" data-da=".header__left,1023,3">
+            <a href="#" class="soclist__item" target="_blank">
+              
+<svg class="iconsvg yt ">
+  <use xlink:href="../img/sprite.svg#yt"></use>
+</svg>
+
+            </a>
+            <a href="#" class="soclist__item" target="_blank">
+              
+<svg class="iconsvg ig ">
+  <use xlink:href="../img/sprite.svg#ig"></use>
+</svg>
+
+            </a>
+            <a href="#" class="soclist__item" target="_blank">
+              
+<svg class="iconsvg vch ">
+  <use xlink:href="../img/sprite.svg#vch"></use>
+</svg>
+
+            </a>
+            <a href="#" class="soclist__item" target="_blank">
+              
+<svg class="iconsvg telegram ">
+  <use xlink:href="../img/sprite.svg#telegram"></use>
+</svg>
+
+            </a>
+            <a href="#" class="soclist__item" target="_blank">
+              
+<svg class="iconsvg vk ">
+  <use xlink:href="../img/sprite.svg#vk"></use>
+</svg>
+
+            </a>
+          </div>
+          <a href="tel:+78312289080" class="header__tel" data-da=".header__right,1023,0">
+            +7 (831) 228-90-80
+            <img src="../img/icon/phone.svg" alt="+78312289080" class="header__tel-ico">
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- end Header -->
+    
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <span href="#" class="breadcrumbs__link">Наша история</span>
+    </li>
+  </ul>
+  <div class="intro">
+    <ul class="intro__nav sec-nav">
+      <li class="sec-nav__item">
+        <a href="#" class="sec-nav__link">Наша компания</a>
+      </li>
+      <li class="sec-nav__item">
+        <a href="#" class="sec-nav__link active">История комбината</a>
+      </li>
+      <li class="sec-nav__item">
+        <a href="#" class="sec-nav__link">Документы и награды</a>
+      </li>
+      <li class="sec-nav__item">
+        <a href="#" class="sec-nav__link">Фото-видео</a>
+      </li>
+    </ul>
+    <div class="intro__main">
+      <h1 class="title title-mob-center">История Володарского мукомольного комбината началась в 1872 году</h1>
+      <div class="intro__slide round-both">
+        <div class="intro__slide-cnt">
+          <ul class="list">
+            <li class="list__item">Пётр Бугров, нижегородский купец и крупнейший благотворитель города, основал
+              крупчатое производство на реке Сейме.</li>
+            <li class="list__item">Под управлением его внука Николая предприятие стало крупнейшим в
+              Российской империи.</li>
+          </ul>
+        </div>
+        <img src="../img/content/about/history-intro.png" alt="" class="intro__slide-img">
+      </div>
+    </div>
+  </div>
+
+  <div class="container container--sm section">
+    <div class="production-step history-info">
+      <div class="production-step__cnt-wrap">
+        <div class="production-step__cnt">
+          <div class="title-sub">
+            За <span class="strong">превосходное качество продукции</span> фирма Бугровых была удостоена высшей награды
+            —
+            права маркировать свою продукцию
+            государственным гербом.
+          </div>
+
+        </div>
+      </div>
+      <div class="production-step__img callout callout--4">
+        <img class="" src="../img/content/about/about-info.png" alt="Лаборатория">
+        <div class="callout__item callout__item--4">
+          <svg width="175" height="38" viewBox="0 0 175 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M174 0.999969C144 28.6666 67.4 67.4 1 0.999969" stroke="#50220F" stroke-width="0.5"
+              stroke-dasharray="8 8" />
+          </svg>
+
+          <div class="callout__cnt"> “Прибыль превыше всего, но честь — превыше прибыли!”
+            <span>Н. А. Бугров</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section history-date">
+      <h2 class="title title--center">История наших достижений</h2>
+      <div class="historys">
+        <div class="history">
+          <div class="history__date">2016</div>
+          <div class="history__cnt">
+            <p>Рекорд завода: переработка 700 тонн зерна в сутки, выпуск 536 тонн муки (444 тонны пшеничной и 92 тонны
+              ржаной) в сутки.</p>
+          </div>
+        </div>
+        <div class="history">
+          <div class="history__date">2014</div>
+          <div class="history__cnt">
+            <p>Расширение географии поставок в другие регионы России.</p>
+          </div>
+        </div>
+        <div class="history">
+          <div class="history__date">2012</div>
+          <div class="history__cnt">
+            <p>Масштабная реорганизация производства: перерабатывающая мощность предприятия увеличилась до 700 тонн
+              зерна в сутки.</p>
+            <p>Налажена система логистики, включая выделенную ж/д линию и собственный автопарк.</p>
+          </div>
+        </div>
+        <div class="history">
+          <div class="history__date">2013</div>
+          <div class="history__cnt">
+            <p>Запуск производства ржаной муки (100 тонн в сутки).</p>
+            <p>Награда “Самая лучшая мука”</p>
+            <p>
+              <img src="../img/content/about/history-step-1.jpg" alt="">
+            </p>
+          </div>
+        </div>
+        <div class="history">
+          <div class="history__date">2011</div>
+          <div class="history__cnt">
+            <p>Запуск собственного бренда “Володарочка”</p>
+            <p>
+              <img src="../img/content/about/history-step-2.jpg" alt="">
+            </p>
+          </div>
+        </div>
+        <div class="history">
+          <div class="history__date">
+            <a href="" class="btn">Показать больше</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <section class="section container--sm">
+      <h2 class="title title--center">Узнать больше</h2>
+      <div class="section-links">
+        <a href="#" class="section-link section-link--light">
+          <div class="section-link__icon">
+            <img src="../img/icon/about-factory.svg" alt="">
+          </div>
+          <div class="section-link__txt">
+            Наша компания
+            
+<svg class="iconsvg arr-long ">
+  <use xlink:href="../img/sprite.svg#arr-long"></use>
+</svg>
+
+          </div>
+        </a>
+        <a href="#" class="section-link section-link--light">
+          <div class="section-link__icon">
+            <img src="../img/icon/about-document.svg" alt="">
+          </div>
+          <div class="section-link__txt">
+            Документы
+            
+<svg class="iconsvg arr-long ">
+  <use xlink:href="../img/sprite.svg#arr-long"></use>
+</svg>
+
+          </div>
+        </a>
+        <a href="#" class="section-link section-link--light">
+          <div class="section-link__icon">
+            <img src="../img/icon/about-camera.svg" alt="">
+          </div>
+          <div class="section-link__txt">
+            Фото-видео
+            
+<svg class="iconsvg arr-long ">
+  <use xlink:href="../img/sprite.svg#arr-long"></use>
+</svg>
+
+          </div>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- end-container -->
+
+  </div>
+
+
+
+</div>
+
+
+  </div>
+
+  <div class="footer round-top">
+  <div class="container container-sm">
+    <div class="footer__main">
+      <div class="footer__about">
+        <a href="/" class="footer__logo">
+          <img src="../img/logo-footer.png" alt="Володарский мукомольный комбинат">
+        </a>
+        <div class="footer__contact" data-da=".footer__footer,1360,2">
+          <a class="footer__contact-tel" href="tel:+78312289080">+7 (831) 228-90-80</a>
+          <a class="footer__contact-mail" href="mailto:nn@wolodar.ru">nn@wolodar.ru</a>
+        </div>
+      </div>
+      <div class="footer__soc soclist" data-da=".footer__footer,1360,3">
+        <a href="#" class="soclist__item" target="_blank">
+          
+<svg class="iconsvg telegram ">
+  <use xlink:href="../img/sprite.svg#telegram"></use>
+</svg>
+
+        </a>
+        <a href="#" class="soclist__item" target="_blank">
+          
+<svg class="iconsvg vk ">
+  <use xlink:href="../img/sprite.svg#vk"></use>
+</svg>
+
+        </a>
+        <a href="#" class="soclist__item" target="_blank">
+          
+<svg class="iconsvg ig ">
+  <use xlink:href="../img/sprite.svg#ig"></use>
+</svg>
+
+        </a>
+        <a href="#" class="soclist__item" target="_blank">
+          
+<svg class="iconsvg vch ">
+  <use xlink:href="../img/sprite.svg#vch"></use>
+</svg>
+
+        </a>
+        <a href="#" class="soclist__item" target="_blank">
+          
+<svg class="iconsvg yt ">
+  <use xlink:href="../img/sprite.svg#yt"></use>
+</svg>
+
+        </a>
+        <a href="#" class="soc-shop link-arr ">Магазин на Aliexpress
+          
+<svg class="iconsvg arr-short ">
+  <use xlink:href="../img/sprite.svg#arr-short"></use>
+</svg>
+
+        </a>
+      </div>
+      <div class="js-adapt-wrap">
+        <nav class="footer__nav footer-nav">
+          <ul class="footer-nav__list footer-nav__root a-container">
+            <li class="footer-nav__title a-item">
+              <a href="#" class="footer-nav__link a-btn">Продукция
+                <span class="marker"></span>
+              </a>
+              <ul class="footer-nav__list a-panel">
+                <li class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">Пшеничная мука</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">Ржаная мука</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">Отруби</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">Зерноотходы</a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer-nav__title a-item">
+              <a href="#" class="footer-nav__link a-btn">О компании
+                <span class="marker"></span>
+              </a>
+              <ul class="footer-nav__list a-panel">
+                <li class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">История</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">Документы</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">Фото/видео</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">Вакансии</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">Новости</a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer-nav__title a-item">
+              <a href="#" class="footer-nav__link a-btn">Клиентам
+                <span class="marker"></span>
+              </a>
+              <ul class="footer-nav__list a-panel">
+                <li class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">Вопрос/ответ</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">Потребителям</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">Услуги элеватора</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#" class="footer-nav__link">Контакты</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__footer">
+        <div class="footer__addr" data-da=".footer__about,767,1">606070, Нижегородская&nbsp;область, г.&nbsp;Володарск,
+          улица&nbsp;Южная,&nbsp;19А
+        </div>
+      </div>
+    </div>
+    <div class="footer__post">
+      <a href="#" class="link-arr">Политика конфиденциальности 
+<svg class="iconsvg arr-short ">
+  <use xlink:href="../img/sprite.svg#arr-short"></use>
+</svg>
+</a>
+      <div class="copy">Copyright© 2022</div>
+    </div>
+  </div>
+</div>
+
+
+
+  <script src="../js/leader-line.min.js"></script>
+  <script defer src="../js/vendor.js"></script>
+  <script defer src="../js/main.js"></script>
+</body>
+
+</html>
