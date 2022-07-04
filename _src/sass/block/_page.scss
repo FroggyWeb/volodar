@@ -217,7 +217,7 @@ a[href*="tel"] {
   background: url('@/img/bg.jpg');
   margin-top: -20px;
   @include r(1025) {
-    padding: 100px 0;
+    padding: 100px 0 50px;
     .footer__about {
       margin-top: -60px;
     }

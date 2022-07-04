@@ -1,0 +1,57 @@
+{% extends "./parthtml/base.html" %} {% block content %}
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <span href="#" class="breadcrumbs__link">Новости</span>
+    </li>
+  </ul>
+</div>
+
+
+<div class="container container--sm">
+  <h1 class="title title--center">Наши актуальные новости</h1>
+  <div class="news-list">
+    <a href="#" class="news">
+      <div class="news__img">
+        <img src="@/img/content/about/news.jpg" alt="">
+      </div>
+      <div class="news__title">И по сей день в центральных регионах звучит перекатами далёкий барабанный бой</div>
+      <div class="news__date">21.08.2000</div>
+    </a>
+    <a href="#" class="news">
+      <div class="news__img">
+        <img src="@/img/content/about/news.jpg" alt="">
+      </div>
+      <div class="news__title">Окрестности Тулы оросил шопот бессменных лидеров</div>
+      <div class="news__date">21.08.2000</div>
+    </a>
+    <a href="#" class="news">
+      <div class="news__img">
+        <img src="@/img/content/about/news.jpg" alt="">
+      </div>
+      <div class="news__title">Подтверждено: объемы выросли</div>
+      <div class="news__date">21.08.2000</div>
+    </a>
+    <a href="#" class="news">
+      <div class="news__img">
+        <img src="@/img/content/about/news.jpg" alt="">
+      </div>
+      <div class="news__title">И по сей день в центральных регионах звучит перекатами далёкий барабанный бой</div>
+      <div class="news__date">21.08.2000</div>
+    </a>
+    <a href="#" class="news">
+      <div class="news__img">
+        <img src="@/img/content/about/news.jpg" alt="">
+      </div>
+      <div class="news__title">И по сей день в центральных регионах звучит перекатами далёкий барабанный бой</div>
+      <div class="news__date">21.08.2000</div>
+    </a>
+  </div>
+  <div class="more more--center">
+    <a href="" class="link-arr">Архив новостей {{ macro.iconSvg('arr-short') }}</a>
+  </div>
+</div>
+{% endblock %}
