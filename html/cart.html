@@ -177,7 +177,14 @@
 </div>
 
 <div class="container container--sm">
-  <div class="cart-wrap">
+  <div class="intro-cart">
+    <div class="intro-cart__img"></div>
+    <div class="intro-cart__cnt">
+      <div class="intro-cart__title">Количество, сроки и поставки</div>
+      <p>обсуждаются с персональным менеджером после оформления</p>
+    </div>
+  </div>
+  <div class="cart-wrap section">
     <div class="cart">
       <h1 class="title">Ваша корзина</h1>
       <div class="cart-list">
@@ -186,19 +193,19 @@
             <div class="cart-list__title">Мука пшеничная хлебопекарная 1 сорт</div>
             <div class="cart-list__details">
               <div class="cart-list__count">120 кг</div>
-              <div class="cart-list__edit">Изменить количество
+              <a href="#" class="cart-list__edit">Изменить количество
                 
 <svg class="iconsvg edit ">
   <use xlink:href="../img/sprite.svg#edit"></use>
 </svg>
 
-              </div>
+              </a>
             </div>
           </div>
           <div class="cart-list__img">
-            <img src="../img/content/product/product_card_2.png" alt="">
+            <img src="../img/content/product/product_card_1.png" alt="">
           </div>
-          <button class="delete">
+          <button class="delete-btn">
             
 <svg class="iconsvg delete ">
   <use xlink:href="../img/sprite.svg#delete"></use>
@@ -206,11 +213,88 @@
 
           </button>
         </div>
+        <div class="cart-list__item">
+          <div class="cart-list__cnt">
+            <div class="cart-list__title">Мука пшеничная хлебопекарная Высший сорт</div>
+            <div class="cart-list__details">
+              <div class="cart-list__count">450 кг</div>
+              <a href="#" class="cart-list__edit">Изменить количество
+                
+<svg class="iconsvg edit ">
+  <use xlink:href="../img/sprite.svg#edit"></use>
+</svg>
 
+              </a>
+            </div>
+          </div>
+          <div class="cart-list__img">
+            <img src="../img/content/product/product_card_2.png" alt="">
+          </div>
+          <button class="delete-btn">
+            
+<svg class="iconsvg delete ">
+  <use xlink:href="../img/sprite.svg#delete"></use>
+</svg>
+
+          </button>
+        </div>
+        <div class="cart-list__item">
+          <div class="cart-list__cnt">
+            <div class="cart-list__title">Ржаные отруби на кормовые цели</div>
+            <div class="cart-list__details">
+              <a href="#" class="cart-list__edit">Добавить количество
+                
+<svg class="iconsvg edit ">
+  <use xlink:href="../img/sprite.svg#edit"></use>
+</svg>
+
+              </a>
+            </div>
+          </div>
+          <div class="cart-list__img">
+            <img src="../img/content/product/product_card_3.png" alt="">
+          </div>
+          <button class="delete-btn">
+            
+<svg class="iconsvg delete ">
+  <use xlink:href="../img/sprite.svg#delete"></use>
+</svg>
+
+          </button>
+        </div>
+      </div>
+      <div class="cart__footer">
+        Итого: <span class="cart__footer-info">3 позиции 570 кг</span>
+        <a href="#" class="cart__clear">Удалить все 
+<svg class="iconsvg delete ">
+  <use xlink:href="../img/sprite.svg#delete"></use>
+</svg>
+ </a>
       </div>
     </div>
     <div class="cart-form">
       <h2 class="title">Оформление заказа</h2>
+      <form action="" class="form cart-order-form">
+          <div class="form__line">
+            <input type="text" name="name" placeholder="Имя" required="">
+          </div>
+          <div class="form__line">
+            <input type="tel" name="tel" placeholder="Телефон" required="">
+          </div>
+          <div class="form__line">
+            <input type="mail" name="mail" placeholder="Почта" required="">
+          </div>
+        <div class="form__line">
+          <textarea name="msg" id="" rows="9" placeholder="Комментарий" required=""></textarea>
+        </div>
+        <div class="form__footer">
+          <input class="check" id="form__confirm" type="checkbox" hidden="" checked="">
+          <label class="form__confirm" for="form__confirm">Я согласен с условиями <a href="#">политики&nbsp;конфиденциальноcти</a></label>
+          <div class="form__btn">
+            <button type="submit" class="btn">Отправить</button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>
