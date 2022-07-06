@@ -119,8 +119,8 @@
       position: absolute;
       right: 0;
       bottom: .1em;
-      width: 1em;
-      height: 1em;
+      width: .5em;
+      height: .5em;
       background: url('@/img/icon/arrow.svg') no-repeat;
       background-size: 100% auto;
       transition: all .3s;
@@ -143,15 +143,14 @@
     &:before {
       background: url('@/img/icon/arr-long.svg') no-repeat;
       background-size: 100% auto;
-      width: 1.5em;
-      bottom: 0;
+      width: 1em;
     }
   }
   &:hover {
     span {
       transform: translateX(-1em);
       &:before {
-        transform: translateX(2em);
+        transform: translateX(1.25em);
         opacity: 1;
       }
     }

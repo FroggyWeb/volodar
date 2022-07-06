@@ -46,13 +46,14 @@ input.check {
       content: "";
       display: inline-block;
       position: absolute;
-      top: 0;
+      top: -0.15em;
       left: 0;
       width: 1em;
       height: 1em;
       background-color: #fff;
       border: 2px solid $c-text;
       border-radius: 5px;
+      padding: .15em;
     }
   }
   &:checked+label:before {

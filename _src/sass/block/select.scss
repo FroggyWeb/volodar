@@ -1,5 +1,6 @@
 .choices {
   position: relative;
+  font-weight: 700;
   &:focus {
     outline: none;
   }
@@ -15,7 +16,7 @@
       background: url('@/img/icon/dropdown.svg') no-repeat center center;
       background-size: cover;
       right: 0;
-      top: .7em;
+      top: .5em;
     }
   }
   &__item {

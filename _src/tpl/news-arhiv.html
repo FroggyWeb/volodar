@@ -1,0 +1,106 @@
+{% extends "./parthtml/base.html" %} {% block content %}
+<div class="container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a href="#" class="breadcrumbs__link">Новости</a>
+    </li>
+    <li class="breadcrumbs__item">
+      <span href="#" class="breadcrumbs__link">Архив новостей</span>
+    </li>
+  </ul>
+</div>
+
+<div class="container container--sm news-arhiv" >
+  <h1 class="title">Все новости <br>Володарского Мукомольного завода</h1>
+  <div class="news-arhiv__header">
+    <div class="news-arhiv__select">
+      <select name="news" id="news-arhiv" calss="js-choice" hidden>
+        <option value="" selected>Выберете год</option>
+        <option value="all">Все года</option>
+        <option value="2022">2022</option>
+        <option value="2021">2021</option>
+      </select>
+    </div>
+    <div class="news-arhiv__sort">
+      <input type="checkbox" name="news_sort" id='news_sort' class="check" hidden checked>
+      <label for="news_sort">Сначала новые</label>
+    </div>
+  </div>
+  <div class="arhiv">
+    <a href="#" class="arhiv__item">
+      <div class="arhiv__date">32 Февраля 2022</div>
+      <div class="arhiv__img">
+        <img width="270" height="180" src="@/img/content/about/news-arhiv.jpg" alt="">
+      </div>
+      <div class="arhiv__title">Эксперты утверждают, что сплочённость команды профессионалов даёт нам право принимать самостоятельные решения</div>
+      <div class="link-arr arhiv__more">Читать новость  {{ macro.iconSvg('arr-short') }}</div>
+    </a>
+    <a href="#" class="arhiv__item">
+      <div class="arhiv__date">1 мая 2022</div>
+      <div class="arhiv__img">
+        <img width="270" height="180" src="@/img/content/about/news-arhiv.jpg" alt="">
+      </div>
+      <div class="arhiv__title">Новая упаковка</div>
+      <div class="link-arr arhiv__more">Читать новость  {{ macro.iconSvg('arr-short') }}</div>
+    </a>
+    <a href="#" class="arhiv__item">
+      <div class="arhiv__date">32 Февраля 2022</div>
+      <div class="arhiv__img">
+        <img width="270" height="180" src="@/img/content/about/news-arhiv.jpg" alt="">
+      </div>
+      <div class="arhiv__title">Эксперты утверждают, что сплочённость команды профессионалов даёт нам право принимать самостоятельные решения</div>
+      <div class="link-arr arhiv__more">Читать новость  {{ macro.iconSvg('arr-short') }}</div>
+    </a>
+    <a href="#" class="arhiv__item">
+      <div class="arhiv__date">1 мая 2022</div>
+      <div class="arhiv__img">
+        <img width="270" height="180" src="@/img/content/about/news-arhiv.jpg" alt="">
+      </div>
+      <div class="arhiv__title">Новая упаковка</div>
+      <div class="link-arr arhiv__more">Читать новость  {{ macro.iconSvg('arr-short') }}</div>
+    </a>
+    <a href="#" class="arhiv__item">
+      <div class="arhiv__date">32 Февраля 2022</div>
+      <div class="arhiv__img">
+        <img width="270" height="180" src="@/img/content/about/news-arhiv.jpg" alt="">
+      </div>
+      <div class="arhiv__title">Эксперты утверждают, что сплочённость команды профессионалов даёт нам право принимать самостоятельные решения</div>
+      <div class="link-arr arhiv__more">Читать новость  {{ macro.iconSvg('arr-short') }}</div>
+    </a>
+    <a href="#" class="arhiv__item">
+      <div class="arhiv__date">1 мая 2022</div>
+      <div class="arhiv__img">
+        <img width="270" height="180" src="@/img/content/about/news-arhiv.jpg" alt="">
+      </div>
+      <div class="arhiv__title">Новая упаковка</div>
+      <div class="link-arr arhiv__more">Читать новость  {{ macro.iconSvg('arr-short') }}</div>
+    </a>
+
+  </div>
+  <div class="pagination-wrap">
+    Страница:
+    <ul class="pagination">
+      <li class="pagination__item">
+        <a href="#" class="pagination__link active">1</a>
+      </li>
+      <li class="pagination__item ">
+        <a href="#" class="pagination__link">2</a>
+      </li>
+      <li class="pagination__item">
+        <a href="#" class="pagination__link pagination-separ">...</a>
+      </li>
+      <li class="pagination__item">
+        <a href="#" class="pagination__link">31</a>
+      </li>
+      <li class="pagination__item">
+        <a href="#" class="pagination__link">32</a>
+      </li>
+    </ul>
+  </div>
+
+
+</div>
+{% endblock %}

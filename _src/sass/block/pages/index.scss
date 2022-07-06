@@ -147,7 +147,6 @@
   /* .product-card__item */
   &__item {
     max-width: 120px;
-    flex: 0 0 calc(50% - var(--lg));
     display: flex;
     flex-direction: column;
     gap: .25em;
@@ -164,7 +163,7 @@
       font-size: 18px;
     }
     @include r(1024) {
-      max-width: 250px;
+      max-width: 300px;
       font-size: 24px;
     }
     @include r(1800) {

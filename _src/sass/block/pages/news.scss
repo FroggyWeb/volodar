@@ -54,3 +54,136 @@
     padding-top: 1em;
   }
 }
+
+.news-arhiv {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1em;
+    border-bottom: 1px dashed;
+  }
+  &__select {
+    text-align: center;
+  }
+
+  &__sort {
+    font-weight: bold;
+  }
+}
+
+.arhiv {
+  @include r(1024) {
+    display: table;
+    // border-collapse: collapse;
+    // border-spacing: 20px $lg;
+    vertical-align: middle;
+  }
+
+  &__item {
+    text-decoration: none;
+    &:hover {
+      color: inherit;
+      background-color: $c-light;
+    }
+    @include r(1024) {
+      display: table-row;
+      align-items: center;
+      & > * {
+          padding: 2em 1em;
+          vertical-align: middle;
+          display: table-cell;
+          // border-bottom: $lg solid transparent;
+          &:not(:last-child) {
+            // border-right: $lg solid transparent;
+          }
+        }
+    }
+  }
+
+  &__date {
+    white-space: nowrap;
+  }
+
+  &__img {
+    img {border-radius: 8px;}
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    @include r(1024) {
+      width: 60%;
+    }
+    @include r(1800) {
+      font-size: 26px;
+    }
+  }
+  &__more {
+
+  }
+}
+
+@include rmax(1023) {
+  .arhiv {
+    margin-top: $lg;
+    &__item {
+      display: grid;
+      gap: 1em $lg;
+      grid-template-columns: 25% auto 1fr auto;
+      margin-bottom: $lg;
+    }
+    &__date {
+      grid-column: 2/4;
+      font-size: 14px;
+    }
+    &__img {
+      grid-column: 1/2;
+      grid-row: 1/4;
+      align-self: start;
+    }
+    &__title {
+      font-size: 16px;
+      grid-column: 2/4;
+    }
+    &__more {
+      display: block;
+      text-align: right;
+      grid-column: 2/4;
+    }
+  }
+}
+
+.pagination-wrap {
+  margin-top: $lg;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 1em
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &__item {
+    margin: 0 .25em;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 1em .75em;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    &.active {
+        background: $c-light;
+        border-radius: 8px;
+      }
+  }
+}
+

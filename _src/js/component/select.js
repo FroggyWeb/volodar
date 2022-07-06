@@ -8,6 +8,17 @@ const choices = new Choices('#select-lang', {
 
 });
 
+let newsArhiv = document.getElementById('news-arhiv')
+if (newsArhiv) {
+  const newsArhivSelect = new Choices(newsArhiv, {
+    allowHTML: false,
+    searchEnabled: false,
+    itemSelectText: false,
+    shouldSort: false,
+
+  })
+}
+
 const vacancy = document.getElementById('select-vacancy')
 if (vacancy) {
   const choicesVacansy = new Choices(vacancy, {
