@@ -1,0 +1,129 @@
+.intro-consumers {
+  display: grid;
+  gap: $lg;
+  grid-template-columns: .7fr 1fr;
+  align-items: center;
+  /* .intro-consumers__cnt */
+  &__cnt {
+    p {
+      color: #b69d86;
+      font-size: 1.125rem;
+      margin: 0;
+    }
+  }
+}
+
+.consumers-benefits {
+  background: url('@/img/content/about/bg-wares.png') no-repeat top center;
+  background-size: contain;
+  padding: 20% 0;
+  /* .consumers-benefits__cnt */
+  &__cnt {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  /* .consumers-benefits__list */
+  &__list.list-check {
+    @include rmax(767) {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+.list-check {
+  display: grid;
+  gap: $lg;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @include r(767) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* .list-check__item */
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: rem(18);
+    padding: 0 0 0 3em;
+    gap: 1em;
+    font-weight: 700;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 2em;
+      height: 2em;
+      left: 0;
+      top: 50%;
+      background: url('@/img/icon/check-list.svg') no-repeat 50% 50%;
+      background-size: 100%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.recipe {
+  padding: 1em;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 9px 13px 26px -12px rgba(0, 0, 0, 0.25);
+  /* .recipe__header */
+  &__header {
+    display: grid;
+    gap: $lg;
+    @include r(1023) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+  }
+
+  /* .recipe__header-cnt */
+  &__header-cnt {
+    display: grid;
+    gap: .5em;
+  }
+
+  /* .recipe__img */
+  &__img {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  /* .recipe__title */
+  &__title {
+    font-size: rem(22);
+    font-weight: 800;
+  }
+
+  /* .recipe__portions */
+  &__portions {
+    color: $c-sec;
+  }
+
+  /* .recipe__composition */
+  &__composition {}
+
+  /* .recipe__list */
+  &__list.list {
+    font-size: rem(16);
+  }
+
+  /* .recipe__count */
+  &__count {}
+
+  /* .recipe__cooking */
+  &__cooking {}
+
+  /* .recipe__cooking-title */
+  &__cooking-title {}
+}
+
+.list {
+
+  /* .list__item */
+  &__item {}
+}
