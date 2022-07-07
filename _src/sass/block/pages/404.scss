@@ -1,0 +1,63 @@
+.page404 {
+  text-align: center;
+  padding: 5vw 0;
+  @include r(767) {
+    background: url('@/img/404.svg') no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  &__error {
+    font-weight: 800;
+    font-size: 140px;
+    color: $c-main;
+    line-height: 1;
+    @include r(767) {
+      font-size: 240px;
+    }
+    @include r(1800){
+      font-size: 290px;
+    }
+
+  }
+
+  &__title {
+    font-size: rem(26);
+    font-weight: 800;
+    margin-bottom: $lg;
+  }
+}
+
+.btn {}
+
+.page404-footer {
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contacts {
+  &__footer {
+    display: grid;
+    gap: $lg;
+    font-size: 24px;
+    font-weight: 800;
+    @include r(550) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include r(1023) {
+      font-size: 36px;
+    }
+  }
+
+  &__404 {
+
+  }
+
+  &__tel {}
+
+  &__desc {}
+
+  &__mail {}
+}
+
+.icon {}

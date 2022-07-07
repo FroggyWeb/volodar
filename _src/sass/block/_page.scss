@@ -124,6 +124,10 @@ a[href*="tel"] {
   color: $c-sec;
 }
 
+.c-sec-dark {
+  color: $c-sec-dark;
+}
+
 .title {
 	position: relative;
 	margin: 0 0 1em;
@@ -438,3 +442,19 @@ a[href*="tel"] {
 }
 
 
+.article {
+  &__header {
+    margin-bottom: $lg;
+  }
+
+  &__date {}
+}
+
+.article-gallery-2-2 {
+  display: grid;
+  gap: $lg;
+  @include r(767) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}

@@ -1,10 +1,14 @@
 .intro-consumers {
   display: grid;
   gap: $lg;
-  grid-template-columns: .7fr 1fr;
-  align-items: center;
+  @include r(1023) {
+    grid-template-columns: .7fr 1fr;
+    align-items: center;
+  }
   /* .intro-consumers__cnt */
   &__cnt {
+    max-width: 500px;
+    margin: auto;
     p {
       color: #b69d86;
       font-size: 1.125rem;
@@ -67,6 +71,9 @@
 }
 
 .recipe {
+  &:not(:last-child) {
+    margin-bottom: $lg;
+  }
   padding: 1em;
   border-radius: 16px;
   background-color: #fff;
@@ -107,19 +114,35 @@
   /* .recipe__composition */
   &__composition {}
 
+  /* .recipe__composition-title */
+  &__composition-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
   /* .recipe__list */
   &__list.list {
-    font-size: rem(16);
+    font-size: 18px;
+    .list__item {
+      margin-bottom: .5em;
+    }
   }
 
   /* .recipe__count */
   &__count {}
 
   /* .recipe__cooking */
-  &__cooking {}
+  &__cooking {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px dashed;
+  }
 
   /* .recipe__cooking-title */
-  &__cooking-title {}
+  &__cooking-title {
+    font-size: rem(18);
+    font-weight: bold;
+  }
 }
 
 .list {

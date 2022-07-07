@@ -1,0 +1,32 @@
+{% extends "./parthtml/base.html" %}
+  {% block content %}
+
+  <div class="container container--sm">
+    <div class="page404">
+      <div class="page404__error">404</div>
+      <div class="page404__title">Упс! Страница не найдена</div>
+      <a href="/" class="btn">На главную страницу</a>
+    </div>
+    <div class="page404-footer section">
+      <h1 class="page404__title">Если есть вопросы, мы обязательно поможем</h1>
+      <div class="contacts__footer">
+          <div class="contacts__404 contacts__tel">
+            <div class="contacts__desc">Основной телефон</div>
+            <a href="tel:80000001212">8 000 000 12 12
+              <img class="icon" src="@/img/icon/phone-contact.svg" alt="">
+            </a>
+          </div>
+          <div class="contacts__404 contacts__mail">
+            <div class="contacts__desc">Оснавная почта</div>
+            <a href="mailto:it@mkvolod.ru">it@mkvolod.ru
+              <img class="icon" src="@/img/icon/mail-contact.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+  </div>
+  <!-- end page-bg -->
+
+
+
+{% endblock %}
