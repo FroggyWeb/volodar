@@ -54,7 +54,6 @@
     align-items: center;
     font-size: rem(18);
     padding: 0 0 0 3em;
-    gap: 1em;
     font-weight: 700;
     &:before {
       content: '';
@@ -85,7 +84,6 @@
     @include r(1023) {
       grid-template-columns: 1fr 1fr;
     }
-
   }
 
   /* .recipe__header-cnt */
@@ -129,7 +127,10 @@
   }
 
   /* .recipe__count */
-  &__count {}
+  &__count {
+    font-weight: 800;
+    display: block;
+  }
 
   /* .recipe__cooking */
   &__cooking {

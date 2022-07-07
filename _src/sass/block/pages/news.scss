@@ -113,9 +113,6 @@
     font-size: 18px;
     font-weight: 700;
     margin: 0;
-    @include r(1024) {
-      width: 60%;
-    }
     @include r(1800) {
       font-size: 26px;
     }
