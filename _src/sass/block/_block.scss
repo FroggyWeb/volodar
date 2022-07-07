@@ -8,7 +8,7 @@
     background-color: transparent;
     appearance: none;
     color: $c-text;
-    font-size: 20px;
+    font-size: 26px;
   }
   &__soc {
     margin-top: -.5em;
@@ -76,28 +76,7 @@
   text-align: center;
 }
 
-.mini-cart {
-  position: relative;
-  padding: 5px;
-  border-radius: 3px;
-  font-size: 20px;
-  display: inline-block;
-  /* .mini-cart__count */
-  &__count {
-    color: #fff;
-    position: absolute;
-    width: 1.5em;
-    height: 1.5em;
-    bottom: -.1em;
-    right: -.5em;
-    border-radius: 50%;
-    background-color: $c-main;
-    padding: 2px;
-    font-size: .5em;
-    font-weight: bold;
-    text-align: center;
-  }
-}
+
 .soclist {
   //.soclist__item
   &__item {

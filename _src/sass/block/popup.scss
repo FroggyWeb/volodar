@@ -1,0 +1,126 @@
+#overflow {
+  position: fixed;
+  width: 100vw;
+  height: 100vw;
+  background-color: rgba(163, 131, 119, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 999;
+}
+
+
+//Миникорзина
+.mini-cart {
+  position: relative;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 26px;
+  display: inline-block;
+
+  /* .mini-cart__count */
+  &__count {
+    color: #fff;
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    bottom: -.1em;
+    right: -.5em;
+    border-radius: 50%;
+    background-color: $c-main;
+    padding: 2px;
+    font-size: .5em;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.header__cart {
+  position: relative;
+  z-index: 1001;
+
+  .cart-popup {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 550px;
+    max-width: 90vw;
+    z-index: 1000;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 14px;
+      background: url('@/img/decor/cart-arr.svg') no-repeat;
+      background-size: cover;
+      top: 0;
+      right: 0;
+      transform: translate(-50%, -100%);
+    }
+  }
+}
+
+.cart-popup {
+  padding: 50px 20px 20px;
+  border-radius: 8px;
+  background-color: #fff;
+
+  &__banner {
+    text-align: center;
+    padding: 20px;
+    background-color: $c-sec;
+    color: #fff;
+    border-radius: 8px;
+  }
+
+  &__banner-txt {
+    margin-top: .5em;
+    font-weight: 700;
+    font-size: 22px;
+  }
+
+  &__close {
+    color: $c-sec-dark;
+    background-color: transparent;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  &__cnt {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed;
+  }
+
+  &__item {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 20% 1fr;
+    text-decoration: none;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  &__item-cnt {
+    font-size: 18px;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  &__item-title {
+    font-size: 20px;
+  }
+
+  &__count {
+    margin-top: .5em;
+    font-weight: 700;
+  }
+
+  &__img {}
+}

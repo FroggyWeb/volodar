@@ -59,6 +59,7 @@
             <div class="header__cart mini-cart">
               {{ macro.iconSvg('cart') }}
               <div class="mini-cart__count">12</div>
+               {% include "./minicart.html" %}
             </div>
           </div>
         </div>
@@ -98,6 +99,7 @@
   <script src="../js/leader-line.min.js"></script>
   <script defer src="../js/vendor.js"></script>
   <script defer src="../js/main.js"></script>
+  <div id="overflow"></div>
 </body>
 
 </html>
