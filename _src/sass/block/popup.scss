@@ -5,6 +5,7 @@
   background-color: rgba(163, 131, 119, 0.6);
   backdrop-filter: blur(3px);
   z-index: 999;
+  display: none;
 }
 
 
@@ -44,6 +45,7 @@
     width: 550px;
     max-width: 90vw;
     z-index: 1000;
+    display: none;
 
     &:before {
       content: "";
