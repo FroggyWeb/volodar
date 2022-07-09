@@ -261,7 +261,7 @@
   gap: $lg;
   @include r(767) {
     grid-template-columns: 1fr 1fr;
-    &.event .title {
+    .title {
       grid-column: 1 /span 2;
     }
   }
@@ -273,7 +273,11 @@
 .people {
   display: grid;
   gap: $lg;
-  grid-template-columns: 40% 1fr;
+  grid-template-columns: 30% 1fr;
+  @include r(450) {
+    grid-template-columns: 40% 1fr;
+  }
+
   /* .people__photo */
   &__photo {
     max-width: 240px;
@@ -296,6 +300,22 @@
     @include r(450) {
       font-size: 22px;
     }
+  }
+  &__footer {
+    border-top: 1px dashed;
+    padding-top: 1em;
+    margin-top: 1em;
+    display: grid;
+    gap: .5em;
+    font-size: rem(16);
+    font-weight: 800;
+  }
+  &__tel{
+    font-size: rem(22);
+  }
+  &__mail {
+    text-decoration: none;
+    color: $c-sec;
   }
 }
 
