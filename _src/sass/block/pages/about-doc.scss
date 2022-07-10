@@ -78,11 +78,11 @@ table {
 
   &__year {
     color: $c-sec;
-    font-size: 22px;
+    font-size: rem(18);
   }
 
   &__name {
-    font-size: rem(22);
+    font-size: rem(18);
     font-weight: 700;
   }
   @include rmax(767) {

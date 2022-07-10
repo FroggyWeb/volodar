@@ -14,8 +14,10 @@ textarea {
   border: none;
   display: block;
   min-width: 100%;
+  color: $c-text;
   @include placeholder() {
       color: #664B42;
+      font-weight: normal;
       opacity: .5;
     }
   &:hover {
@@ -48,8 +50,8 @@ input.check {
       position: absolute;
       top: -0.15em;
       left: 0;
-      width: 1em;
-      height: 1em;
+      width: 24px;
+      height: 24px;
       background-color: #fff;
       border: 2px solid $c-text;
       border-radius: 5px;
@@ -94,6 +96,7 @@ input.check {
     text-align: left;
   }
 }
+
 
 .form-order {
   background-color: $c-text;
@@ -244,5 +247,26 @@ input.check {
     &:hover {
       color: #fff;
     }
+  }
+}
+
+.form-modal {
+  display: none;
+  .form-order {
+    background-color: #fff;
+    color: $c-text;
+    padding: $lg;
+    .form__btn {
+      text-align: right;
+    }
+  }
+  .form__confirm:before{
+    border-color: $c-text;
+  }
+  .form-order__footer {
+    text-align: left;
+  }
+  .form-order__pre-tel a[href*="tel:"] {
+    color: $c-text;
   }
 }

@@ -1,0 +1,58 @@
+<div class="search-popup popup" id="search">
+  <div class="search-popup__header">
+    <img class="search-popup__logo" src="@/img/logo-header.svg" alt="">
+    <form action="" class="search-form" name="search">
+      <button type="submit" tabindex='2' class="search-btn">
+        {{ macro.iconSvg('search') }}
+      </button>
+      <input type="search" tabindex='1' placeholder="Введите запрос">
+      <button type="button" class="search-popup__close close-popup" type="button"
+        tabindex='3'>{{ macro.iconSvg('delete') }}
+    </form>
+  </div>
+
+  <div class="search-popup__body search-res" id="search-result">
+    <div class="search-res__title title-sub">Мука пшеничная высший сорт</div>
+    <div class="search-res__count c-sec">Найдено результатов: 2</div>
+    <div class="search-result">
+      <div class="search-result__item">
+        <a href="#" class="search-result__img">
+          <img src="@/img/content/product/product_card_2.png" alt="">
+        </a>
+        <div class="search-result__cnt">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link c-sec">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link c-sec">Продукция</a>
+            </li>
+          </ul>
+          <a href="#" class="search-result__title">Мука пшеничная хлебопекарная</a>
+          <div class="search-result__txt c-sec">Сорт экста , высший сорт, 1 сорт, заказать , добавить в корзину, Мука по
+            индивидуальным потребностям</div>
+          <a href="#" class="link-arr">Перейти на страницу {{ macro.iconSvg('arr-short') }}</a>
+        </div>
+      </div>
+      <div class="search-result__item">
+        <a href="#" class="search-result__img">
+          <img src="@/img/content/product/product_card_2.png" alt="">
+        </a>
+        <div class="search-result__cnt">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link c-sec">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link c-sec">Продукция</a>
+            </li>
+          </ul>
+          <a href="#" class="search-result__title">Мука пшеничная хлебопекарная</a>
+          <div class="search-result__txt c-sec">Сорт экста , высший сорт, 1 сорт, заказать , добавить в корзину, Мука по
+            индивидуальным потребностям</div>
+          <a href="#" class="link-arr">Перейти на страницу {{ macro.iconSvg('arr-short') }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

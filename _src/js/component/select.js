@@ -1,12 +1,6 @@
 import Choices from "choices.js";
 import mixitup from 'mixitup';
 
-const choices = new Choices('#select-lang', {
-  allowHTML: false,
-  searchEnabled: false,
-  itemSelectText: false,
-
-});
 
 let newsArhiv = document.getElementById('news-arhiv')
 if (newsArhiv) {

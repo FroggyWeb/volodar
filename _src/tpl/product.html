@@ -2,8 +2,8 @@
 {% block prebase %}
 <!-- begin page-bg -->
 <div class="page-bg page-bg--nopad round-bottom">
-{% endblock %}
-{% block content %}
+  {% endblock %}
+  {% block content %}
   <div class="container">
     <ul class="breadcrumbs">
       <li class="breadcrumbs__item">
@@ -25,7 +25,7 @@
             <div class="gost">ГОСТ Р ИСО 22000-2019</div>
           </div>
           <div class="to-basket">
-            <a href="#sendorder" class="btn">Заказать поставку</a>
+            <a href="#form-order" data-fancybox class="btn">Заказать поставку</a>
             <a href="#" class="add-to-basket">
               <div class="mini-cart">
                 {{ macro.iconSvg('cart') }}
@@ -63,26 +63,30 @@
               </div>
             </div>
             <div class="delivery-cards__item" style="background-image: url('@/img/content/product/delivery-3.svg');">
-              <div class="delivery-cards__cnt" >
+              <div class="delivery-cards__cnt">
                 <div class="delivery-cards__title">Вагон</div>
                 В таре
               </div>
             </div>
             <div class="delivery-cards__item" style="background-image: url('@/img/content/product/delivery-4.svg');">
-              <div class="delivery-cards__cnt" >
+              <div class="delivery-cards__cnt">
                 <div class="delivery-cards__title">Зерновоз</div>
                 Бестарно
               </div>
             </div>
             <div class="delivery-cards__item" style="background-image: url('@/img/content/product/delivery-5.svg');">
-              <div class="delivery-cards__cnt" >
+              <div class="delivery-cards__cnt">
                 <div class="delivery-cards__title">Хоппер</div>
                 Бестарно
               </div>
             </div>
           </div>
         </div>
-        <div class="tab" id="tab-2"><p>Мука высшего сорта – белая мука из пшеницы твёрдых сортов. В пшеничной муке высшего сорта содержится незначительное количество жира, клетчатки, сахара и белков. Зато в ней много крахмала (около 80%). Этот сорт муки отличается белым цветом и прекрасными хлебопекарными свойствами. Выпечка получается объемной с мелкой пористостью.</p>
+        <div class="tab" id="tab-2">
+          <p>Мука высшего сорта – белая мука из пшеницы твёрдых сортов. В пшеничной муке высшего сорта содержится
+            незначительное количество жира, клетчатки, сахара и белков. Зато в ней много крахмала (около 80%). Этот сорт
+            муки отличается белым цветом и прекрасными хлебопекарными свойствами. Выпечка получается объемной с мелкой
+            пористостью.</p>
           <div class="product-recommendation">
             <div class="product-recommendation__title">Идеальна для</div>
             <div class="product-recommendation__list">
@@ -214,18 +218,19 @@
       </a>
     </div>
     <a href="#" class="product-other__more link-arr"> Посмотреть всю продукцию
-       {{ macro.iconSvg('arr-short') }}
+      {{ macro.iconSvg('arr-short') }}
     </a>
   </div>
 </div>
 
 <section class="section container container--sm">
-    <div class="wares" style="background-image: url(../img/content/product/bg_wares_product.png);">
-      <div class="wares__cnt">
-        <p class="title title--center">Произведем продукцию по вашим <span class="strong">индивидуальным потребностям</span> и доставим ее в срок</p>
-        <a href="#" class="btn">Оставить заявку</a>
-      </div>
+  <div class="wares" style="background-image: url(../img/content/product/bg_wares_product.png);">
+    <div class="wares__cnt">
+      <p class="title title--center">Произведем продукцию по вашим <span class="strong">индивидуальным
+          потребностям</span> и доставим ее в срок</p>
+      <a href="#form-order" data-fancybox class="btn">Оставить заявку</a>
     </div>
-  </section>
+  </div>
+</section>
 
 {% endblock %}

@@ -389,6 +389,7 @@
   background-color: #fff;
   box-shadow: 9px 13px 26px -12px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
+  font-size: rem(18);
   @include r(767) {
     &__icon img {
       width: 3.5em;

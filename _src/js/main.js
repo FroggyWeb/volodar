@@ -1,11 +1,11 @@
 import { Fancybox } from "@fancyapps/ui";
 import "./component/sliders";
-import "./component/select";
-// import "./component/drawLine";
 import "./component/nav";
+import "./component/select";
 import "./component/dynamicAdapt";
 import "./component/products";
 import "./component/tabs";
+import "./component/popup";
 
 
 if ('ontouchstart' in window || navigator.msMaxTouchPoints) {

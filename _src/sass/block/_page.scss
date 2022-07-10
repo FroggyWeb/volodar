@@ -12,6 +12,14 @@ body {
 
 * {
 	min-width: 0;
+  box-sizing: border-box;
+  &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+
+a {
+  transition: all .3s;
 }
 // *
 //   outline: 1px solid green
@@ -65,6 +73,11 @@ a[href*="tel"] {
 	align-items: center;
 	justify-content: space-between;
 	padding: 10px 0;
+  &__lang {
+    @include rmax(650) {
+      display: none;
+    }
+  }
 	&__tel {
 		font-weight: bold;
 		text-align: center;
@@ -86,8 +99,10 @@ a[href*="tel"] {
   &__right {
     display: flex;
     flex: 1;
-    gap: 10px;
     align-items: center;
+    @include r(600) {
+      gap: 10px;
+    }
   }
   &__right {
     justify-content: flex-end;
@@ -95,6 +110,10 @@ a[href*="tel"] {
   &__cart{
     background-color: $c-bg;
   }
+}
+
+.page__header .mob-panel {
+  display: none;
 }
 
 .logo {
@@ -402,9 +421,10 @@ a[href*="tel"] {
 }
 
 .breadcrumbs {
-  text-align: center;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
+  text-align: center;
   list-style: none;
   margin: 50px 0;
   padding: 0;
@@ -422,7 +442,7 @@ a[href*="tel"] {
   }
   /* .breadcrumbs__item */
   &__item {
-    margin: 0 .5em;
+    margin: 0 .5em 0 0;
     display: flex;
     flex: 0 0 auto;
     align-items: center;
@@ -443,6 +463,8 @@ a[href*="tel"] {
 
 
 .article {
+  max-width: 920px;
+  margin: auto;
   &__header {
     margin-bottom: $lg;
   }

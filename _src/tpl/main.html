@@ -24,7 +24,7 @@
                 <div class="intro-slide__title" data-swiper-parallax="-100">Индивидуальный подход к&nbsp;каждому
                   клиенту</div>
                 <div class="intro-slide__txt">Персональный менеджер <br>и сопровождение 24/7</div>
-                <a href="#" class="btn">Заказать поставку</a>
+                <a href="#form-order" class="btn" data-fancybox="">Заказать поставку</a>
               </div>
               <img class="intro-slide__img round-both" src="@/img/content/slide-1.png" alt="">
             </div>
@@ -33,7 +33,7 @@
                 <div class="intro-slide__title" data-swiper-parallax="-100">Большие объемы призводимой продукции
                 </div>
                 <div class="intro-slide__txt">700 тонн - производимая способность <br>комбината “Володарский”</div>
-                <a href="#" class="btn">Заказать поставку</a>
+                <a href="#form-order" class="btn" data-fancybox>Заказать поставку</a>
               </div>
               <img class="intro-slide__img round-both" src="@/img/content/slide-2.png" alt="">
             </div>
@@ -96,8 +96,8 @@
     <h2 class="title title--center production-steps__title">Путь производства нашей муки</h2>
     <div class="production-step">
       <div class="line line--1"></div>
-      <div class="production-step__cnt-wrap" >
-        <div class="production-step__cnt" >
+      <div class="production-step__cnt-wrap">
+        <div class="production-step__cnt">
           <h3 class="production-step__title title-sub">Закупка зерна</h3>
           <p class="production-step__txt">Мы закупаем зерно только у агрохолдингов с проверенной репутацией</p>
           <a href="#" class="btn production-step__link">Стать вашим поставщиком</a>
@@ -135,7 +135,8 @@
         <img src="@/img/content/processing-3.png" alt="Очистка зерна">
         <div class="callout__item callout__item--1">
           <svg width="175" height="38" viewBox="0 0 175 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M174 0.999969C144 28.6666 67.4 67.4 1 0.999969" stroke="#50220F" stroke-width="0.5" stroke-dasharray="8 8"/>
+            <path d="M174 0.999969C144 28.6666 67.4 67.4 1 0.999969" stroke="#50220F" stroke-width="0.5"
+              stroke-dasharray="8 8" />
           </svg>
 
           <div class="callout__cnt">
@@ -187,15 +188,16 @@
             <p class="production-step__txt">Наконец, подготовленные виды зерна отправляются в размольное отделение,
               где cначала дробятся в крупку, а потом
               измельчаются в муку</p>
-            </div>
           </div>
         </div>
-        <img class="fill-block__img" src="@/img/content/processing-4.jpg" alt="2 000 тонн">
+      </div>
+      <img class="fill-block__img" src="@/img/content/processing-4.jpg" alt="2 000 тонн">
     </div>
 
     <div class="callout__item callout__item--2">
       <svg width="175" height="38" viewBox="0 0 175 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M174 0.999969C144 28.6666 67.4 67.4 1 0.999969" stroke="#50220F" stroke-width="0.5" stroke-dasharray="8 8"/>
+        <path d="M174 0.999969C144 28.6666 67.4 67.4 1 0.999969" stroke="#50220F" stroke-width="0.5"
+          stroke-dasharray="8 8" />
       </svg>
 
       <div class="callout__cnt">
@@ -246,7 +248,7 @@
         <p class="production-step__txt-p">Поставим муку на ваше производство в любом количестве. 35 регионов, 5 районов,
           4 страны
         </p>
-        <a href="#" class="btn production-step__link">Заказать поставку</a>
+        <a href="#form-order" data-fancybox class="btn production-step__link">Заказать поставку</a>
       </div>
     </div>
   </div>
@@ -260,5 +262,7 @@
 <div class="prefooter">
   {% include './parthtml/form_order.html' %}
 </div>
+
+
 
 {% endblock %}

@@ -38,8 +38,8 @@
             <div class="burger">
               <div class="burger__el"></div>
             </div>
-            <div class="header__lang">
-              <select name="lang" id="select-lang" calss="js-choice" hidden>
+            <div class="lang-swither header__lang">
+              <select name="lang" class="lang-desktop" hidden>
                 <option value="Ru" selected>Ru</option>
                 <option value="En">En</option>
               </select>
@@ -51,18 +51,38 @@
           </a>
           <div class="header__right">
 
-            <div class="header__search search">
-              <button class="search__btn">
+            <div class="header__search" data-popup="bg">
+              <button class="search-btn">
                 {{ macro.iconSvg('search') }}
               </button>
+              {% include "./search-panel.html" %}
             </div>
-            <div class="header__cart mini-cart">
+            <div class="header__cart mini-cart" data-popup="bg">
               {{ macro.iconSvg('cart') }}
+              <!-- <a href="./cart.html" class="link-mob-only">{{ macro.iconSvg('cart') }}</a> -->
               <div class="mini-cart__count">12</div>
-               {% include "./minicart.html" %}
+              {% include "./minicart.html" %}
             </div>
           </div>
         </div>
+
+        <div class="mob-panel">
+          <div class="lang-swither">
+            <select name="lang" class="lang-mob" hidden>
+              <option value="Ru" selected>Ru</option>
+              <option value="En">En</option>
+            </select>
+          </div>
+          <button class="search-btn">
+            {{ macro.iconSvg('search') }}
+          </button>
+          <a href="./cart.html" class="mini-cart">{{ macro.iconSvg('cart') }}
+            <div class="mini-cart__count">12</div>
+          </a>
+
+        </div>
+
+
         {% include "./nav.html" %}
         <div class="mob-header">
           <div class="header__soc soclist" data-da=".header__left,1023,3">
@@ -99,7 +119,14 @@
   <script src="../js/leader-line.min.js"></script>
   <script defer src="../js/vendor.js"></script>
   <script defer src="../js/main.js"></script>
-  <div id="overflow"></div>
+  <div id="overlay"></div>
+  <div class="form-modal" id="form-order">
+    {% set formID = "form__confirm2" %}
+    {% include "./form_order-body.html" %}
+  </div>
+
+
+
 </body>
 
 </html>

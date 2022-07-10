@@ -158,13 +158,13 @@
     position: relative;
     font-weight: bold;
     font-size: rem(18);
-    @include r(460) {
-      max-width: 200px;
+    @include r(360) {
+      max-width: 150px;
       font-size: 18px;
     }
     @include r(1024) {
-      max-width: 300px;
-      font-size: 24px;
+      max-width: 250px;
+      font-size: 22px;
     }
     @include r(1800) {
       max-width: 300px;
@@ -196,7 +196,7 @@
   display: grid;
   align-items: center;
   gap: $lg;
-  margin-bottom: calc(2*$lg);
+  margin-bottom: calc(3*$lg);
   // @include r(767) {
   //     grid-template-columns: minmax(350px, 10vw) auto;
   //     gap: 20px;

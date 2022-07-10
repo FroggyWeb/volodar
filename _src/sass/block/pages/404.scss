@@ -33,31 +33,21 @@
   max-width: 840px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.contacts {
-  &__footer {
-    display: grid;
-    gap: $lg;
-    font-size: 24px;
-    font-weight: 800;
-    @include r(550) {
-      grid-template-columns: 1fr 1fr;
+  .contacts {
+    &__footer {
+      display: grid;
+      gap: $lg;
+      font-size: 24px;
+      font-weight: 800;
+      @include r(550) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include r(1023) {
+        font-size: 36px;
+      }
     }
-    @include r(1023) {
-      font-size: 36px;
-    }
-  }
-
-  &__404 {
 
   }
-
-  &__tel {}
-
-  &__desc {}
-
-  &__mail {}
 }
 
-.icon {}
+

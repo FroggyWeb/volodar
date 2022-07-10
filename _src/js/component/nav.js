@@ -1,6 +1,5 @@
 import hcOffcanvasNav from 'hc-offcanvas-nav';
-
-document.addEventListener('DOMContentLoaded', function () {
+import Choices from "choices.js";
 
   var Nav = new hcOffcanvasNav('#main-nav', {
     disableAt: 1024,
@@ -19,11 +18,23 @@ document.addEventListener('DOMContentLoaded', function () {
   console.log(menuTop)
   menuTop.insertBefore(headerNav, menuTop.querySelector('.nav__list'))
 
-  headerNav.appendChild(document.querySelector('.header__lang').cloneNode(true))
-  headerNav.appendChild(document.querySelector('.search__btn').cloneNode(true))
-  headerNav.appendChild(document.querySelector('.header__cart').cloneNode(true))
+  headerNav.appendChild(document.querySelector('.mob-panel'))
 
+
+const langDesktop = new Choices('.lang-desktop', {
+  allowHTML: false,
+  searchEnabled: false,
+  itemSelectText: false,
 });
+const langMob = new Choices('.lang-mob', {
+  allowHTML: false,
+  searchEnabled: false,
+  itemSelectText: false,
+});
+
+document.querySelector('.mob-panel').addEventListener('click', (e) => {
+  e.stopPropagation;
+})
 
 // accordion
 function initAcc(elem, option, media){

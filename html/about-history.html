@@ -38,8 +38,8 @@
             <div class="burger">
               <div class="burger__el"></div>
             </div>
-            <div class="header__lang">
-              <select name="lang" id="select-lang" calss="js-choice" hidden>
+            <div class="lang-swither header__lang">
+              <select name="lang" class="lang-desktop" hidden>
                 <option value="Ru" selected>Ru</option>
                 <option value="En">En</option>
               </select>
@@ -51,24 +51,104 @@
           </a>
           <div class="header__right">
 
-            <div class="header__search search">
-              <button class="search__btn">
+            <div class="header__search" data-popup="bg">
+              <button class="search-btn">
                 
 <svg class="iconsvg search ">
   <use xlink:href="../img/sprite.svg#search"></use>
 </svg>
 
               </button>
+              <div class="search-popup popup" id="search">
+  <div class="search-popup__header">
+    <img class="search-popup__logo" src="../img/logo-header.svg" alt="">
+    <form action="" class="search-form" name="search">
+      <button type="submit" tabindex='2' class="search-btn">
+        
+<svg class="iconsvg search ">
+  <use xlink:href="../img/sprite.svg#search"></use>
+</svg>
+
+      </button>
+      <input type="search" tabindex='1' placeholder="Введите запрос">
+      <button type="button" class="search-popup__close close-popup" type="button"
+        tabindex='3'>
+<svg class="iconsvg delete ">
+  <use xlink:href="../img/sprite.svg#delete"></use>
+</svg>
+
+    </form>
+  </div>
+
+  <div class="search-popup__body search-res" id="search-result">
+    <div class="search-res__title title-sub">Мука пшеничная высший сорт</div>
+    <div class="search-res__count c-sec">Найдено результатов: 2</div>
+    <div class="search-result">
+      <div class="search-result__item">
+        <a href="#" class="search-result__img">
+          <img src="../img/content/product/product_card_2.png" alt="">
+        </a>
+        <div class="search-result__cnt">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link c-sec">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link c-sec">Продукция</a>
+            </li>
+          </ul>
+          <a href="#" class="search-result__title">Мука пшеничная хлебопекарная</a>
+          <div class="search-result__txt c-sec">Сорт экста , высший сорт, 1 сорт, заказать , добавить в корзину, Мука по
+            индивидуальным потребностям</div>
+          <a href="#" class="link-arr">Перейти на страницу 
+<svg class="iconsvg arr-short ">
+  <use xlink:href="../img/sprite.svg#arr-short"></use>
+</svg>
+</a>
+        </div>
+      </div>
+      <div class="search-result__item">
+        <a href="#" class="search-result__img">
+          <img src="../img/content/product/product_card_2.png" alt="">
+        </a>
+        <div class="search-result__cnt">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link c-sec">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link c-sec">Продукция</a>
+            </li>
+          </ul>
+          <a href="#" class="search-result__title">Мука пшеничная хлебопекарная</a>
+          <div class="search-result__txt c-sec">Сорт экста , высший сорт, 1 сорт, заказать , добавить в корзину, Мука по
+            индивидуальным потребностям</div>
+          <a href="#" class="link-arr">Перейти на страницу 
+<svg class="iconsvg arr-short ">
+  <use xlink:href="../img/sprite.svg#arr-short"></use>
+</svg>
+</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
             </div>
-            <div class="header__cart mini-cart">
+            <div class="header__cart mini-cart" data-popup="bg">
               
 <svg class="iconsvg cart ">
   <use xlink:href="../img/sprite.svg#cart"></use>
 </svg>
 
+              <!-- <a href="./cart.html" class="link-mob-only">
+<svg class="iconsvg cart ">
+  <use xlink:href="../img/sprite.svg#cart"></use>
+</svg>
+</a> -->
               <div class="mini-cart__count">12</div>
-               <div class="cart-popup popup">
-  <button class="cart-popup__close">
+              <div class="cart-popup popup">
+  <button class="cart-popup__close close-popup" type="button">
     
 <svg class="iconsvg delete ">
   <use xlink:href="../img/sprite.svg#delete"></use>
@@ -111,6 +191,32 @@
             </div>
           </div>
         </div>
+
+        <div class="mob-panel">
+          <div class="lang-swither">
+            <select name="lang" class="lang-mob" hidden>
+              <option value="Ru" selected>Ru</option>
+              <option value="En">En</option>
+            </select>
+          </div>
+          <button class="search-btn">
+            
+<svg class="iconsvg search ">
+  <use xlink:href="../img/sprite.svg#search"></use>
+</svg>
+
+          </button>
+          <a href="./cart.html" class="mini-cart">
+<svg class="iconsvg cart ">
+  <use xlink:href="../img/sprite.svg#cart"></use>
+</svg>
+
+            <div class="mini-cart__count">12</div>
+          </a>
+
+        </div>
+
+
         <nav class="header__nav nav" id="main-nav">
   <ul class="nav__list">
     <li class="nav__item">
@@ -119,11 +225,28 @@
     <li class="nav__item">
       <a href="#" class="nav__link">Услуги</a>
     </li>
-    <li class="nav__item">
+    <li class="nav__item nav__item-sub">
       <a href="#" class="nav__link">Клиентам</a>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#" class="nav__link link-arr-hover">
+            <img src="../img/icon/client-question.svg" alt="Вопрос-ответ">
+            <span>Вопрос-ответ</span></a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link link-arr-hover">
+            <img src="../img/icon/client-vacancy.svg" alt="Вакансии">
+            <span>Вакансии</span></a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link link-arr-hover">
+            <img src="../img/icon/client-consumers.svg" alt="Потребителям">
+            <span>Потребителям</span></a>
+        </li>
+      </ul>
     </li>
     <li class="nav__item nav__item-sub">
-      <a href="#" class="nav__link">О компании</a>
+      <a href="#" class="nav__link active">О компании</a>
       <ul class="nav__list">
         <li class="nav__item">
           <a href="#" class="nav__link link-arr-hover">
@@ -527,7 +650,51 @@
   <script src="../js/leader-line.min.js"></script>
   <script defer src="../js/vendor.js"></script>
   <script defer src="../js/main.js"></script>
-  <div id="overflow"></div>
+  <div id="overlay"></div>
+  <div class="form-modal" id="form-order">
+    
+    <form action="" name="form_order" class="form-order__wrap">
+  <div class="form-order__pre">
+    <div class="form-order__pre-txt">
+      <h3 class="form__title">Оставьте заявку</h3>
+      <p>С вами свяжется персональный менеджер, который отрегулирует все вопросы и будет на связи 24/7</p>
+    </div>
+    <div class="form-order__pre-tel">
+      <span> Или позвоните нам:</span>
+      <a href="tel:+78312289080">+7 (831) 228-90-80</a>
+    </div>
+  </div>
+  <div class="form-order__body">
+    <div class="form-order__body-main">
+      <div class="form__line">
+        <input type="text" name="name" placeholder="Имя" required>
+      </div>
+      <div class="form__line">
+        <input type="tel" name="tel" placeholder="Телефон" required>
+      </div>
+      <div class="form__line">
+        <input type="mail" name="mail" placeholder="Почта" required>
+      </div>
+    </div>
+    <div class="form-order__body-side">
+      <textarea name="msg" id="" rows="9" placeholder="Комментарий" required></textarea>
+    </div>
+    <div class="form-order__footer">
+      <input class="check check--invert" id="form__confirm2" type="checkbox" hidden checked>
+      <label class="form__confirm" for="form__confirm2">Я согласен с условиями <a
+          href="#">политики&nbsp;конфиденциальноcти</a></label>
+      <div class="form__btn">
+        <button type="submit" class="btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+
+</form>
+
+  </div>
+
+
+
 </body>
 
 </html>

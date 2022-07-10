@@ -81,6 +81,8 @@
   &__header {
     display: grid;
     gap: $lg;
+    padding-bottom: 1em;
+    border-bottom: 1px dashed;
     @include r(1023) {
       grid-template-columns: 1fr 1fr;
     }
@@ -134,9 +136,8 @@
 
   /* .recipe__cooking */
   &__cooking {
+    max-width: 920px;
     margin-top: 1em;
-    padding-top: 1em;
-    border-top: 1px dashed;
   }
 
   /* .recipe__cooking-title */
