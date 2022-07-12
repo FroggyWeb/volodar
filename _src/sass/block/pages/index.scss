@@ -146,8 +146,8 @@
   justify-content: center;
   /* .product-card__item */
   &__item {
-    max-width: 120px;
     display: flex;
+    flex: 0 0 calc(50% - $lg);
     flex-direction: column;
     gap: .25em;
     text-decoration: none;
@@ -157,17 +157,16 @@
     padding: 1em;
     position: relative;
     font-weight: bold;
-    font-size: rem(18);
-    @include r(360) {
-      max-width: 150px;
-      font-size: 18px;
-    }
-    @include r(1024) {
-      max-width: 250px;
+    font-size: 18px;
+    @include r(767) {
+      flex: 0 0 200px;
       font-size: 22px;
     }
+    @include r(1024) {
+      flex: 0 0 270px;
+    }
     @include r(1800) {
-      max-width: 300px;
+      flex: 0 0 300px;
       font-size: 26px;
     }
     &:before {
@@ -244,6 +243,50 @@
     @include rmax(767) {
       order: 1
     }
+  }
+}
+
+.benefit {
+  display: flex;
+  gap: $lg;
+
+  @include rmax(768) {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: calc(2*$lg);
+  }
+
+  /* .benefit__item */
+  &__item {
+    align-items: flex-start;
+
+    @include rmax(768) {
+      flex: 0 1 320px;
+      text-align: center;
+    }
+  }
+
+  /* .benefit__ico */
+  &__ico {
+    width: 120px;
+
+    @include rmax(768) {
+      width: 96px;
+      margin: auto;
+    }
+  }
+
+  /* .benefit__title */
+  &__title {
+    margin: .5em 0 0;
+    font-weight: 800;
+    font-size: 22px;
+  }
+
+  /* .benefit__txt */
+  &__txt {
+    font-size: 18px;
+    margin: .5em 0 0;
   }
 }
 

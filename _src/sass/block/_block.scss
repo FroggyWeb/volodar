@@ -101,7 +101,6 @@
       content: "";
       position: absolute;
       right: 0;
-      bottom: .1em;
       width: 1em;
       height: 1em;
       background: url('@/img/icon/arrow.svg') no-repeat;
@@ -124,7 +123,7 @@
 .link-arr-hover--long {
   span {
     &:before {
-      background: url('@/img/icon/arr-long.svg') no-repeat;
+      background: url('@/img/icon/arr-long.svg') center no-repeat;
       background-size: 100% auto;
       width: 1em;
     }

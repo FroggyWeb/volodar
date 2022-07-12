@@ -196,44 +196,6 @@ a[href*="tel"] {
   margin: 0 0 .75em;
 }
 
-.benefit {
-  display: flex;
-  gap: $lg;
-  @include rmax(768) {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: calc(2*$lg);
-  }
-  /* .benefit__item */
-  &__item {
-    align-items: flex-start;
-    @include rmax(768) {
-      flex: 0 1 320px;
-      text-align: center;
-    }
-  }
-
-  /* .benefit__ico */
-  &__ico {
-    width: 120px;
-    @include rmax(768) {
-      width: 96px;
-      margin: auto;
-    }
-  }
-
-  /* .benefit__title */
-  &__title {
-    margin: .5em 0 0;
-    font-weight: 800;
-    font-size: 18px;
-  }
-
-  /* .benefit__txt */
-  &__txt {
-    margin: .5em 0 0;
-  }
-}
 
 .footer {
   padding: 40px 0;
