@@ -67,7 +67,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    height: calc(100% + 40px);
+    height: 100%;
     object-fit: cover;
     max-width: 60%;
     @include rmax(767) {
@@ -83,17 +83,10 @@
 
 .intro-slider{
   position: relative;
-  padding-top: 40px;
+  padding: 40px 0 0;
 }
 
-.intro-slider__bg {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 40px);
-  padding: 0;
-}
+
 
 .anons-card {
   /* .anons-card__cnt */
@@ -158,9 +151,11 @@
     position: relative;
     font-weight: bold;
     font-size: 18px;
+    @include r(450) {
+      font-size: 22px;
+    }
     @include r(767) {
       flex: 0 0 200px;
-      font-size: 22px;
     }
     @include r(1024) {
       flex: 0 0 270px;
@@ -183,6 +178,10 @@
   }
 }
 
+.production-steps {
+  margin-top: 60px;
+}
+
 .production-steps__title {
   font-size: 36px;
   @include r(1024) {
@@ -195,19 +194,20 @@
   display: grid;
   align-items: center;
   gap: $lg;
-  margin-bottom: calc(3*$lg);
-  // @include r(767) {
-  //     grid-template-columns: minmax(350px, 10vw) auto;
-  //     gap: 20px;
-  //   }
-  @include r(1024) {
-      grid-template-columns: minmax(450px, 10vw) auto;
+  margin-bottom: 80px;
+  text-align: center;
+
+  @include r(767) {
+    text-align: left;
+    &:not(:last-child) {
+      margin-bottom: 120px;
+    }
+      grid-template-columns: 350px auto;
     }
 
   /* .production-step__cnt */
   &__cnt-wrap {
     max-width: 450px;
-    margin: auto;
     background-color: #fff;
     @include r(1024) {
       padding: 30px 0;
@@ -222,21 +222,23 @@
   }
   /* .production-step__link */
   &__link {
-    margin-top: 3em;
+    margin-top: $lg;
   }
   /* .production-step__img */
   &__img {
     text-align: left;
     position: relative;
-    @include rmax(1023) {
+    @include rmax(767) {
       order: -1;
     }
   }
 
   &--vert{
     text-align: center;
-    align-content: center;
     grid-template-columns: 1fr;
+    .production-step__cnt-wrap {
+      margin: 0 auto;
+    }
   }
 
   &--reverse {
@@ -258,11 +260,11 @@
 
   /* .benefit__item */
   &__item {
-    align-items: flex-start;
-
     @include rmax(768) {
       flex: 0 1 320px;
+      flex-direction: column;
       text-align: center;
+      justify-content: center;
     }
   }
 
@@ -285,8 +287,14 @@
 
   /* .benefit__txt */
   &__txt {
-    font-size: 18px;
+    font-size: 14px;
     margin: .5em 0 0;
+    @include r(767) {
+      font-size: 16px;
+    }
+    @include r(1500) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -366,27 +374,33 @@
 }
 
 //connect line
+.line {
+  display: none;
+}
 @include r(1024) {
   .line {
-    border-top: 1px dashed $c-text;
+    display: block;
+    height: 1px;
     position: absolute;
     left: 5%;
     right: 50%;
     z-index: -1;
+    background: linear-gradient(to right, #a2897f 50%, transparent 0%);
+    background-size: 20px 1px;
     &:before,
     &:after {
       content: "";
       position: absolute;
+      background: linear-gradient(to top, #a2897f 50%, transparent 0%);
+      background-size: 1px 20px;
       width: 1px;
       height: 40px;
     }
     &:before {
-      border-left: 1px dashed $c-text;
       left: 0;
       bottom: 0;
     }
     &:after {
-      border-right: 1px dashed $c-text;
       right: 0;
     }
   }

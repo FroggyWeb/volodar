@@ -16,9 +16,9 @@
           </h1>
         </div>
 
-        <div class="intro-slider swiper">
+        <div class="intro-slider swiper round-both intro-slider__bg bg-card">
           <div class="swiper-pagination"></div>
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper ">
             <div class="intro-slide swiper-slide">
               <div class="intro-slide__cnt">
                 <div class="intro-slide__title" data-swiper-parallax="-100">Индивидуальный подход к&nbsp;каждому
@@ -26,7 +26,7 @@
                 <div class="intro-slide__txt">Персональный менеджер <br>и сопровождение 24/7</div>
                 <a href="#form-order" class="btn" data-fancybox="">Заказать поставку</a>
               </div>
-              <img class="intro-slide__img round-both" src="@/img/content/slide-1.png" alt="">
+              <img class="intro-slide__img" src="@/img/content/slide-1.png" alt="">
             </div>
             <div class="intro-slide swiper-slide">
               <div class="intro-slide__cnt">
@@ -35,10 +35,10 @@
                 <div class="intro-slide__txt">700 тонн - производимая способность <br>комбината “Володарский”</div>
                 <a href="#form-order" class="btn" data-fancybox>Заказать поставку</a>
               </div>
-              <img class="intro-slide__img round-both" src="@/img/content/slide-2.png" alt="">
+              <img class="intro-slide__img" src="@/img/content/slide-2.png" alt="">
             </div>
           </div>
-          <div class="intro-slider__bg round-both bg-card"></div>
+          <div class=""></div>
         </div>
       </div>
       <div class="index-intro__aside anons-card">
@@ -92,7 +92,7 @@
 
 <!-- begin production-steps -->
 <div class="production-steps section">
-  <div class="container container--sm">
+  <div class="container">
     <h2 class="title title--center production-steps__title">Путь производства нашей муки</h2>
     <div class="production-step">
       <div class="line line--1"></div>
@@ -112,7 +112,7 @@
   </div>
 
   <div class="production-step fill-block round-top">
-    <div class="container container--sm">
+    <div class="container">
       <div class="production-step__cnt-wrap">
         <div class="production-step__cnt">
           <h3 class="production-step__title title-sub">Около 2 000 тонн</h3>
@@ -123,7 +123,7 @@
     <img class="fill-block__img" src="@/img/content/processing-2.jpg" alt="2 000 тонн">
   </div>
 
-  <div class="container container--sm">
+  <div class="container">
     <div class="production-step">
       <div class="line line--3"></div>
       <div class="production-step__cnt-wrap">
@@ -181,7 +181,7 @@
 
   <div class="callout callout--2">
     <div class="production-step fill-block round-bottom">
-      <div class="container container--sm">
+      <div class="container">
         <div class="production-step__cnt-wrap">
           <div class="production-step__cnt">
             <h3 class="production-step__title title-sub">Три производственные линии
@@ -209,7 +209,7 @@
 
   </div>
 
-  <div class="container container--sm">
+  <div class="container">
     <div class="production-step">
       <div class="line line--6"></div>
       <div class="production-step__cnt-wrap">
@@ -257,7 +257,10 @@
 <!-- end production-steps -->
 
 <div class="map">
-  <img src="@/img/map.svg" alt="Регионы поставок">
+  <picture>
+    <source media="(max-width: 550px)" srcset="@/img/map-mobile.svg">
+    <img src="@/img/map.svg" alt="Регионы поставок">
+  </picture>
 </div>
 
 <div class="prefooter">

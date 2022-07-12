@@ -225,7 +225,6 @@ a[href*="tel"] {
       margin-bottom: $lg;
       .footer__contact {
         flex: 0 0 auto;
-        text-align: right;
       }
     }
     @include r(767) {
@@ -249,6 +248,10 @@ a[href*="tel"] {
     max-width: 210px;
   }
 
+  &__soc {
+    margin-top: $lg;
+  }
+
   .soc-shop.link-arr {
     text-align: center;
     margin-top: 1em;
@@ -261,8 +264,8 @@ a[href*="tel"] {
   &__addr {
     padding: 10px 0 0 20px;
     background: url('@/img/map-footer.svg') top left no-repeat;
-    margin-top: calc(2*$lg);
-    max-width: 320px;
+    margin: calc(2*$lg) auto 0 ;
+    max-width: 300px;
     @include r(767) {
       font-size: 18px;
       font-weight: bold;
@@ -283,7 +286,7 @@ a[href*="tel"] {
 
   &__contact {
     font-weight: 800;
-    margin-bottom: 30px;
+    text-align: center;
   }
 
   &__contact-tel {
