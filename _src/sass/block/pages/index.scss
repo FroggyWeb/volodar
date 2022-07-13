@@ -258,6 +258,9 @@
     .production-step__cnt-wrap {
       margin: 0 auto;
     }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &--reverse {
@@ -337,6 +340,15 @@
       text-align: center;
     }
   }
+  .production-step__cnt-center {
+    @include r(767) {
+      width: 50%;
+    }
+    .production-step__cnt {
+      text-align: center;
+      margin: auto;
+    }
+  }
 
   @include r(1023) {
     display: block;
@@ -363,19 +375,21 @@
     right: 0;
   }
   .production-step__cnt-wrap {
-    margin: auto 50% auto 0;
+    @include r(1023) {
+      margin: auto 50% auto 0;
+    }
   }
 }
 
 .production-step__cnt-center {
-  @include rmax(767) {
+  @include rmax(1023) {
     margin: auto!important;
     text-align: center;
   }
 }
 
 .fill-block.round-top .fill-block__img {
-  @include rmax(767) {
+  @include rmax(1023) {
     order: -1;
   }
 }

@@ -399,6 +399,7 @@
   padding: 0;
   list-style: none;
   font-size: 18px;
+  text-align: left !important;
   @include r(1024) {
     font-size: 22px;
   }
