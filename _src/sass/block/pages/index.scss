@@ -43,7 +43,7 @@
   /* .intro-slide__cnt */
   &__cnt {
     position: relative;
-    padding: 60px 40px 70%;
+    padding: 100px 40px 70%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -53,7 +53,7 @@
     @include r(767) {
       max-width: 60%;
       min-height: 460px;
-      padding: 100px 80px;
+      padding: 140px 80px 100px;
     }
   }
   /* .intro-slide__title */
@@ -69,6 +69,7 @@
     bottom: 0;
     height: 100%;
     object-fit: cover;
+    object-position: left top;
     max-width: 60%;
     @include rmax(767) {
       height: auto;
@@ -83,7 +84,7 @@
 
 .intro-slider{
   position: relative;
-  padding: 40px 0 0;
+  padding: 0;
 }
 
 
@@ -197,25 +198,42 @@
   margin-bottom: 80px;
   text-align: center;
 
-  @include r(767) {
+  @include r(1023) {
     text-align: left;
     &:not(:last-child) {
       margin-bottom: 120px;
     }
-      grid-template-columns: 350px auto;
+      grid-template-columns: auto 1fr;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 30px 0;
     }
+  @include r(1400) {
+    max-width: 1330px;
+    margin-left: calc(100% / 12 * 2 );
+    margin-right: calc(100% / 12 );
+  }
 
   /* .production-step__cnt */
   &__cnt-wrap {
+    margin-right: auto;
+    margin-left: auto;
     max-width: 450px;
     background-color: #fff;
     @include r(1024) {
+      margin-left: 0;
       padding: 30px 0;
     }
   }
 
     /* .production-step__txt */
   &__txt {
+    @include rmax(1023) {
+      br {
+        display: none;
+      }
+    }
     @include r(1023) {
       font-size: 18px;
     }
@@ -228,7 +246,8 @@
   &__img {
     text-align: left;
     position: relative;
-    @include rmax(767) {
+    @include rmax(1023) {
+      text-align: center;
       order: -1;
     }
   }
@@ -242,7 +261,7 @@
   }
 
   &--reverse {
-    @include rmax(767) {
+    @include rmax(1023) {
       order: 1
     }
   }
@@ -252,7 +271,7 @@
   display: flex;
   gap: $lg;
 
-  @include rmax(768) {
+  @include rmax(1400) {
     justify-content: center;
     flex-wrap: wrap;
     gap: calc(2*$lg);
@@ -260,7 +279,7 @@
 
   /* .benefit__item */
   &__item {
-    @include rmax(768) {
+    @include rmax(1400) {
       flex: 0 1 320px;
       flex-direction: column;
       text-align: center;
@@ -272,7 +291,7 @@
   &__ico {
     width: 120px;
 
-    @include rmax(768) {
+    @include rmax(1400) {
       width: 96px;
       margin: auto;
     }
@@ -303,6 +322,7 @@
   flex-direction: column;
   background-color: #FAFAFA;
   position: relative;
+  margin-bottom: 80px;
   img {
     width: 100%;
     height: 100%;
@@ -313,9 +333,12 @@
     max-width: none;
     background-color: transparent;
     max-width: 450px;
+    @include rmax(1023) {
+      text-align: center;
+    }
   }
 
-  @include r(767) {
+  @include r(1023) {
     display: block;
     .container {
       min-height: 350px;
@@ -457,6 +480,9 @@
     &:after {
       content: none;
     }
+    @include rmax(1300) {
+      display: none;
+    }
   }
 
   .line--5 {
@@ -464,6 +490,9 @@
     bottom: -50px;
     right: 40%;
     left: 5%;
+    @include rmax(1400) {
+      left: 50%;
+    }
     &:before {
       height: 120px;
     }
@@ -520,7 +549,7 @@
 .callout--1 {
   @include rm(1023, 1280) {
     img {
-      transform: translateX(-25%)
+      transform: translateX(-10%)
     }
   }
 }
@@ -529,6 +558,10 @@
   top: 0;
   right: 0;
   margin-left: auto;
+  @include r(1200) {
+    right: auto;
+    left: 520px;
+  }
   svg {
     display: none;
     @include r(450) {

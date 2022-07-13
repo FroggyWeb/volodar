@@ -72,7 +72,7 @@
 .mob-header {
   text-align: center;
   .soclist {
-    margin-bottom: 1em;
+    margin: 2em 0;
   }
 }
 
@@ -86,10 +86,13 @@
   &__item {
     display: inline-block;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 32px;
     line-height: 0;
     color: $c-sec;
     padding: 0 2px;
+    @include r(1023) {
+      font-size: 24px;
+    }
   }
 }
 
