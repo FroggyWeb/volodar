@@ -1,7 +1,7 @@
 .index-intro {
   display: grid;
   gap: $lg;
-  padding-top: 40px;
+  padding-top: 0;
   @include r(1280) {
     grid-template-columns: 2fr 1fr;
   }
@@ -111,6 +111,13 @@
     justify-content: space-between;
     gap: $lg;
     align-items: flex-end;
+    @include rmax(450) {
+      flex-direction: column;
+      align-items: flex-start;
+      .link-arr {
+        align-self: center;
+      }
+    }
   }
 }
 
@@ -180,7 +187,7 @@
 }
 
 .production-steps {
-  margin-top: 60px;
+  margin-top: 120px;
 }
 
 .production-steps__title {

@@ -49,23 +49,37 @@
   width: 45px;
 }
 
+%bg-abs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
 .page-bg {
   background-color: $c-bg;
-  padding-bottom: calc(4*$lg);
-  margin-bottom: calc(-3*$lg);
+  padding-bottom: 60px;
+  margin-bottom: -120px;
   &--products {
     padding-bottom: calc(4*$lg);
     margin-bottom: calc(-3*$lg);
   }
-  .header__logo {
-    background-color: $c-bg;
-  }
-  .nav__list {
-    background-color: #fff;
+  &--contacts{
+    @extend %bg-abs;
+    height: 650px;
+
+    // position: absolute;
   }
   &--nopad {
     padding: 0;
     margin: 0;
+  }
+  .header__logo, & + .page__header .header__logo {
+    background-color: $c-bg;
+  }
+  .nav__list, & + .page__header  .nav__list{
+    background-color: #fff;
   }
 }
 

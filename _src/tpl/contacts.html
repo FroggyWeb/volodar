@@ -1,4 +1,12 @@
-{% extends "./parthtml/base.html" %} {% block content %}
+{% extends "./parthtml/base.html" %}
+{% block prebase %}
+<!-- begin page-bg -->
+<div class="page-bg round-bottom page-bg--contacts"></div>
+
+{% endblock %}
+
+{% block content %}
+
 <div class="container">
   <ul class="breadcrumbs">
     <li class="breadcrumbs__item">
@@ -94,6 +102,5 @@
   <!-- end-container -->
 
 </div>
-
 
 {% endblock %}
