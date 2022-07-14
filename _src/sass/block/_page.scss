@@ -135,11 +135,15 @@ a[href*="tel"] {
 }
 
 .section {
-  padding: 60px 0;
-  margin: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 	@include rmax(767){
-    padding: 30px 0;
-    margin: 30px 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   &--top-pad {
     margin-bottom: 0;
@@ -417,7 +421,6 @@ a[href*="tel"] {
       display: none;
     }
   @include r(767) {
-    justify-content: center;
     font-size: 16px;
   }
   /* .breadcrumbs__item */

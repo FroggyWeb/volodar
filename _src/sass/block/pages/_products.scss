@@ -94,7 +94,7 @@
     @include r(1500) {
       align-self: start;
       height: 250px;
-      width: 480px;
+      width: 400px;
     }
     img {
       position: absolute;
@@ -186,7 +186,7 @@
     &:before {
       top: 0;
       @include r(1023) {
-        width: 800px;
+        width: 700px;
       }
     }
     &:after {
@@ -206,9 +206,6 @@
     font-size: rem(18);
     font-weight: 800;
     max-width: 530px;
-    @include r(1500) {
-      font-size: 26px;
-    }
   }
 }
 
@@ -414,6 +411,7 @@ body:not(.touch) .product__readmore {
   &__content {
     background-color: #fff;
     border-radius: 16px;
+    flex: 1;
   }
 }
 
@@ -425,6 +423,10 @@ body:not(.touch) .product__readmore {
     cursor: pointer;
     &.active {
       background-color: #fff;
+      color: $c-main;
+      @include rmax(767) {
+        box-shadow: 10px 0px 10px rgb(0 0 0 / 15%);;
+      }
     }
   }
 }
@@ -443,7 +445,7 @@ body:not(.touch) .product__readmore {
     max-width: 700px;
   }
   &__title {
-    font-size: rem(18);
+    font-size: rem(24);
   }
 }
 
@@ -580,7 +582,7 @@ body:not(.touch) .product__readmore {
   }
   &__title {
     text-align: center;
-    font-size: rem(18);
+    font-size: rem(22);
     font-weight: bold;
     margin-bottom: 1em;
   }
