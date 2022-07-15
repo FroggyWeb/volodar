@@ -394,9 +394,12 @@
   padding: 1em;
   background-color: #fff;
   border-radius: 8px;
-  font-size: rem(22);
+  font-size: 18px;
   img {
     width: 100%;
+  }
+  @include r(450) {
+    font-size: rem(22);
   }
   @include r(767) {
     &__icon img {
@@ -410,7 +413,7 @@
   /* .section-link__icon */
   &__icon {
     @include rmax(767) {
-      flex: 0 0 80px;
+      flex: 0 0 70px;
     }
   }
 
