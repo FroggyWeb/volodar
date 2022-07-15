@@ -40,7 +40,7 @@ a {
 }
 
 .prefooter {
-  margin-bottom: -70px;
+  margin-bottom: -70px !important;
 }
 
 .strong {
@@ -405,9 +405,9 @@ a[href*="tel"] {
 }
 
 .breadcrumbs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   text-align: center;
   list-style: none;
   margin: 50px 0;
@@ -415,18 +415,14 @@ a[href*="tel"] {
   position: relative;
   z-index: 1;
   font-size: 14px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  &::-webkit-scrollbar {
-      display: none;
-    }
+
   @include r(767) {
     font-size: 16px;
   }
   /* .breadcrumbs__item */
   &__item {
     margin: 0 .5em 0 0;
-    display: flex;
+    display: inline;
     flex: 0 0 auto;
     align-items: center;
     &:not(:first-child):before {

@@ -10,9 +10,9 @@
   padding: 20px;
   border-radius: 8px;
   background-color: #fff;
-  box-shadow: 9px 13px 26px -12px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
+  @extend %shadow;
   @include rm(767, 1024) {
     display: grid;
     gap: $lg;
@@ -50,7 +50,7 @@
 
   /* .service__list */
   &__list {
-    font-size: 16px;
+    font-size: rem(16);
     @include r(1025) {
       columns: 2;
     }

@@ -85,6 +85,16 @@ table {
     font-size: rem(18);
     font-weight: 700;
   }
+
+  &__img-vert {
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    @include r(1023) {
+      width: 250px;
+    }
+  }
+
   @include rmax(767) {
     flex: 0 0 250px;
   }
