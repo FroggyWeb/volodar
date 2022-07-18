@@ -58,8 +58,7 @@
               {% include "./search-panel.html" %}
             </div>
             <div class="header__cart mini-cart" data-popup="bg">
-              {{ macro.iconSvg('cart') }}
-              <!-- <a href="./cart.html" class="link-mob-only">{{ macro.iconSvg('cart') }}</a> -->
+              <a href="./cart.html" class="link-mob-only">{{ macro.iconSvg('cart') }}</a>
               <div class="mini-cart__count">12</div>
               {% include "./minicart.html" %}
             </div>
@@ -116,7 +115,6 @@
   {% include "./footer.html" %}
 
 
-  <script src="../js/leader-line.min.js"></script>
   <script defer src="../js/vendor.js"></script>
   <script defer src="../js/main.js"></script>
   <div id="overlay"></div>

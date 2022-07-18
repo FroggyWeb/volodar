@@ -1,4 +1,5 @@
-{% extends "./parthtml/base.html" %} {% block content %}
+{% extends "./parthtml/base.html" %}
+{% block content %}
 <div class="container">
   <ul class="breadcrumbs">
     <li class="breadcrumbs__item">
@@ -39,7 +40,7 @@
     </div>
   </div>
 
-  <div class="container container--sm section">
+  <div class="container section">
     <div class="production-step history-info">
       <div class="production-step__cnt-wrap">
         <div class="production-step__cnt">
@@ -67,6 +68,13 @@
       </div>
     </div>
 
+    <!-- end-container -->
+
+  </div>
+</div>
+
+<div class="page-bg round-top">
+  <div class="container container--sm">
     <div class="section history-date">
       <h2 class="title title--center">История наших достижений</h2>
       <div class="historys">
@@ -152,13 +160,7 @@
       </div>
 
     </section>
-
-    <!-- end-container -->
-
   </div>
-
-
-
 </div>
 
 {% endblock %}

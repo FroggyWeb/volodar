@@ -1,20 +1,17 @@
 .vacancys {
   display: grid;
-  gap: $lg;
+  gap: 60px;
   align-items: start;
-  @include r(1280) {
-    grid-template-columns: minmax(760px, 2fr) 1fr;
+  @include r(1023) {
+    grid-template-columns: minmax(460px, 2fr) 1fr;
   }
   /* .vacansys__main */
   &__main {}
 
   /* .vacansys__header */
   &__header {
-    display: grid;
+    display: flex;
     gap: $lg;
-    @include r(767) {
-      grid-template-columns: 1fr 200px;
-    }
   }
 
   /* .vacansys__header-main */
@@ -54,7 +51,7 @@
   border-radius: 16px;
   /* .vacancy__header */
   &__header {
-    display: grid;
+    display: flex;
     gap: $lg;
     grid-template-columns: 1fr 150px;
   }
@@ -100,9 +97,9 @@
 }
 
 .conditions {
+  @extend %shadow;
   border-radius: 16px;
   background-color: #fff;
-  box-shadow: 9px 13px 26px -12px rgba(0, 0, 0, 0.25);
   padding: 1em;
   display: grid;
   gap: $lg;

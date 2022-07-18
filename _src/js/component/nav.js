@@ -1,7 +1,7 @@
 import hcOffcanvasNav from 'hc-offcanvas-nav';
 import Choices from "choices.js";
 
-  var Nav = new hcOffcanvasNav('#main-nav', {
+ export const Nav = new hcOffcanvasNav('#main-nav', {
     disableAt: 1024,
     customToggle: '.burger',
     navTitle: false,
@@ -11,14 +11,14 @@ import Choices from "choices.js";
     labelBack: "Назад",
   });
 
-  // add mobilenav extend panel
-  const headerNav = document.createElement("div")
-  const menuTop = document.querySelector(".nav-wrapper-0 .nav-content")
-  headerNav.classList.add('js-navbar')
-  console.log(menuTop)
-  menuTop.insertBefore(headerNav, menuTop.querySelector('.nav__list'))
+// add mobilenav extend panel
+const headerNav = document.createElement("div")
+const menuTop = document.querySelector(".nav-wrapper-0 .nav-content")
+headerNav.classList.add('js-navbar')
+console.log(menuTop)
+menuTop.insertBefore(headerNav, menuTop.querySelector('.nav__list'))
 
-  headerNav.appendChild(document.querySelector('.mob-panel'))
+headerNav.appendChild(document.querySelector('.mob-panel'))
 
 
 const langDesktop = new Choices('.lang-desktop', {
@@ -32,8 +32,12 @@ const langMob = new Choices('.lang-mob', {
   itemSelectText: false,
 });
 
-document.querySelector('.mob-panel').addEventListener('click', (e) => {
-  e.stopPropagation;
+document.querySelector('.lang-swither').addEventListener('click', (e) => {
+  langMob.showDropdown();
+})
+
+menuTop.addEventListener('click', (e) => {
+  langMob.hideDropdown();
 })
 
 // accordion
