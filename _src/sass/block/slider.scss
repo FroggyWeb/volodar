@@ -19,7 +19,7 @@
     top: 80px;
     left: 40px;
     @include r(767) {
-      top: 120px;
+      top: 100px;
       left: 80px;
     }
   }
@@ -30,6 +30,7 @@
 
 .swiper-pagination {
   display: flex;
+  gap: 5px;
   position: absolute;
   z-index: 2;
 }
@@ -45,8 +46,8 @@
     background-color: $c-main;
     &:before {
       border-color: $c-main;
-      width: 180%;
-      height: 180%;
+      width: 250%;
+      height: 250%;
     }
   }
   &:before {

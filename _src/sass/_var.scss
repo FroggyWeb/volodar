@@ -25,7 +25,7 @@
     font-size: 20px;
   }
   body {
-    --lg: 60px;
+    --lg: 50px;
   }
 }
 
@@ -36,7 +36,7 @@ $breakpoints: (
   "md": 767px,
   "lg": 992px,
   "xl": 1024px,
-  "xxl": 1360px,
+  "xxl": 1400px,
 ) !default;
 
 $f-base: 16px/1.2 "Mulish", sans-serif;
