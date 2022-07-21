@@ -103,7 +103,7 @@ input.check {
   color: #F4EEE5;
   padding: $lg $lg 80px;
   @include r(1023) {
-    padding: 60px 60px 120px;
+    padding: 80px 80px 120px;
     background: url('@/img/decor/form-order-1.png') no-repeat left bottom, url('@/img/decor/form-order-2.png') no-repeat right bottom;
     background-color: $c-text;
     background-size: 30%;
@@ -113,10 +113,10 @@ input.check {
   }
   &__wrap {
     max-width: 1340px;
-    margin: auto;
-    @include r(1400) {
+    margin: auto 20px auto auto;
+    @include r(xxl) {
       display: grid;
-      gap: $lg;
+      gap: 100px;
       grid-template-columns: 320px 1fr;
       .form-order__pre {
         flex-direction: column;
@@ -132,6 +132,12 @@ input.check {
     @include r(767) {
       flex-direction: row;
       justify-content: space-between;
+    }
+    @include r(1023) {
+      font-size: 18px;
+      .form__title {
+        font-size: 36px;
+      }
     }
   }
 
@@ -154,8 +160,9 @@ input.check {
 
   &__body {
     display: grid;
-    gap: $lg;
+    gap: 60px 40px;
     @include r(767) {
+      flex: 1;
       grid-template-columns: 1fr 1fr;
     }
   }
