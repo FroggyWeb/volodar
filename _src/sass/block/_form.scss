@@ -89,7 +89,7 @@ input.check {
   }
 
   &__btn {
-    margin-top: calc($lg / 2);
+    margin-top: 40px;
     text-align: center;
   }
   &__btn-left {
@@ -101,8 +101,9 @@ input.check {
 .form-order {
   background-color: $c-text;
   color: #F4EEE5;
-  padding: $lg $lg 80px;
+  padding: 40px 0;
   @include r(1023) {
+    padding: $lg $lg 80px;
     padding: 80px 80px 120px;
     background: url('@/img/decor/form-order-1.png') no-repeat left bottom, url('@/img/decor/form-order-2.png') no-repeat right bottom;
     background-color: $c-text;
@@ -113,8 +114,9 @@ input.check {
   }
   &__wrap {
     max-width: 1340px;
-    margin: auto 20px auto auto;
+    margin: auto;
     @include r(xxl) {
+      margin: auto 20px auto auto;
       display: grid;
       gap: 100px;
       grid-template-columns: 320px 1fr;
@@ -125,7 +127,7 @@ input.check {
     }
   }
   &__pre {
-    margin-bottom: $lg;
+    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
     gap: $lg;
@@ -160,8 +162,9 @@ input.check {
 
   &__body {
     display: grid;
-    gap: 60px 40px;
+    gap: $lg;
     @include r(767) {
+      gap: 40px 60px;
       flex: 1;
       grid-template-columns: 1fr 1fr;
     }
@@ -192,6 +195,18 @@ input.check {
     }
     a {
       color: inherit;
+    }
+  }
+  @include r(xxl) {
+    .form__confirm {
+      font-size: 18px;
+    }
+    .form__line, .form-order__body-side {
+      font-size: 18px;
+    }
+    .btn {
+      font-size: 18px;
+      padding: 1em 3em;
     }
   }
 }

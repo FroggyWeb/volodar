@@ -318,6 +318,9 @@
     @include r(1023) {
       font-size: 24px;
     }
+    @include r(xxl) {
+      font-size: 26px;
+    }
 
     &:hover {
       color: $c-main;
@@ -331,12 +334,12 @@
     &.mixitup-control-active:before,
     &.active:before {
       background: #fd9f32;
-      border: 4px solid #fff;
+      border: 7px solid #fff;
       border-radius: 50%;
       content: "";
       display: inline-block;
+      margin-right: .5em;
       height: 1em;
-      margin-right: 1em;
       width: 1em;
       background-clip: content-box;
       outline: 1px solid;
@@ -349,15 +352,15 @@
   gap: 7vw;
   align-items: start;
 
-  @include r(1280) {
+  @include r(xxl) {
     grid-template-columns: 320px 1fr;
     .title {
-      font-size: 46px;
+      font-size: 55px;
     }
   }
   /* .intro__nav */
   &__nav {
-    @include r(1280) {
+    @include r(xxl) {
         flex-direction: column;
         gap: 1em;
       }

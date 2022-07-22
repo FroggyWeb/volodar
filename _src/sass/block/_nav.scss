@@ -29,6 +29,8 @@
   .nav {
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 200;
   }
   .nav__list {
     border-radius: 10px 10px 0 0;

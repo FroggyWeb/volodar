@@ -222,9 +222,15 @@ a[href*="tel"] {
   background: url('@/img/bg.jpg');
   margin-top: -20px;
   @include r(1025) {
-    padding: 100px 0 50px;
+    padding: 80px 0 50px;
     .footer__about {
-      margin-top: -60px;
+      margin-top: -40px;
+    }
+  }
+  @include r(xxl) {
+    .footer__main,
+    .footer__post {
+      margin-left: calc(100%/12);
     }
   }
 
@@ -270,6 +276,11 @@ a[href*="tel"] {
 
   &__soc {
     margin-top: $lg;
+    display: flex;
+    justify-content: space-between;
+    .soclist__item {
+      font-size: 32px;
+    }
   }
 
   .soc-shop.link-arr {
@@ -290,6 +301,9 @@ a[href*="tel"] {
       font-size: 18px;
       font-weight: bold;
       margin-top: 0;
+    }
+    @include r(xxl) {
+      font-size: 22px;
     }
   }
 
@@ -314,8 +328,16 @@ a[href*="tel"] {
     display: block;
   }
 
+  &__contact-mail {
+    text-decoration: none;
+    font-weight: normal;
+    @include r(xxl) {
+      font-size: 22px;
+    }
+  }
+
   &__post {
-    margin-top: 40px;
+    // margin-top: 40px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -323,6 +345,9 @@ a[href*="tel"] {
     @include r(767) {
       flex-direction: row-reverse;
       justify-content: space-between;
+    }
+    .link-arr {
+      font-weight: normal;
     }
   }
 
@@ -345,7 +370,7 @@ a[href*="tel"] {
   }
   &__title {
     font-size: 22px;
-    font-weight: 800;
+    font-weight: 700;
     @include rmax(767) {
        border-bottom: 1px solid;
     }
@@ -388,6 +413,9 @@ a[href*="tel"] {
     display: flex;
     justify-content: space-between;
   }
+  @include r(xxl) {
+    font-size: 26px;
+  }
 }
 
 .active .marker {
@@ -411,7 +439,7 @@ a[href*="tel"] {
   overflow: hidden;
   text-align: center;
   list-style: none;
-  margin: 50px 0;
+  margin: 50px 0 70px;
   padding: 0;
   position: relative;
   z-index: 1;
